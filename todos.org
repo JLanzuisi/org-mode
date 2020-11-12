@@ -1,0 +1,32 @@
+#+TITLE: Cosas por hacer.
+#+AUTHOR: Jhonny Lanzuisi.
+#+DATE: 2020.
+
+* Programación.
+ 
+** Emacs
+*** TODO Lista de juegos terminados en org mode. Poner enlaces.
+
+** CS50 EdX
+*** TODO Ver el video de la semana 2, completo.
+
+*** TODO Hacer segundo ejercicio de la semana 2.
+
+* Juegos retro.
+** RPGs en la SNES.
+
+*** TODO Terminar Secret of mana.
+
+** Juegos de gamecube.
+
+*** TODO Terminar pikmin.
+
+** Hacer funcionar wine para Hollow Knight y Mass effect.
+* Navidades.
+** TODO Pensar regalo para Oriana.
+*** TODO Una taza con diseño similar, que los dos tengamos una.
+*** TODO ALgo de Amazon?
+* Instalación de ubuntu
+** TODO Respaldar carpeta de emacs antes de Ubuntu.
+** TODO Respaldar perfil de firefox.
+** TODO Respaldar iso de Ubuntu.
