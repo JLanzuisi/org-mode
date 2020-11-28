@@ -23,10 +23,6 @@
 *** TODO Hacer segundo ejercicio de la semana 3
     
 * Trabajo de graham :trab:graham: 
-** DONE Epub Checker
-   Arreglar erros que da la aplicación. Son casi 40.
-** TODO Revisar todo el EPUB
-** TODO Una vez revisado, poner en github como release
 * Juegos retro :juegos:retro: 
 ** RPGs en la SNES.
    Los dejé por ahora.
@@ -38,19 +34,29 @@
 
 * Navidades :varios:navid: 
 ** TODO Pensar regalo para Oriana.
-*** TODO Una taza con diseño similar, preguntar a mama. Deberia ser barato
+*** TODO Una taza con diseño similar, preguntar a mama.
+    Una taza con al de otters, investigar sobre ellas.
+** TODO Peliculas, series, especiales de navidad:
+   + Especiales de los simpsons
+   + Tokyo godfathers
+   + Especial de sherk
 * Github :git: 
 ** TODO EPUB de robert
    Colocar bien el epub de robert en su repo de github
 ** TODO cambiar nombres de las repos en github a usar solo minusculas
-** TODO Crear repo de org-mode, text-files(renombrar) y c-files en github
+** DONE Crear repo de org-mode
+** TODO repo de text-files(renombrar) y
+** TODO repo de c-files
 
 * Ori y an llamadas :ori: 
 ** TODO Pensar en ideas para poner en la cuenta del emprendimiento
 ** TODO Revisara utoras de la lista
 ** TODO Revisar libros de la lista que descargue:
    [ ] Pankhurst
+** TODO Equipaje de mano de ori. Confirmar!!!!!
 * Mate :mate: 
 ** Universidad
    Repasar para el trimestre enero-marzo
-** Ejercicios que menciono zamaira
+* Rebajas en juegos.
+** GOG
+** Steam
