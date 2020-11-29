@@ -1,3 +1,8 @@
 #+TITLE: Cosas por hacer de la universidad.
 #+AUTHOR: Jhonny Lanzuisi.
 #+DATE: 2020.
+#+FILETAGS: :uni:
+
+* Enero marzo 2021
+** TODO estar pendiente de la inscripciones
+** TODO Repasar contenidos del trimestre

@@ -1,3 +1,7 @@
 #+TITLE: Trabajos por hacer.
 #+AUTHOR: Jhonny Lanzuisi.
 #+DATE: 2020.
+#+FILETAGS: :trab:
+
+* EPUB de graham :graham:
+  Por ahora nada nuevo.

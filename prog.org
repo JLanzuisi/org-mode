@@ -1,3 +1,32 @@
 #+TITLE: Programación.
 #+AUTHOR: Jhonny Lanzuisi.
 #+DATE: 2020.
+#+FILETAGS: :prog:
+
+Las cosas que tengo por hacer, relacionadas con lenguajes de programación.
+Quizás tengan que ver con editores de texto, u otras cosas cercanas a programar.
+
+* Emacs :emacs:
+** TODO Buscar mas información
+   Terminar tutorial de emacs. Documentación online.
+** TODO Lista de juegos terminados en org mode. Poner enlaces.
+** TODO Aprender a usar magit
+   Quizas sea la mejor manera de usar git.
+** TODO Investigar elfeed y gnus (mail y noticias)
+** TODO Investigar yasnippets, para tener snippets y escribir org-mode mas rápido
+** TODO Investigar sobre ediff
+** TODO Investigar sobre mpd y 'M-x mpc'
+ 
+* LISP :lisp:
+** TODO Leer sobre lisp, útil para emacs.
+    
+* CS50 EdX :cs50:
+** TODO Ver videos de la semana 3
+** TODO Hacer segundo ejercicio de la semana 3
+
+* Github :git:
+** TODO EPUB de robert
+   Colocar bien el epub de robert en su repo de github
+** TODO cambiar nombres de las repos en github a usar solo minúsculas
+** TODO repo de text-files(renombrar) y
+** TODO repo de c-files
