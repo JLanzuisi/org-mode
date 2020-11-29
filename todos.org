@@ -14,6 +14,8 @@
     Quizas sea la mejor manera de usar git.
 *** TODO Investigar elfeed y gnus (mail y noticias)
 *** TODO Investigar yasnippets, para tener snippets y escribir org-mode mas rapido
+*** TODO Investigar sobre ediff
+*** TODO Investigar sobre mpd y 'M-x mpc'
 
 ** LISP
 *** TODO Leer sobre lisp, util para emacs.
@@ -21,7 +23,8 @@
 ** CS50 EdX
 *** TODO Ver videos de la semana 3
 *** TODO Hacer segundo ejercicio de la semana 3
-    
+
+** TODO Clonar argos de git y ver si sigue el error
 * Trabajo de graham :trab:graham: 
 * Juegos retro :juegos:retro: 
 ** RPGs en la SNES.
