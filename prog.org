@@ -10,12 +10,12 @@ Quizás tengan que ver con editores de texto, u otras cosas cercanas a programar
 ** TODO Buscar mas información
    Terminar tutorial de emacs. Documentación online.
 ** TODO Lista de juegos terminados en org mode. Poner enlaces.
-** TODO Aprender a usar magit
-   Quizas sea la mejor manera de usar git.
+** TODO Investigar features mas avanzadas de helm
 ** TODO Investigar elfeed y gnus (mail y noticias)
 ** TODO Investigar yasnippets, para tener snippets y escribir org-mode mas rápido
+** TODO org mode cdlatex minor mode para escribir notas de la uni
 ** TODO Investigar sobre ediff
-** TODO Investigar sobre mpd y 'M-x mpc'
+** TODO Investigar sobre mpd y EMMS
  
 * LISP :lisp:
 ** TODO Leer sobre lisp, útil para emacs.

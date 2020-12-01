@@ -6,3 +6,4 @@
 * Enero marzo 2021
 ** TODO estar pendiente de la inscripciones
 ** TODO Repasar contenidos del trimestre
+   Repasar analisis

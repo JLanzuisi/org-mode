@@ -12,10 +12,10 @@
 *** TODO Terminar pikmin.
 
 * Navidades :varios:navid: 
-** TODO Pensar regalo para Oriana.
+** TODO Pensar regalo para Oriana. :ori:
 *** TODO Una taza con diseño similar, preguntar a mama.
     Una taza con al de otters, investigar sobre ellas.
-** TODO Peliculas, series, especiales de navidad:
+** TODO Peliculas, series, especiales de navidad: :ori:
    + Especiales de los simpsons
    + Tokyo godfathers
    + Especial de sherk
@@ -28,3 +28,4 @@
 * Rebajas en juegos.
 ** GOG
 ** Steam
+* TODO Limpiar correos gmail
