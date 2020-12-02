@@ -1,0 +1,24 @@
+#+TITLE: Análisis
+#+AUTHOR: Jhonny Lanzuisi
+#+EMAIL: jalb97@gmail.com
+#+STARTUP: latexpreview
+#+TAGS: :uni:analisis:
+#+LANGUAGE: es
+#+OPTIONS: toc:2
+# INCLUDE: "~/git/LaTeX-University/preamble-book.tex" export LaTeX
+#+HTML_MATHJAX: align: left indent: 5em tagside: left font: "Neo Euler"
+#+HTML_MATHJAX: cancel.js noErrors.js
+
+* Conjuntos de números
+
+Este curso se centra en el análisis del sistema de los números reales.
+Por lo tanto es esencial conocer /que es/ el conjunto de los números reales de forma rigurosa.
+
+#+begin_definition
+Sea \(A\) un conjunto ordenado y \(X\subset A\). 
+Entonces
+\[\bigcap A = \sum X_k - P^2\]
+
+#+end_definition
+
+***** TODO Investigar como escribir mejor latex con snippets

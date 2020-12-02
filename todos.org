@@ -16,9 +16,11 @@
 *** TODO Una taza con diseño similar, preguntar a mama.
     Una taza con al de otters, investigar sobre ellas.
 ** TODO Peliculas, series, especiales de navidad: :ori:
+   
    + Especiales de los simpsons
    + Tokyo godfathers
    + Especial de sherk
+
 * Ori y an llamadas :ori: 
 ** TODO Pensar en ideas para poner en la cuenta del emprendimiento
 ** TODO Revisara utoras de la lista
@@ -29,3 +31,4 @@
 ** GOG
 ** Steam
 * TODO Limpiar correos gmail
+* TODO Buscar "manufacturer refurbishded" hdd en ebay
