@@ -20,5 +20,3 @@ Entonces
 \[\bigcap A = \sum X_k - P^2\]
 
 #+end_definition
-
-***** TODO Investigar como escribir mejor latex con snippets
