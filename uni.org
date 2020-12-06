@@ -5,5 +5,26 @@
 
 * Enero marzo 2021
 ** TODO estar pendiente de la inscripciones
+   Materias a inscribir:
+
+   + Analisis 2 (segura). Lun, Mier, Vier, 3-4
+   + Algoritmos y estructuras 1 (segura) Mar, Mier, Jue 2:00-4:00
+   + Lab de algoritmos 1 (segura) Mier, Jue 02:00-05:00
+   + Ingles para matematicos I. (segura) Sin horario.
+   + Topo 2 (con permiso, poco probable).
+   + Revisar FLX para generales
+
+     | Asignatura   |     Lun | Mar |  Mier | Jue | Vier |   Cred |
+     |--------------+---------+-----+-------+-----+------+--------|
+     | Analisis 2   |     3-4 |     |   3-4 |     |  3-4 |      4 |
+     | Algoritmos 1 |         | 6-9 |   6-9 | 6-9 |      |      3 |
+     | Lab Algos 1  |         |     |   6-9 | 6-9 |      |      2 |
+     | Ingles Mat 1 |         |     |       |     |      |      2 |
+     | Topo 2 (p)   |     5-6 |     |   5-6 |     |      |      4 |
+     | Generales    |         |     |       |     |      |      3 |
+     | Total        | 3-4;5-6 | 6-9 | 3-9!! | 6-9 |  3-4 | 14(15) |
+
 ** TODO Repasar contenidos del trimestre
    Repasar analisis
+
+** TODO Probar una tarea en org, asegurar que funcione antes del trimestre

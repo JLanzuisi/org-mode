@@ -14,7 +14,8 @@
 * Navidades :varios:navid: 
 ** TODO Pensar regalo para Oriana. :ori:
 *** TODO Una taza con diseño similar, preguntar a mama.
-    Una taza con al de otters, investigar sobre ellas.
+    Una taza con al de otters, investigar sobre ellas
+*** TODO Cuaderno lindo para el trimestre
 ** TODO Peliculas, series, especiales de navidad: :ori:
    
    + Especiales de los simpsons
@@ -27,8 +28,10 @@
 ** TODO Revisar libros de la lista que descargue:
    [ ] Pankhurst
 ** TODO Equipaje de mano de ori. Confirmar!!!!!
+** DONE Pasar videos de carlos a ori por telegram
+   CLOSED: [2020-12-06 dom 11:30]
 * Rebajas en juegos.
 ** GOG
 ** Steam
 * TODO Limpiar correos gmail
-* TODO Buscar "manufacturer refurbishded" hdd en ebay
+* DONE Buscar "manufacturer refurbishded" hdd en ebay

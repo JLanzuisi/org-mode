@@ -12,9 +12,16 @@ Quizás tengan que ver con editores de texto, u otras cosas cercanas a programar
 ** TODO Lista de juegos terminados en org mode. Poner enlaces.
 ** TODO Investigar features mas avanzadas de helm
 ** TODO Investigar elfeed y gnus (mail y noticias)
-** TODO Investigar yasnippets, para tener snippets y escribir org-mode mas rápido
-** TODO org mode cdlatex minor mode para escribir notas de la uni
+** DONE Investigar yasnippets, para tener snippets y escribir org-mode mas rápido
+** DONE org mode cdlatex minor mode para escribir notas de la uni
+   CLOSED: [2020-12-06 dom 11:28]
 ** TODO Investigar sobre ediff
+** DONE Cambiar mis premabulos de latex a org.
+   CLOSED: [2020-12-06 dom 11:29]
+** TODO Cambiar los programas de C a Org.
+** TODO Makefile para compilar LaTeX
+** TODO Hacer esqueletos como plantillas de cosas de org
+** TODO Compilar emacs en la tablet, sin x11, con modulos
 * LISP :lisp:
 ** TODO Leer sobre lisp, útil para emacs.
     
