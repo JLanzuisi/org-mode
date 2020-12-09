@@ -1,0 +1,17 @@
+#+TITLE: Libros
+#+AUTHOR: Jhonny Lanzuisi.
+#+DATE: 2020.
+#+FILETAGS: :libros:
+
+* Programación, compu :prog:
+** TODO Art of unix programming
+** TODO Libro de emcas
+** TODO Libro de common lisp
+* Filosofía
+
+* Historia
+
+* Politica
+** TODO nuevo libro de varoufakis
+* Ori
+
