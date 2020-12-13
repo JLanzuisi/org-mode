@@ -14,15 +14,14 @@
    + Topo 2 (con permiso, poco probable).
    + Revisar FLX para generales
 
-     | Asignatura   |     Lun | Mar |  Mier | Jue | Vier |   Cred |
-     |--------------+---------+-----+-------+-----+------+--------|
-     | Analisis 2   |     3-4 |     |   3-4 |     |  3-4 |      4 |
-     | Algoritmos 1 |         | 6-9 |   6-9 | 6-9 |      |      3 |
-     | Lab Algos 1  |         |     |   6-9 | 6-9 |      |      2 |
-     | Ingles Mat 1 |         |     |       |     |      |      2 |
-     | Topo 2 (p)   |     5-6 |     |   5-6 |     |      |      4 |
-     | Generales    |         |     |       |     |      |      3 |
-     | Total        | 3-4;5-6 | 6-9 | 3-9!! | 6-9 |  3-4 | 14(15) |
+     | Asignatura          | Código | Lun     | Mar |    Mier | Jue | Vier | Cred |
+     |---------------------+--------+---------+-----+---------+-----+------+------|
+     | Analisis 2          | MA2321 | 3-4     |     |     3-4 |     |  3-4 |    4 |
+     | Algoritmos 1        | CI2611 |         | 6-9 |     6-9 | 6-9 |      |    3 |
+     | Lab Algos 1         | CI2691 |         |     |     6-9 | 6-9 |      |    2 |
+     | Ingles Mat 1        | ID2131 |         |     |         |     |      |    2 |
+     | Lit en Ingles (gen) | IDE143 |         |     |         |     |      |    3 |
+     | Total               |        | 3-4;5-6 | 6-9 | 3-4;6-9 | 6-9 |  3-4 |   14 |
 
 ** TODO Repasar contenidos del trimestre
    Repasar analisis

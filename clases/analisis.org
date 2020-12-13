@@ -8,29 +8,35 @@
 #+LATEX_CLASS: book
 #+HTML_MATHJAX: align: left indent: 5em tagside: left font: "STIX General"
 #+HTML_MATHJAX: cancel.js noErrors.js
+#+SETUPFILE: /home/jhonny/git/org-mode/style.css.org
 
 * Conjuntos de números
 
 ** Reales y racionales
-
 Definimos los reales usando las cotas superiores (o inferioes) mínimas (o máximas).
 Esto es:
+
 #+BEGIN_definition 
 Sea \( A \) un conjunto y \( X \) un subconjunto de \( A \).
 Un elemento \( b\in A \) es una /cota superior/ si \( b\geq x \) para todo \( x\in X \).
 #+END_definition
+
 ***** Una prueba
    Esto, junto con:
+
    #+BEGIN_definition
-   Un elemento \(b\in A\) es una cota superior mínima, o /supremo/, si
+   Un elemento \(b\in A\) es una cota superior mínima, o /supremo/, si 
    para toda cota superior \(b'\) de \(X\) se tiene que \(b\leq b'\).
    #+END_definition
+
    Nos permite definir los reales de la siguiente forma:
+
    #+BEGIN_definition
    Existe un cuerpo ordenado, que contiene a \(\mathbb{Q}\),
    con la propiedad de que todo conjunto acotado (no vacío) superiormente tiene supremo.
    A este conjunto lo llamamos \(\mathbb{R}\), los reales.
    #+END_definition
+
    Al giual que con las otras dos definiciones, 
    se puede dar una definición análoga de los reales usando ínfimos.
 

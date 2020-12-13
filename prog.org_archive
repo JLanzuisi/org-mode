@@ -1,0 +1,88 @@
+#    -*- mode: org -*-
+
+
+Archived entries from file /home/jhonny/git/org-mode/prog.org
+
+
+* DONE Crear repo de org-mode
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2020-11-29 dom 16:23
+  :ARCHIVE_FILE: ~/git/org-mode/prog.org
+  :ARCHIVE_OLPATH: Github
+  :ARCHIVE_CATEGORY: prog
+  :ARCHIVE_TODO: DONE
+  :ARCHIVE_ITAGS: prog git
+  :END:
+
+* DONE Aprender a lo basico de magit
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2020-11-30 lun 21:59
+  :ARCHIVE_FILE: ~/git/org-mode/prog.org
+  :ARCHIVE_OLPATH: Emacs
+  :ARCHIVE_CATEGORY: prog
+  :ARCHIVE_TODO: DONE
+  :ARCHIVE_ITAGS: prog emacs
+  :END:
+  Quizas sea la mejor manera de usar git.
+
+* DONE Instalar e iniciar helm-mode
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2020-11-30 lun 21:59
+  :ARCHIVE_FILE: ~/git/org-mode/prog.org
+  :ARCHIVE_OLPATH: Emacs
+  :ARCHIVE_CATEGORY: prog
+  :ARCHIVE_TODO: DONE
+  :ARCHIVE_ITAGS: prog emacs
+  :END:
+
+* DONE Investigar sobre mpd y EMMS
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2020-12-01 mar 16:28
+  :ARCHIVE_FILE: ~/git/org-mode/prog.org
+  :ARCHIVE_OLPATH: Emacs
+  :ARCHIVE_CATEGORY: prog
+  :ARCHIVE_TODO: DONE
+  :ARCHIVE_ITAGS: prog emacs
+  :END:
+
+* DONE Ver porque emms no tiene audio. Probar si algo se escucha con mpd.
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2020-12-01 mar 16:28
+  :ARCHIVE_FILE: ~/git/org-mode/prog.org
+  :ARCHIVE_OLPATH: Emacs
+  :ARCHIVE_CATEGORY: prog
+  :ARCHIVE_TODO: DONE
+  :ARCHIVE_ITAGS: prog emacs
+  :END:
+
+* DONE Investigar yasnippets, para tener snippets y escribir org-mode mas rápido
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2020-12-08 mar 21:37
+  :ARCHIVE_FILE: ~/git/org-mode/prog.org
+  :ARCHIVE_OLPATH: Emacs
+  :ARCHIVE_CATEGORY: prog
+  :ARCHIVE_TODO: DONE
+  :ARCHIVE_ITAGS: prog emacs
+  :END:
+
+* DONE org mode cdlatex minor mode para escribir notas de la uni
+  CLOSED: [2020-12-06 dom 11:28]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2020-12-08 mar 21:37
+  :ARCHIVE_FILE: ~/git/org-mode/prog.org
+  :ARCHIVE_OLPATH: Emacs
+  :ARCHIVE_CATEGORY: prog
+  :ARCHIVE_TODO: DONE
+  :ARCHIVE_ITAGS: prog emacs
+  :END:
+
+* DONE Cambiar mis premabulos de latex a org.
+  CLOSED: [2020-12-06 dom 11:29]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2020-12-08 mar 21:37
+  :ARCHIVE_FILE: ~/git/org-mode/prog.org
+  :ARCHIVE_OLPATH: Emacs
+  :ARCHIVE_CATEGORY: prog
+  :ARCHIVE_TODO: DONE
+  :ARCHIVE_ITAGS: prog emacs
+  :END:

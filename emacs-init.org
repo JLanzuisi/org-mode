@@ -1,0 +1,48 @@
+# -*- eval: (add-hook 'after-save-hook (lambda ()(org-babel-tangle)) nil t) -*-
+#+TITLE: Configuración de emacs
+#+AUTHOR: Jhonny Lanzuisi
+#+TAGS: :emacs:init:
+#+PROPERTY: header-args :exports code :tangle ~/.emacs.d/init-test.el
+#+SETUPFILE: /home/jhonny/git/org-mode/style.css.org
+
+* Configurar emacs usando Org-mode
+
+La idea es configurar emacs usando org-mode.
+Org-mode permite escribir el código mezclado con texto,
+de tal forma que documentar el código es más sencillo.
+Además, es más fácil recordar en el futuro que significa alguna pieza de la contiguración si puedo leer lo que pensaba en el momento.
+
+El archivo =init.el= de configración se crea a partir de un =emcas-init.org= usando =org-babel-tangle=.
+Por ahora, no es más que una recopilación de cosas que tomo de otras configuraciones o que descubro en el manual de emacs.
+
+Para poder crear el archivo =init.el=, uso la siguiente linea al inicio del archivo =.org=,
+que permite cargar /variables locales/.
+Con esta linea se ejecuta la operación de tangle cada vez que se guarda el archivo.
+
+#+BEGIN_SRC emacs-lisp :tangle no
+# -*- eval: (add-hook 'after-save-hook (lambda ()(org-babel-tangle)) nil t) -*-
+#+END_SRC
+
+Además, la siguiente linea hace que sea más conveniente escribir el código en el archivo =.org=,
+pues establece ciertas opciones que quiero por defecto en practicamente todos los bloques de código.
+
+#+BEGIN_SRC emacs-lisp :tangle no
+#+PROPERTY: header-args :exports code :tangle ~/.emacs.d/init-test.el
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp :exports none
+  ;; This init.el file is tangled from an Org file.
+  ;; As such, it's documentation will be terse or non-existent.
+  ;; For more in-depth, look at the Org or HTML files associated with it.
+#+END_SRC
+
+* Apariencia general
+Estos primeros comando se encargar de desactivar ciertos elementos que vienen por defecto en la interfaz de emacs.
+Los nombres de las variables se explican a si mismos, así que no hay mucho más que decir.
+
+#+BEGIN_SRC emacs-lisp
+(menu-bar-mode -1)          ; Disable the menu bar
+(scroll-bar-mode -1)        ; Disable visible scrollbar
+(tool-bar-mode -1)          ; Disable the toolbar
+(tooltip-mode -1)           ; Disable tooltips
+#+END_SRC
