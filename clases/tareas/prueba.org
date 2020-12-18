@@ -1,4 +1,5 @@
-#+TITLE: Algoritmos y estructuras. Especificación. 1
+#+TITLE: Primer examen parcial.
+#+SUBTITLE: Una preuba
 #+AUTHOR: Jhonny Lanzuisi
 #+EMAIL: jalb97@gmail.com
 #+STARTUP: latexpreview
@@ -9,15 +10,16 @@
 #+HTML_MATHJAX: align: left indent: 5em tagside: left font: "STIX General"
 #+HTML_MATHJAX: cancel.js noErrors.js
 #+SETUPFILE: /home/jhonny/git/org-mode/style.css.org
+#+LATEX_HEADER: \asignatura{Algoritmos y estructuras}
 
 * Conjuntos de números
 
 ** Reales y racionales
 Definimos los reales usando las cotas superiores (o inferioes) mínimas (o máximas).
-Esto es:
+Esto es: a\textsf{a}
 
 #+BEGIN_definition 
-Sea \( A \) un conjunto y \( X \) un subconjunto de \( A \).
+Sea \( A \) un conjunto y \( X \) un subconjunto de \( A \). $\symbfit{ait}$
 Un elemento \( b\in A \) es una /cota superior/ si \( b\geq x \) para todo \( x\in X \).
 #+END_definition
 

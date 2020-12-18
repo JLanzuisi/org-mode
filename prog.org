@@ -17,7 +17,8 @@ Quizás tengan que ver con editores de texto, u otras cosas cercanas a programar
 ** TODO Makefile para compilar LaTeX
 ** TODO Hacer esqueletos como plantillas de cosas de org
 ** TODO Compilar emacs en la tablet, sin x11, con modulos
-** TODO Charter y helvetica en HTML y LaTeX, con times math
+** DONE Charter y helvetica en HTML y LaTeX, con times math
+   CLOSED: [2020-12-16 mié 11:14]
 * LISP :lisp:
     
 * CS50 EdX :cs50:

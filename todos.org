@@ -30,7 +30,7 @@
 ** TODO Revisara utoras de la lista
 ** TODO Revisar libros de la lista que descargue:
    [ ] Pankhurst
-** TODO Equipaje de mano de ori. Confirmar!!!!!
+** TODO Equipaje de mano de ori. Confirmar!!!!! Llamar 0800 CONVIASA
 ** DONE Revisar cantante que esta destacada en el mesnaje de guasac
    CLOSED: [2020-12-07 lun 10:53]
 ** DONE Pasar videos de carlos a ori por telegram

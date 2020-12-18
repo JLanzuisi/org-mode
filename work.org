@@ -4,4 +4,15 @@
 #+FILETAGS: :trab:
 
 * EPUB de graham :graham:
-  Por ahora nada nuevo.
+** DONE 0.1-testimonials: nuevo HTML para testimonials antes de la primera página
+   CLOSED: [2020-12-17 jue 09:56]
+** DONE 0.3-cover-art: se cambió toda la sección
+   CLOSED: [2020-12-17 jue 10:06]
+** DONE 13-human: cambios menores (no cambio nada)
+   CLOSED: [2020-12-17 jue 10:09]
+** DONE all-vol-bibliography.bib
+   CLOSED: [2020-12-17 jue 10:14]
+** DONE Revisar meld e ir añadiendo diferencias
+   CLOSED: [2020-12-17 jue 10:14]
+** TODO Revisar con pagina epub checker
+** TODO Subir al github

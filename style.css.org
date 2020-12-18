@@ -9,15 +9,16 @@
 #+HTML_HEAD: body {
 #+HTML_HEAD: margin-left: 22%;
 #+HTML_HEAD: margin-right: 22%;
-#+HTML_HEAD: font-family: "Charter", "Georgia", serif;
-#+HTML_HEAD: font-size: 1.1em;
+#+HTML_HEAD: font-family: "DejaVu Serif", "Georgia", serif;
+#+HTML_HEAD: font-size: 1em;
+#+HTML_HEAD: line-height: 140%;
 #+HTML_HEAD: }
 #+HTML_HEAD: a {
 #+HTML_HEAD: color: darkred;
 #+HTML_HEAD: text-decoration: none;
 #+HTML_HEAD: }
 #+HTML_HEAD: h1,h2,h3 {
-#+HTML_HEAD: font-family: "Century Schoolbook", "TeX Gyre Schola", "Palatino", serif;
+#+HTML_HEAD: font-family: "DejaVu Sans", "Verdana", sans;
 #+HTML_HEAD: font-weight: normal;
 #+HTML_HEAD: }
 #+HTML_HEAD: h1 {
@@ -37,7 +38,11 @@
 #+HTML_HEAD: }
 #+HTML_HEAD: .org-src-container {
 #+HTML_HEAD: font-family: "Hack", "Dejavu Mono", "Consolas", monospace;
+#+HTML_HEAD: font-size: 1.1em;
 #+HTML_HEAD: overflow: auto;
+#+HTML_HEAD: }
+#+HTML_HEAD: code {
+#+HTML_HEAD: font-size: 1.1em;
 #+HTML_HEAD: }
 #+HTML_HEAD: pre                                      {background-color:#FFFFFF; border: none; box-shadow: none;}
 #+HTML_HEAD: pre span.org-builtin                     {color:#006FE0;font-weight:bold;}

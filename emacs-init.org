@@ -2,8 +2,10 @@
 #+TITLE: Configuración de emacs
 #+AUTHOR: Jhonny Lanzuisi
 #+TAGS: :emacs:init:
+#+LATEX_CLASS: article
 #+PROPERTY: header-args :exports code :tangle ~/.emacs.d/init-test.el
 #+SETUPFILE: /home/jhonny/git/org-mode/style.css.org
+#+LATEX_HEADER: \lstset{language=Lisp}\asignatura{Emacs Lisp}
 
 * Configurar emacs usando Org-mode
 
@@ -16,9 +18,10 @@ El archivo =init.el= de configración se crea a partir de un =emcas-init.org= us
 Por ahora, no es más que una recopilación de cosas que tomo de otras configuraciones o que descubro en el manual de emacs.
 
 Para poder crear el archivo =init.el=, uso la siguiente linea al inicio del archivo =.org=,
-que permite cargar /variables locales/.
+que permite cargar [[* Variables locales][variables locales]]. 
 Con esta linea se ejecuta la operación de tangle cada vez que se guarda el archivo.
 
+#+NAME: cblk-tangle-on-save
 #+BEGIN_SRC emacs-lisp :tangle no
 # -*- eval: (add-hook 'after-save-hook (lambda ()(org-babel-tangle)) nil t) -*-
 #+END_SRC
@@ -45,4 +48,83 @@ Los nombres de las variables se explican a si mismos, así que no hay mucho más
 (scroll-bar-mode -1)        ; Disable visible scrollbar
 (tool-bar-mode -1)          ; Disable the toolbar
 (tooltip-mode -1)           ; Disable tooltips
+(set-fringe-mode 10)        ; Give some breathing room
+(setq visible-bell t)
+#+END_SRC
+
+** Números en la líneas
+Los números de línea estan se habilitan de la siguiente forma.
+Algunos modos, como los terminales, es usual que no tengan números de línea en el buffer.
+
+#+BEGIN_SRC emacs-lisp
+;; Display line numbers
+(column-number-mode)
+(global-display-line-numbers-mode t)
+;; Disable line numbers for certain modes
+(dolist (mode '(eshell-mode-hook
+                term-mode-hook
+		vterm-mode-hook))
+  (add-hook mode (lambda () (display-line-numbers-mode 0))))
+#+END_SRC
+
+** Fuentes
+  Emacs permite configurar las fuentes de una manera bastante extensiva.
+  El siguiente bloque simplemente configura la fuente por defecto.
+
+  #+BEGIN_SRC emacs-lisp
+  ;; Font
+  (set-face-attribute 'default nil :font "Hack-11")
+  (set-frame-font "Hack-11" nil t)
+  #+END_SRC
+
+* Variables
+
+** Variable =PATH=
+  La variable =load-path= le dice a emacs donde encontrar código de lisp del que tomar funciones, etc.
+  Además, se actualiza la variable =PATH= para cargar ejecutables en =~/.local/bin/=.
+
+  #+BEGIN_SRC emacs-lisp
+  ;; Set PATH
+  (setenv "PATH" (concat (getenv "PATH") "~/.local/bin"))
+  (add-to-list 'load-path "~/.emacs.d/custom-elisp")
+  #+END_SRC
+
+** Variables locales
+Las variables locales son formas de decirle a emacs que cambie une variable para un solo archivo,
+el [[cblk-tangle-on-save][bloque de código al inicio]] de este documento es un ejemplo de una variable local.
+Lo siguiente se encarga de que las variables locales /siempre/ sean aceptadas,
+y de que el código en ellas siempre sea evaluado
+(podría ser peligroso si se ejecutan archivos de terceros).
+
+#+BEGIN_SRC emacs-lisp
+(setq enable-local-variables :all)
+(setq enable-local-eval t)
+#+END_SRC
+
+* Archivos de respaldo
+Emacs guarda, convenientemente, respaldos de todos los archivos que se editan.
+Personalmente, me molesta verlos en el mismo directorio que dichos archivos, así que los muevo todos a un solo lugar.
+
+#+BEGIN_SRC emacs-lisp
+(setq backup-directory-alist `(("." . "~/.saves")))
+#+END_SRC
+* Combinaciones de teclas para funcionalidades vanilla
+Lo siguiente cambia las combinaciones de teclas que activan ciertas funciones que vienen por defecto con emacs.
+Para ver las combinaciones de teclas asociadas a los paquetes, es necesario ir a esa sección más adelante.
+
+#+BEGIN_SRC emacs-lisp
+;; Make ESC quit prompts
+(global-set-key (kbd "<escape>") 'keyboard-escape-quit)
+;; Bind compile to F5 for C
+(global-set-key (kbd "<f5>") 'compile)
+;; Better bindings for buffer switching
+(global-set-key (kbd "C-ñ") 'previous-buffer)
+(global-set-key (kbd "C-ç") 'next-buffer)
+;; Better window movement
+(global-set-key (kbd "C-.") #'other-window)
+(global-set-key (kbd "C-,") #'prev-window)
+;; Do what i mean shortcuts
+(global-set-key (kbd "M-u") 'upcase-dwim)
+(global-set-key (kbd "M-l") 'downcase-dwim)
+(global-set-key (kbd "M-c") 'capitalize-dwim)
 #+END_SRC

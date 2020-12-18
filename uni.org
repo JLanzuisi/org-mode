@@ -26,4 +26,7 @@
 ** TODO Repasar contenidos del trimestre
    Repasar analisis
 
-** TODO Probar una tarea en org, asegurar que funcione antes del trimestre
+** DONE Probar una tarea en org, asegurar que funcione antes del trimestre
+   CLOSED: [2020-12-15 mar 13:52]
+
+** TODO Revisar que las referencias funcionen. Org ref.

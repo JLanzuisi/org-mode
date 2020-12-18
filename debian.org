@@ -9,9 +9,21 @@ Para solucionar esto se puede usar:
 + Guix (mas dificl)
 
 ** Casos especiales
-  *Youtube-dl y streamlink* se pueden instalar con pip3.
-
-*mpv* se puede usar el script mpv-build.
+*Youtube-dl y streamlink* se pueden instalar con pip3.
 
 *latex* se usa texlive directamente (ya descragado)
 
+** Lista de software
+
++ Firefox
++ Transmission
++ Calibre
++ VLC
++ emacs (compilar)
++ libreoffice
++ chromium
++ inkscape
++ emulación (retroarch + dolphin)
++ transmission
+
+* TODO Pasar las peliculas de la laptop
