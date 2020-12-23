@@ -10,15 +10,11 @@ Quizás tengan que ver con editores de texto, u otras cosas cercanas a programar
 ** TODO Buscar mas información
    Terminar tutorial de emacs. Documentación online.
 ** TODO Lista de juegos terminados en org mode. Poner enlaces.
-** TODO Investigar features mas avanzadas de helm
-** TODO Investigar elfeed y gnus (mail y noticias)
 ** TODO Investigar sobre ediff
 ** TODO Cambiar los programas de C a Org.
 ** TODO Makefile para compilar LaTeX
-** TODO Hacer esqueletos como plantillas de cosas de org
+** TODO Hacer plantillas de cosas de org, los prgramas de C y notas.
 ** TODO Compilar emacs en la tablet, sin x11, con modulos
-** DONE Charter y helvetica en HTML y LaTeX, con times math
-   CLOSED: [2020-12-16 mié 11:14]
 * LISP :lisp:
     
 * CS50 EdX :cs50:
@@ -31,3 +27,8 @@ Quizás tengan que ver con editores de texto, u otras cosas cercanas a programar
 ** TODO cambiar nombres de las repos en github a usar solo minúsculas
 ** TODO repo de text-files(renombrar) y
 ** TODO repo de c-files
+** GLPv3
+*** TODO Pasar todas las repos menos la del trabajo a la GLP.
+*** TODO Poner el license notice en cada archivo:
+   + Para los TeX, añadirlo en la plantilla de org mode, que haga tangle pero no se exporte
+   + Para los archivos de C, añadirlo en cada archivo org, quizas igual con plantillas

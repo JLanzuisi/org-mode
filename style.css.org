@@ -9,7 +9,7 @@
 #+HTML_HEAD: body {
 #+HTML_HEAD: margin-left: 22%;
 #+HTML_HEAD: margin-right: 22%;
-#+HTML_HEAD: font-family: "DejaVu Serif", "Georgia", serif;
+#+HTML_HEAD: font-family: "Bitstream Charter", "Charter", "Georgia", serif;
 #+HTML_HEAD: font-size: 1em;
 #+HTML_HEAD: line-height: 140%;
 #+HTML_HEAD: }
@@ -19,7 +19,7 @@
 #+HTML_HEAD: }
 #+HTML_HEAD: h1,h2,h3 {
 #+HTML_HEAD: font-family: "DejaVu Sans", "Verdana", sans;
-#+HTML_HEAD: font-weight: normal;
+#+HTML_HEAD: font-weight: lighter;
 #+HTML_HEAD: }
 #+HTML_HEAD: h1 {
 #+HTML_HEAD: font-size: 2em;

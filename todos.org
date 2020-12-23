@@ -2,6 +2,24 @@
 #+AUTHOR: Jhonny Lanzuisi.
 #+DATE: 2020.
 
+# ----LICENSE---
+# Copyright 2021 Jhonny Lanzuisi (jalb97@gmail.com)
+# More source files at github.com/JLanzuisi
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+# --------------
+
 * Juegos retro :juegos:retro: 
 ** RPGs en la SNES.
    Los dejé por ahora.
@@ -19,11 +37,10 @@
 ** TODO Peliculas, series, especiales de navidad: :ori:
    
    + Especiales de los simpsons
-   + Tokyo godfathers
    + Especial de sherk
-   + Mandalorian
-   + The boys 1 & 2
-   + Hilda 1 & 2
+   + The boys 2
+   + Hilda 2
+   + Kurosagua
 
 * Ori y an llamadas :ori: 
 ** TODO Pensar en ideas para poner en la cuenta del emprendimiento

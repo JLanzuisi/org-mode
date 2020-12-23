@@ -86,3 +86,25 @@ Archived entries from file /home/jhonny/git/org-mode/prog.org
   :ARCHIVE_TODO: DONE
   :ARCHIVE_ITAGS: prog emacs
   :END:
+
+* DONE Investigar features mas avanzadas de helm
+  CLOSED: [2020-12-18 vie 15:12]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2020-12-18 vie 15:12
+  :ARCHIVE_FILE: ~/git/org-mode/prog.org
+  :ARCHIVE_OLPATH: Emacs
+  :ARCHIVE_CATEGORY: prog
+  :ARCHIVE_TODO: DONE
+  :ARCHIVE_ITAGS: prog emacs
+  :END:
+
+* DONE Charter y helvetica en HTML y LaTeX, con times math
+  CLOSED: [2020-12-16 mié 11:14]
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2020-12-18 vie 15:12
+  :ARCHIVE_FILE: ~/git/org-mode/prog.org
+  :ARCHIVE_OLPATH: Emacs
+  :ARCHIVE_CATEGORY: prog
+  :ARCHIVE_TODO: DONE
+  :ARCHIVE_ITAGS: prog emacs
+  :END:

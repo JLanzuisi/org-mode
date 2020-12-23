@@ -7,6 +7,24 @@
 #+SETUPFILE: /home/jhonny/git/org-mode/style.css.org
 #+LATEX_HEADER: \lstset{language=Lisp}\asignatura{Emacs Lisp}
 
+# ----LICENSE---
+# Copyright 2021 Jhonny Lanzuisi (jalb97@gmail.com)
+# More source files at github.com/JLanzuisi
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+# --------------
+
 * Configurar emacs usando Org-mode
 
 La idea es configurar emacs usando org-mode.

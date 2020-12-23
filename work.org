@@ -14,5 +14,9 @@
    CLOSED: [2020-12-17 jue 10:14]
 ** DONE Revisar meld e ir añadiendo diferencias
    CLOSED: [2020-12-17 jue 10:14]
-** TODO Revisar con pagina epub checker
-** TODO Subir al github
+** DONE Revisar con pagina epub checker
+   CLOSED: [2020-12-19 sáb 19:03]
+** DONE Subir al github
+   CLOSED: [2020-12-19 sáb 19:03]
+* Ori
+** TODO Poner en el primer articulo bullet points en alguna parte.
