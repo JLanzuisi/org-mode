@@ -19,4 +19,5 @@
 ** DONE Subir al github
    CLOSED: [2020-12-19 sáb 19:03]
 * Ori
-** TODO Poner en el primer articulo bullet points en alguna parte.
+** DONE Poner en el primer articulo bullet points en alguna parte.
+   CLOSED: [2020-12-23 mié 18:24]

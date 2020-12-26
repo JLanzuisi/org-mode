@@ -5,7 +5,7 @@
 #+LATEX_CLASS: article
 #+PROPERTY: header-args :exports code :tangle ~/.emacs.d/init-test.el
 #+SETUPFILE: /home/jhonny/git/org-mode/style.css.org
-#+LATEX_HEADER: \lstset{language=Lisp}\asignatura{Emacs Lisp}
+#+LATEX_HEADER: \asignatura{Emacs Lisp}
 
 # ----LICENSE---
 # Copyright 2021 Jhonny Lanzuisi (jalb97@gmail.com)

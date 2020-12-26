@@ -30,10 +30,13 @@
 *** Terminar pikmin.
 
 * Navidades :varios:navid: 
-** TODO Pensar regalo para Oriana. :ori:
-*** TODO Una taza con diseño similar, preguntar a mama.
+** DONE Pensar regalo para Oriana.                                      :ori:
+   CLOSED: [2020-12-23 mié 18:23]
+*** DONE Una taza con diseño similar, preguntar a mama.
+    CLOSED: [2020-12-23 mié 18:23]
     Una taza con al de otters, investigar sobre ellas. 
-*** TODO Cuaderno lindo para el trimestre
+*** DONE Cuaderno lindo para el trimestre
+    CLOSED: [2020-12-23 mié 18:23]
 ** TODO Peliculas, series, especiales de navidad: :ori:
    
    + Especiales de los simpsons
@@ -47,7 +50,8 @@
 ** TODO Revisara utoras de la lista
 ** TODO Revisar libros de la lista que descargue:
    [ ] Pankhurst
-** TODO Equipaje de mano de ori. Confirmar!!!!! Llamar 0800 CONVIASA
+** DONE Equipaje de mano de ori. Confirmar!!!!! Llamar 0800 CONVIASA
+   CLOSED: [2020-12-23 mié 18:24]
 ** DONE Revisar cantante que esta destacada en el mesnaje de guasac
    CLOSED: [2020-12-07 lun 10:53]
 ** DONE Pasar videos de carlos a ori por telegram
@@ -57,3 +61,4 @@
 ** Steam
 * TODO Limpiar correos gmail
 * DONE Buscar "manufacturer refurbishded" hdd en ebay
+* Minecraft

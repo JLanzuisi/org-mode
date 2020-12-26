@@ -4,7 +4,8 @@
 #+FILETAGS: :uni:
 
 * Enero marzo 2021
-** TODO estar pendiente de la inscripciones
+** DONE estar pendiente de la inscripciones
+   CLOSED: [2020-12-23 mié 18:24]
    Materias a inscribir:
 
    + Analisis 2 (segura). Lun, Mier, Vier, 3-4
