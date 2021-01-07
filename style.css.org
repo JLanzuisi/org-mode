@@ -19,16 +19,19 @@
 #+HTML_HEAD: }
 #+HTML_HEAD: h1,h2,h3 {
 #+HTML_HEAD: font-family: "DejaVu Sans", "Verdana", sans;
-#+HTML_HEAD: font-weight: lighter;
 #+HTML_HEAD: }
 #+HTML_HEAD: h1 {
 #+HTML_HEAD: font-size: 2em;
+#+HTML_HEAD: font-weight: lighter;
 #+HTML_HEAD: }
 #+HTML_HEAD: h2 {
 #+HTML_HEAD: font-size: 1.5em;
+#+HTML_HEAD: font-weight: lighter;
+#+HTML_HEAD: line-height: 145%;
 #+HTML_HEAD: }
 #+HTML_HEAD: h3 {
 #+HTML_HEAD: font-size: 1em;
+#+HTML_HEAD: font-weight: normal;
 #+HTML_HEAD: }
 #+HTML_HEAD: @media only screen and (max-width: 800px) {
 #+HTML_HEAD:   body {

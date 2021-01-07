@@ -97,7 +97,7 @@ Se usan por defecto números proporcionales y "oldstyle".
 \setmainfont{New Computer Modern Book}
 \defaultfontfeatures{Scale=MatchLowercase}
 \setsansfont{Public Sans}
-\setmonofont{Average Mono}
+\setmonofont{Hack}
 \newcommand{\headfont}{\sffamily}
 #+END_SRC
 
@@ -159,8 +159,8 @@ La línea que especifica el lugar del archi =.bib= debe ser editada, evidentemen
 [
 backend=biber,
 backref=true,
-citestyle=authoryear-comp,
-style=chicago-authordate ,
+citestyle=authortitle,
+bibstyle=authortitle,
 sorting=ynt
 ]
 {biblatex}

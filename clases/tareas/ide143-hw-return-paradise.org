@@ -1,0 +1,49 @@
+#+TITLE: Answers to the questions on Return to Paradise.
+#+SUBTITLE: First homework.
+#+AUTHOR: Jhonny Lanzuisi
+#+EMAIL: jalb97@gmail.com
+#+TAGS: :uni::
+#+LANGUAGE: es
+#+OPTIONS: toc:2
+#+LATEX_CLASS: article
+#+HTML_MATHJAX: align: left indent: 5em tagside: left font: "STIX General"
+#+HTML_MATHJAX: cancel.js noErrors.js
+#+SETUPFILE: /home/jhonny/git/org-mode/style.css.org
+#+LATEX_HEADER: \asignatura{El Mundo de la Literatura en Inglés -- IDE143.}
+
+# ----LICENSE---
+# Copyright 2021 Jhonny Lanzuisi (jalb97@gmail.com)
+# More source files at github.com/JLanzuisi
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+# --------------
+
+* Describe Annie and Mrs. Rogers.
+
+Siguiendo a cite:apostol_mathematical_1974, en su capitulo de las futuasionas cuanticas, 
+vemos que
+
+* Why has Annie gone to their house?
+
+hehehehe cite:munkres_topology_2014
+
+* What is Mrs. Rogers attitude towards her?
+
+* Do you notice any difference in the way they speak?
+
+* Describe the differences between Jean and Carlton.
+
+* Why do you think the play is called Return to Paradise?
+
+\printbibliography

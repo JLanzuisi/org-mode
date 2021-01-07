@@ -28,7 +28,7 @@ Quizás tengan que ver con editores de texto, u otras cosas cercanas a programar
 ** TODO repo de text-files(renombrar) y
 ** TODO repo de c-files
 ** GLPv3
-*** TODO Pasar todas las repos menos la del trabajo a la GLP.
+*** TODO Pasar todas las repos menos la del trabajo a la GPL.
 *** TODO Poner el license notice en cada archivo:
    + Para los TeX, añadirlo en la plantilla de org mode, que haga tangle pero no se exporte
    + Para los archivos de C, añadirlo en cada archivo org, quizas igual con plantillas

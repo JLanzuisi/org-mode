@@ -37,7 +37,7 @@
     Una taza con al de otters, investigar sobre ellas. 
 *** DONE Cuaderno lindo para el trimestre
     CLOSED: [2020-12-23 mié 18:23]
-** TODO Peliculas, series, especiales de navidad: :ori:
+** TODO Peliculas, series, especiales de navidad:                       :ori:
    
    + Especiales de los simpsons
    + Especial de sherk
@@ -46,9 +46,8 @@
    + Kurosagua
 
 * Ori y an llamadas :ori: 
-** TODO Pensar en ideas para poner en la cuenta del emprendimiento
 ** TODO Revisara utoras de la lista
-** TODO Revisar libros de la lista que descargue:
+** Revisar libros de la lista que descargue:
    [ ] Pankhurst
 ** DONE Equipaje de mano de ori. Confirmar!!!!! Llamar 0800 CONVIASA
    CLOSED: [2020-12-23 mié 18:24]

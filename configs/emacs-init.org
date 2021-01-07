@@ -32,12 +32,14 @@ Org-mode permite escribir el código mezclado con texto,
 de tal forma que documentar el código es más sencillo.
 Además, es más fácil recordar en el futuro que significa alguna pieza de la contiguración si puedo leer lo que pensaba en el momento.
 
-El archivo =init.el= de configración se crea a partir de un =emcas-init.org= usando =org-babel-tangle=.
+El archivo =init.el= de configuración se crea a partir de un =emacs-init.org= usando =org-babel-tangle=.
 Por ahora, no es más que una recopilación de cosas que tomo de otras configuraciones o que descubro en el manual de emacs.
 
 Para poder crear el archivo =init.el=, uso la siguiente linea al inicio del archivo =.org=,
 que permite cargar [[* Variables locales][variables locales]]. 
 Con esta linea se ejecuta la operación de tangle cada vez que se guarda el archivo.
+Y con esto logro que al guardar el archivo =.org= los cambios de guarden también en el =.el=,
+si tener que hacerlo manualmente.
 
 #+NAME: cblk-tangle-on-save
 #+BEGIN_SRC emacs-lisp :tangle no
@@ -58,7 +60,14 @@ pues establece ciertas opciones que quiero por defecto en practicamente todos lo
 #+END_SRC
 
 * Apariencia general
-Estos primeros comando se encargar de desactivar ciertos elementos que vienen por defecto en la interfaz de emacs.
+Estos comandos se encargar de desactivar ciertos elementos que vienen por defecto en la interfaz de emacs.
+
+#+BEGIN_SRC emacs-lisp
+;; Disable welcome screen
+(setq inhibit-startup-message t
+      initial-buffer-choice  nil)
+#+END_SRC
+
 Los nombres de las variables se explican a si mismos, así que no hay mucho más que decir.
 
 #+BEGIN_SRC emacs-lisp
@@ -67,7 +76,7 @@ Los nombres de las variables se explican a si mismos, así que no hay mucho más
 (tool-bar-mode -1)          ; Disable the toolbar
 (tooltip-mode -1)           ; Disable tooltips
 (set-fringe-mode 10)        ; Give some breathing room
-(setq visible-bell t)
+(setq visible-bell t)       ; Set bell to visible, not sound
 #+END_SRC
 
 ** Números en la líneas
@@ -128,8 +137,9 @@ Personalmente, me molesta verlos en el mismo directorio que dichos archivos, as�
 #+END_SRC
 * Combinaciones de teclas para funcionalidades vanilla
 Lo siguiente cambia las combinaciones de teclas que activan ciertas funciones que vienen por defecto con emacs.
-Para ver las combinaciones de teclas asociadas a los paquetes, es necesario ir a esa sección más adelante.
+Para ver las combinaciones de teclas asociadas a los paquetes, es necesario ir a la sección correspondiente.
 
+#+NAME:src-general-shortcuts
 #+BEGIN_SRC emacs-lisp
 ;; Make ESC quit prompts
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
@@ -145,4 +155,106 @@ Para ver las combinaciones de teclas asociadas a los paquetes, es necesario ir a
 (global-set-key (kbd "M-u") 'upcase-dwim)
 (global-set-key (kbd "M-l") 'downcase-dwim)
 (global-set-key (kbd "M-c") 'capitalize-dwim)
+#+END_SRC
+
+Lo siguiente es una mejor manera de cambiar entre las ventanas abiertas de emacs.
+
+#+BEGIN_SRC emacs-lisp
+;; Better window movement
+(global-set-key (kbd "C-.") #'other-window)
+(global-set-key (kbd "C-,") #'prev-window)
+
+(defun prev-window ()
+  (interactive)
+  (other-window -1))
+#+END_SRC
+
+* Configuraciones para código en C
+
+Al escribir código en C,
+emacs posee un modo que se encarga automáticamente de casi todo lo que necesito.
+La identación es una de las cosas que me interesa cambiar.
+
+Con el siguiente bloque se configura el estilo de la identación
+y también se activa la identación automática.
+Todo esto junto con el atajo para ='compile=,
+configuran el entorno que uso para escribir en C.
+
+#+BEGIN_SRC emacs-lisp
+; C stuff
+;; Linux line indent style
+(setq c-default-style "linux"
+          c-basic-offset 4)
+;; Auto indent
+(add-hook 'c-mode-common-hook '(lambda () (c-toggle-auto-state 1)))
+#+END_SRC
+
+* Otros
+
+No insertar una linea al final de las plantillas.
+
+#+BEGIN_SRC emacs-lisp
+;; No line after templates
+(setq mode-require-final-newline nil)
+#+END_SRC
+
+* Configuración inicial para usar paquetes
+
+Comenzamos cargando el administrador de paquetes.
+
+#+BEGIN_SRC emacs-lisp
+(require 'package)
+#+END_SRC
+
+Sigue la configuración de los sitios web de los que descargar los paquetes.
+
+#+BEGIN_SRC emacs-lisp
+(setq package-archives '(("melpa" . "https://melpa.org/packages/")
+                         ("org" . "https://orgmode.org/elpa/")
+                         ("elpa" . "https://elpa.gnu.org/packages/")))
+#+END_SRC
+
+Y, si no hay descripciones de los paquetes, refrescar las descripciones de todas las fuentes.
+
+#+BEGIN_SRC emacs-lisp
+(package-initialize)
+ (unless package-archive-contents
+   (package-refresh-contents))
+#+END_SRC
+
+La sección =custom= suele ocupar mucho espacio y no ser muy fácil de leer,
+por lo que prefiero colocarlo en otro archivo fuera de la configuración principal.
+El siguiente bloque se encarga de esto.
+
+#+BEGIN_SRC emacs-lisp
+(setq custom-file "~/.emacs.d/emacs-custom")
+(if (file-exists-p custom-file)
+    (load custom-file))
+#+END_SRC
+
+** Configuración de =use-package=.
+El paquete =use-package= permite cargar otros paquetes de una forma ordenada y fácil de leer.
+Además el =setq= en el bloque siguiente se encarga de que los paquetes siempre sean descargados si no se encuentran en la instalación local.
+Este paquete no se encarga de administrar el resto de paquetes.
+Para más información veáse la documentación oficial.
+
+#+BEGIN_SRC emacs-lisp
+(require 'use-package)
+(setq use-package-always-ensure t)
+#+END_SRC
+
+* Tema de Emacs
+
+Uso el tema =modus-operandi= en su versión clara.
+Desactivar el subyarado de los enlaces es algo esencial.
+El resto es opcional, y la documentación oficial hace un buen trabajo en explicarlo.
+
+#+BEGIN_SRC emacs-lisp
+;; Theme
+(use-package modus-themes
+  :config
+  (load-theme 'modus-operandi t)
+  (setq modus-themes-syntax 'faint)
+  (setq modus-themes-links 'no-underline)
+  (setq modus-themes-completions 'opinionated))
 #+END_SRC

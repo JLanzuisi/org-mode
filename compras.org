@@ -1,0 +1,53 @@
+#+TITLE: Compras y cualquier cosa relacionada
+#+AUTHOR: Jhonny Lanzuisi.
+#+DATE: 2021.
+#+FILETAGS: :buy:
+
+# ----LICENSE---
+# Copyright 2021 Jhonny Lanzuisi (jalb97@gmail.com)
+# More source files at github.com/JLanzuisi
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+# --------------
+
+* Electronicos
+
++ Nokia 3.1 A, como unos 100$ ma o menos.
++ Power banks, mínimo 10000mah
++ Cornetica
++ Teclado pa la table? Adaptador?
++ Cargador nuevo, telefono ori. 5V/3A. A lo mejor el belkin que hemos visto por ahi.
+
+** Compras telcentro:
+    (sin comisiones de paypal)
+    | Productos      | Precios ($) |
+    | Nokia 3.1 A    |          95 |
+    | Powerbank (x4) |          60 |
+    | Micro sd 64gb  |          15 |
+    | TOTAL          |         170 |
+    #+TBLFM: @5$2=vsum(@2..@4)
+
+* Mercados
+
+** Margarita
+
+*** TODO 5 en sigo, 5 en Nova, 2.5 en rio, 5 carniceria. Total:17.5 (mié dic 30 16:39:29 -04 2020)
+
+*** TODO 8 en nova, 2 en rio. Total: 10 (mié ene  6 20:32:43 -04 2021)
+
+
+* DONE preguntar cuanto se gasto en rio y la carniceria
+  CLOSED: [2020-12-31 jue 11:59]
+
+

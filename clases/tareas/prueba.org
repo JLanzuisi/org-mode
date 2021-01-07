@@ -13,8 +13,6 @@
 #+SETUPFILE: /home/jhonny/git/org-mode/style.css.org
 #+LATEX_HEADER: \asignatura{Algoritmos y estructuras}
 
-* TODO A test
-
 * Conjuntos de números
 
 ** Reales y racionales
