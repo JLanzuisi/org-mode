@@ -42,9 +42,14 @@
 
 ** Margarita
 
-*** TODO 5 en sigo, 5 en Nova, 2.5 en rio, 5 carniceria. Total:17.5 (mié dic 30 16:39:29 -04 2020)
+*** TODO Por pagar 13.5
 
-*** TODO 8 en nova, 2 en rio. Total: 10 (mié ene  6 20:32:43 -04 2021)
+*** 5 en sigo, 5 en Nova, 2.5 en rio, 5 carniceria. Total:17.5 (mié dic 30 16:39:29 -04 2020)
+
+*** 8 en nova, 2 en rio. Total: 10 (mié ene  6 20:32:43 -04 2021)
+
+*** 14$ menos de la cuenta por pago del condominio (vie ene  8 17:38:18 -04 2021)
+
 
 
 * DONE preguntar cuanto se gasto en rio y la carniceria

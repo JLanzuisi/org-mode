@@ -31,12 +31,20 @@
 
 * Describe Annie and Mrs. Rogers.
 
-Siguiendo a cite:apostol_mathematical_1974, en su capitulo de las futuasionas cuanticas, 
-vemos que
+Annie and Mrs. Rogers are two old women,
+who knew each other and are,
+according to the events protrayed in the play by cite:nla.cat-vn2311401,
+meeting again after many years.
+
+Annie appears wearing her old cruch dress `shabby but clean',
+as is described in the play.
+Mrs. Rogers, on the other hand, is wearing house slippers and has her hair in curlers.
+
+Annie also seems to be slimmer than Mrs. Rogers,
+who is described as `looking fat'. 
 
 * Why has Annie gone to their house?
 
-hehehehe cite:munkres_topology_2014
 
 * What is Mrs. Rogers attitude towards her?
 
@@ -47,3 +55,4 @@ hehehehe cite:munkres_topology_2014
 * Why do you think the play is called Return to Paradise?
 
 \printbibliography
+# #+BIBLIOGRAPHY: 
