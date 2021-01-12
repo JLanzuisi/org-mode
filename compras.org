@@ -28,7 +28,6 @@
 + Teclado pa la table? Adaptador?
 
 ** Compras telcentro:
-    (sin comisiones de paypal, pues no la cobraron)
     | Productos        | Precios ($) |
     | Nokia 3.1 A      |          95 |
     | Pendrive64gb (2) |          38 |
