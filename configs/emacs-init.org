@@ -24,11 +24,15 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 # --------------
+‖
+Las porciones del tecto encerradas en doble línea vertical,
+como esta,
+tratan sobre la forma en que se implementa exta configuración en =org-mode=.
+Si lo único que le interesa al lector es la configuración de emacs,
+pueden ignorarse estas partes del texto sin problemas.
 
-* Configurar emacs usando Org-mode
-
-La idea es configurar emacs usando org-mode.
-Org-mode permite escribir el código mezclado con texto,
+La idea es configurar emacs usando =org-mode=.
+=org-mode= permite escribir el código mezclado con texto,
 de tal forma que documentar el código es más sencillo.
 Además, es más fácil recordar en el futuro que significa alguna pieza de la contiguración si puedo leer lo que pensaba en el momento.
 
@@ -47,11 +51,13 @@ si tener que hacerlo manualmente.
 #+END_SRC
 
 Además, la siguiente linea hace que sea más conveniente escribir el código en el archivo =.org=,
-pues establece ciertas opciones que quiero por defecto en practicamente todos los bloques de código.
 
 #+BEGIN_SRC emacs-lisp :tangle no
 #+PROPERTY: header-args :exports code :tangle ~/.emacs.d/init-test.el
 #+END_SRC
+
+pues establece ciertas opciones que quiero por defecto en practicamente todos los bloques de código.
+‖
 
 #+BEGIN_SRC emacs-lisp :exports none
   ;; This init.el file is tangled from an Org file.
@@ -245,7 +251,7 @@ Para más información veáse la documentación oficial.
 
 * Tema de Emacs
 
-Uso el tema =modus-operandi= en su versión clara.
+Uso el tema =modus= en su versión clara.
 Desactivar el subyarado de los enlaces es algo esencial.
 El resto es opcional, y la documentación oficial hace un buen trabajo en explicarlo.
 
@@ -257,4 +263,44 @@ El resto es opcional, y la documentación oficial hace un buen trabajo en explic
   (setq modus-themes-syntax 'faint)
   (setq modus-themes-links 'no-underline)
   (setq modus-themes-completions 'opinionated))
+#+END_SRC
+
+* El adimistrador de archivos =dired=
+
+=Dired= es un componente que viene con emacs por defecto.
+Es mi administrador de archivos cuando estoy editando textos.
+Lo único que añado a la funcionalidad original de =dired= son dos cosas:
+
+1. Una forma de ir rápidamente de un archivo a su ubicación en el sistema de archivos,usando =dired=, con la función =dired-jump=; y 
+
+2. Unas opciones extras a la forma en que =dired= muestra los archivos, para que agrupe primero las carpetas (es básicamente darle opciones al comando de UNIX =ls= que =dired= utiliza).
+
+#+BEGIN_SRC emacs-lisp
+;; Dired
+(use-package dired
+  :ensure nil
+  :commands (dired dired-jump)
+  :custom ((dired-listing-switches "-agho --group-directories-first"))
+  :bind
+  ("C-x C-j" . dired-jump))
+#+END_SRC
+
+* Org Mode
+Creo que es imposible resumir lo que =org-mode= /es/.
+Personalmente lo uso para casi todo:
+archivos de configuración de mi sistema,
+escribir artículos de todo tipo,
+organizar mis tareas por hacer y
+mantener notas de las cosas que quiero hacer y las que he completado.
+
+La configuración de =org-mode= es tan importante para mi uso de Emacs
+que es de lejos la parte mas larga de la configuración.
+Hasta tal punto es así que tuve que separarla en varias partes,
+dejando cosas que tienen que ver con LaTeX en un archivo separado.
+
+La siguiente incantación inicia la configuración de =org-mode=.
+
+#+BEGIN_SRC emacs-lisp
+;; Org-mode
+(use-package org
 #+END_SRC

@@ -97,7 +97,7 @@ Se usan por defecto números proporcionales y "oldstyle".
 \setmainfont{New Computer Modern Book}
 \defaultfontfeatures{Scale=MatchLowercase}
 \setsansfont{Public Sans}
-\setmonofont{Hack}
+\setmonofont{Latin Modern Mono}
 \newcommand{\headfont}{\sffamily}
 #+END_SRC
 

@@ -23,26 +23,23 @@
 
 * Electronicos
 
-+ Nokia 3.1 A, como unos 100$ ma o menos.
 + Power banks, mínimo 10000mah
-+ Cornetica
++ Cornetica (Hecho. 15$. 1 mes garantia)
 + Teclado pa la table? Adaptador?
-+ Cargador nuevo, telefono ori. 5V/3A. A lo mejor el belkin que hemos visto por ahi.
 
 ** Compras telcentro:
-    (sin comisiones de paypal)
-    | Productos      | Precios ($) |
-    | Nokia 3.1 A    |          95 |
-    | Powerbank (x4) |          60 |
-    | Micro sd 64gb  |          15 |
-    | TOTAL          |         170 |
-    #+TBLFM: @5$2=vsum(@2..@4)
+    (sin comisiones de paypal, pues no la cobraron)
+    | Productos        | Precios ($) |
+    | Nokia 3.1 A      |          95 |
+    | Pendrive64gb (2) |          38 |
+    | TOTAL            |         133 |
+    #+TBLFM: @4$2=vsum(@2..@3)
 
 * Mercados
 
 ** Margarita
 
-*** TODO Por pagar 13.5
+*** TODO Por pagar 22.75
 
 *** 5 en sigo, 5 en Nova, 2.5 en rio, 5 carniceria. Total:17.5 (mié dic 30 16:39:29 -04 2020)
 
@@ -50,9 +47,19 @@
 
 *** 14$ menos de la cuenta por pago del condominio (vie ene  8 17:38:18 -04 2021)
 
+*** 9.25 en rio (lun ene 11 13:53:34 -04 2021)
+
 
 
 * DONE preguntar cuanto se gasto en rio y la carniceria
   CLOSED: [2020-12-31 jue 11:59]
 
 
+* Recolección de mis dineros.
+** PayPal
+Del trabajo del epub de graham se pago el nokia de telcentro.
+
+** Efectivo (aparatmento)
+Tome 100 para mi cartera, sin usar aún.
+
+** Otros

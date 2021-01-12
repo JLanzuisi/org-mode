@@ -10,7 +10,8 @@ Quizás tengan que ver con editores de texto, u otras cosas cercanas a programar
 ** TODO Buscar mas información
    Terminar tutorial de emacs. Documentación online.
 ** TODO Lista de juegos terminados en org mode. Poner enlaces.
-** TODO Investigar sobre ediff
+** DONE Investigar sobre ediff
+   CLOSED: [2021-01-10 dom 17:07]
 ** TODO Cambiar los programas de C a Org.
 ** TODO Makefile para compilar LaTeX
 ** TODO Hacer plantillas de cosas de org, los prgramas de C y notas.

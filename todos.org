@@ -37,7 +37,8 @@
     Una taza con al de otters, investigar sobre ellas. 
 *** DONE Cuaderno lindo para el trimestre
     CLOSED: [2020-12-23 mié 18:23]
-** TODO Peliculas, series, especiales de navidad:                       :ori:
+** DONE Peliculas, series, especiales de navidad:                       :ori:
+   CLOSED: [2021-01-10 dom 17:08]
    
    + Especiales de los simpsons
    + Especial de sherk

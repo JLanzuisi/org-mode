@@ -30,4 +30,5 @@
 ** DONE Probar una tarea en org, asegurar que funcione antes del trimestre
    CLOSED: [2020-12-15 mar 13:52]
 
-** TODO Revisar que las referencias funcionen. Org ref.
+** DONE Revisar que las referencias funcionen. Org ref.
+   CLOSED: [2021-01-10 dom 17:08]
