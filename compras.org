@@ -23,11 +23,12 @@
 
 * Electronicos
 
-+ Power banks, mínimo 10000mah
++ Power banks, mínimo 10000mah. 24$, Oriana pago con PayPal.
 + Cornetica (Hecho. 15$. 1 mes garantia)
-+ Teclado pa la table? Adaptador?
++ Adaptador 4$ USB tipo a USB micro
 
 ** Compras telcentro:
+
     | Productos        | Precios ($) |
     | Nokia 3.1 A      |          95 |
     | Pendrive64gb (2) |          38 |
@@ -35,30 +36,22 @@
     #+TBLFM: @4$2=vsum(@2..@3)
 
 * Mercados
-
 ** Margarita
-
-*** TODO Por pagar 22.75
-
+*** TODO Por pagar 30.57
 *** 5 en sigo, 5 en Nova, 2.5 en rio, 5 carniceria. Total:17.5 (mié dic 30 16:39:29 -04 2020)
-
 *** 8 en nova, 2 en rio. Total: 10 (mié ene  6 20:32:43 -04 2021)
-
 *** 14$ menos de la cuenta por pago del condominio (vie ene  8 17:38:18 -04 2021)
-
 *** 9.25 en rio (lun ene 11 13:53:34 -04 2021)
-
-
-
+*** 5.57 en pescado y 2.25 en sigo (Wed Jan 13 15:21:06 -04 2021)
 * DONE preguntar cuanto se gasto en rio y la carniceria
   CLOSED: [2020-12-31 jue 11:59]
 
-
 * Recolección de mis dineros.
 ** PayPal
+
 Del trabajo del epub de graham se pago el nokia de telcentro.
 
-** Efectivo (aparatmento)
-Tome 100 para mi cartera, sin usar aún.
-
+** Efectivo (apartamento)
+*** Primeros 100$
+**** 20$ en farmatodo y 20$ en sushi (Wed Jan 13 15:21:06 -04 2021)
 ** Otros
