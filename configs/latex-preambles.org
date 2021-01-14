@@ -1,12 +1,11 @@
 # -*- eval: (add-hook 'after-save-hook (lambda ()(org-babel-tangle)) nil t) -*-
-#+TITLE: Preámbulo de LaTeX (Artículo)
-#+SUBTITLE: Una configuración que usa la clase article y LuaLaTeX
+#+TITLE: Preámbulos de LaTeX
+#+SUBTITLE: Una configuración que usa las clases article,book y LuaLaTeX
 #+AUTHOR: Jhonny Lanzuisi
 #+TAGS: :latex:preamble:
-#+PROPERTY: header-args :exports code :tangle ~/git/LaTeX-University/preamble-article.tex
+#+PROPERTY: header-args :eval never :exports code :noweb tangle
 #+SETUPFILE: /home/jhonny/git/org-mode/style.css.org
 #+LATEX_HEADER: \asignatura{Tipografía en TeX}
-
 # LICENSE: See license notice bellow
 
 #+BEGIN_SRC latex :exports none
@@ -34,10 +33,36 @@
 %--------------
 #+END_SRC
 
+Este archivo explica mi configuración de LaTeX.
+La idea es usar el estilo de la "programación letrada",
+por lo que la prosa y los bloques de código se mezclan.
+
+‖
+Las herramientas utilizadas para lograr esta mezcla de código y texto
+son Emacs y Org.
+Las porciones del texto, como esta, que estan encerradas en doble barra vertical
+hablan sobre cosas que tienen que ver con este sistema de emacs+org
+y no de la configuración de LaTeX.
+
+Además de las herramientas mencionadas antes,
+parte de la sintanxis y el estilo pronvienen del sistema =WEB=
+inventado por Don Knuth.
+‖
+
+En LaTeX solo me han hecho falta dos tipos de documentos,
+los que usan como base la clase =article= y los que usan la clase =book=.
+Como ambos comparten partes del código,
+es pues sensato que ambos preámbulos sean descritos en este archivo.
+
+Todos los preambulos que se generan de este archivo
+pueden encontrarse de forma íntegra al final del documento,
+en caso de que se quiera hacer referencia al código directamente.
+
 * Configuraciones varias de TeX
 Esta parte hace que TeX no reporte overfull (o underfull) boxes si son muy pequeñas.
 Además, hace la marca de una overfull más grande, para que sea más fácil de ver
 
+#+NAME:misc-tex-config
 #+BEGIN_SRC latex
 \hfuzz1pc
 \overfullrule=2cm
@@ -46,6 +71,7 @@ Además, hace la marca de una overfull más grande, para que sea más fácil de 
 * Configuración de idioma
 Aquí de configura el español, junto con una opción para que los párrafos que siguen a un título no estén identados.
 
+#+NAME:language-babel
 #+BEGIN_SRC latex
 \usepackage[spanish,es-noindentfirst]{babel}
 \usepackage{csquotes}
@@ -54,6 +80,7 @@ Aquí de configura el español, junto con una opción para que los párrafos que
 * Dimensiones de la página
 Los márgenes se configuran aquí. Junto con el tamaño del papel, actualmente en carta.
 
+#+NAME:page-size-article
 #+BEGIN_SRC latex
 \usepackage
 [
@@ -70,6 +97,14 @@ Los márgenes se configuran aquí. Junto con el tamaño del papel, actualmente e
 #+END_SRC
 
 * Tipografías (texto y matemáticas)
+
+** Tipografías compartidas
+  :PROPERTIES:
+  :header-args: :noweb-ref fonts-common :eval never
+  :END:
+
+Esta sección describe las fuentes que ambas clases comparten.
+
 Primero cargamos los paquetes de la AMS para tener algunos símbolos y entornos útiles.
 También se definen algunos operadores.
 
@@ -98,8 +133,9 @@ Se usan por defecto números proporcionales y "oldstyle".
 \defaultfontfeatures{Scale=MatchLowercase}
 \setsansfont{Public Sans}
 \setmonofont{Latin Modern Mono}
-\newcommand{\headfont}{\sffamily}
 #+END_SRC
+
+
 
 Algo de espacio entre las lineas. El comando =\frenchspacing= hace que LaTeX coloque un solo espacio después de los puntos.
 
@@ -121,7 +157,22 @@ Y por último, ajustes microtipográficos.
 \usepackage[final]{microtype}
 #+END_SRC
 
+** Especifico de los artículos
+
+La fuente de los títulos viene dada por el siguiente bloque.
+
+#+NAME:fonts-article-headfont
+#+BEGIN_SRC latex
+\newcommand{\headfont}{\sffamily}
+#+END_SRC
+
 * Paquetes varios
+
+** Paquetes compartidos
+  :PROPERTIES:
+  :header-args: :noweb-ref packages-common  :eval never
+  :END:
+
 Primero, un línea que permite cargar las imágenes del documente según hagan falta.
 Esto se hace pasando la opción "borrador" al paquete que se encarga de las imágenes.
 Luego, una opción para poder usar los nombres de los colores en =xcolor=.
@@ -149,6 +200,10 @@ La mayoría son fáciles de entender, en cualquier caso chequeen la documentaci�
 #+END_SRC
 
 * Referencias y bibliografía
+  :PROPERTIES:
+  :header-args: :noweb-ref bib-common  :eval never
+  :END:
+
 El siguiente bloque configura el estylo de la bibliografía,
 y además especifica el comando =biber= para procesar los archivos,
 evidentemente hará falat tener =biber= instalado para usarlo.
@@ -187,6 +242,10 @@ citecolor=\linkcolor
 #+END_SRC
 
 * Notas al márgen
+  :PROPERTIES:
+  :header-args: :noweb-ref margin-notes-article  :eval never
+  :END:
+
 Esta parte define los comandos para añadir notas al margen.
 Primero, un nuevo comando que sirve como "variable" para elegir la fuente a usar en el margen =marfont=.
 
@@ -230,6 +289,10 @@ Por último, que el comando =footnote= sea lo mismo que =nota=, para que el docu
 #+END_SRC
 
 * Listas
+  :PROPERTIES:
+  :header-args: :noweb-ref lists-common  :eval never
+  :END:
+
 Este bloque se encarga de la apriencia de las listas, nada mas.
 
 #+BEGIN_SRC latex
@@ -484,3 +547,48 @@ Ahora, los entornos numerados.
 \newtheorem{theorem}{Teorema}
 }
 #+END_SRC
+
+* Los preambulos completos
+
+Esta sección reproduce los archivos
+cuyas partes han sido descritas y explicadas anteriormente.
+
+‖
+En el archivo =.org= esto es bastanet sencillo de lograr.
+Simplemente hace falta crear un bloque =src= que contiene lo siguiente:
+
+#+BEGIN_SRC
+<<first-keyword>>
+
+<<second-keyword>>
+#+END_SRC
+
+Donde los =*-keyword= son los nombres de los bloques de código que se han de insertar.
+Esto junto con la opción =:noweb yes=
+permite crear el archivo =.tex= en el disco que se usará para compilar LaTeX
+y al mismo tiempo coloca una copia de dicho archivo en el documento exportado.
+‖
+
+** Articulos
+
+#+NAME:article-preamble
+#+BEGIN_SRC latex :noweb yes :tangle ~/git/LaTeX-University/preamble-article-test.tex 
+<<misc-tex-config>>
+
+<<language-babel>>
+
+<<page-size-article>>
+
+<<fonts-common>>
+<<fonts-article-headfont>>
+
+<<packages-common>>
+
+<<bib-common>>
+
+<<margin-notes-article>>
+
+<<lists-common>>
+#+END_SRC
+
+** Libros
