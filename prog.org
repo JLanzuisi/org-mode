@@ -16,9 +16,6 @@ Quizás tengan que ver con editores de texto, u otras cosas cercanas a programar
 ** TODO Hacer plantillas de cosas de org, los prgramas de C y notas.
 ** TODO Compilar emacs en la tablet, sin x11, con modulos
 * LISP :lisp:
-
-    
-
 * CS50 EdX :cs50:
 ** TODO Ver videos de la semana 3
 ** TODO Hacer segundo ejercicio de la semana 3
@@ -37,4 +34,6 @@ Quizás tengan que ver con editores de texto, u otras cosas cercanas a programar
    + Para los TeX, añadirlo en la plantilla de org mode, que haga tangle pero no se exporte
    + Para los archivos de C, añadirlo en cada archivo org, quizas igual con plantillas
 
-** TODO Poner READMEs en repo de org
+** DONE Poner READMEs en repo de org
+CLOSED: [2021-01-16 Sat 19:56]
+
