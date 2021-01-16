@@ -11,10 +11,6 @@ Quizás tengan que ver con editores de texto, u otras cosas cercanas a programar
 
    Terminar tutorial de emacs. Documentación online.
 
-** TODO Lista de juegos terminados en org mode. Poner enlaces.
-** DONE Investigar sobre ediff
-   CLOSED: [2021-01-10 dom 17:07]
-
 ** TODO Cambiar los programas de C a Org.
 ** TODO Makefile para compilar LaTeX
 ** TODO Hacer plantillas de cosas de org, los prgramas de C y notas.
@@ -41,4 +37,4 @@ Quizás tengan que ver con editores de texto, u otras cosas cercanas a programar
    + Para los TeX, añadirlo en la plantilla de org mode, que haga tangle pero no se exporte
    + Para los archivos de C, añadirlo en cada archivo org, quizas igual con plantillas
 
-** TODO Poner READMEs en org
+** TODO Poner READMEs en repo de org

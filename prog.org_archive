@@ -108,3 +108,16 @@ Archived entries from file /home/jhonny/git/org-mode/prog.org
   :ARCHIVE_TODO: DONE
   :ARCHIVE_ITAGS: prog emacs
   :END:
+
+* TODO Lista de juegos terminados en org mode. Poner enlaces.
+  :PROPERTIES:
+  :ARCHIVE_TIME: 2021-01-16 sáb 18:36
+  :ARCHIVE_FILE: ~/git/org-mode/prog.org
+  :ARCHIVE_OLPATH: Emacs
+  :ARCHIVE_CATEGORY: prog
+  :ARCHIVE_TODO: DONE
+  :ARCHIVE_ITAGS: prog emacs
+  :END:
+* DONE Investigar sobre ediff
+  CLOSED: [2021-01-10 dom 17:07]
+

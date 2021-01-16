@@ -1,0 +1,94 @@
+* Org for.. Everything!
+
+Org, being the huge thing it is, is hard to describe.
+It is thus also hard to concretely explain all that can be done with it.
+
+All I can say is that I have for main purposes for it:
+
++ My agenda. I keep track of things I have to do, and things I've done.
+  The amount of features I use in this area is a really small subset of the total amount of things org allows one to do.
++ The configuration of my system (in the future) and configuration files in general.
+  For now, Org takes care of my LaTeX templates, and my Emacs configuration.
+  The plan for the future is to extend this to as many configuration files as possible,
+  culminating in something like GNU Guix and a operating system completely configured in Org files.
++ Programming. More about this below, but Org (and emacs for that matter) gave me the most comfortable environment to code I've tried so far.
++ Writing. It's almost my word processor. I write everything in Org and then export to the format I need, usually that is PDF or odt.
+
+* A bit more in depth
+
+** Keeping track of things
+
+My usual workflow is to check my to-dos with =C-c a t=,
+which opens a window with everything I've marked =TODO= in my Org files.
+Also, the agenda help with things that I need to get done for a specific date.
+My usage of this is very basic.
+
+** Literate programming for everything
+
+The literate programming paradigm is something I find really nice.
+An explanation of the whole thing here is unnecessary and unwieldy, so better go check out the original documentation,
+that is, the articles and the book written by Don Knuth.
+
+I use the whole idea of tangling and exporting as a way to generate both "code" and documentation files associated with it from a single file.
+The idea is given by the following diagram:
+
+#+BEGIN_SRC
+	  ---(tangling)---> Code, configuration file, etc
+	 /
+Org file
+	 \
+	  ---(exporting)---> Documentation, PDF files, HTML files.
+#+END_SRC
+
+This is the reason that this repo contains almost nothing but Org files.
+Everything can be made out of them.
+
+*** Makefiles are the future
+
+I will add makefiles so that getting the code produced by the Org file can be automated.
+The dependencies for now are just to have emacs installed and maybe some other small files,
+but emacs should be enough to get something that works.
+
+My idea is to use something like
+#+BEGIN_SRC
+emacs myorgfile.org --batch -f org-export-as-*
+#+END_SRC
+to get things exported the way I want them.
+Something similar for tangling.
+
+I'll add a dedicated section for building once the whole system is in place,
+until then only partial or no part of it may work.
+
+** Writing, or, how I learned to love plain text files.
+
+The thing is, plain text is to comfortable to use anything else.
+This is really one of those things that's better experienced than explained,
+so if you have even the slightest inclination for learning to better use your computer,
+look into using and editing plain text and stop with the horrible behemoths like docx files.
+
+The whole UNIX philosophy is a big part of it. Check it out.
+
+For this repo the relevant thing is that Org allows quite a bit of configuration and extensibility.
+This means I get more out of everything I write just by writing it in emacs and Org.
+
+Specifically, Org gives me a simple and easy to read syntax that is at the same time powerful.
+I can export to say PDF and ODT and keep all the structure of the text intact.
+Even references and bibliographies.
+What is more, all off this can be triggered by simply typing =C-c C-e l p= to get a PDF trough LaTeX.
+All the configuration is abstracted away, and I can focus in the task at hand. 
+
+For an idea of how this is all implemented look at my Emacs configuration in this repo.
+
+
+* My Org files are self-documenting (or at least that's what I want for them)
+
+That means that you only need to look at the file itself to get an idea of how things work.
+Usually the files explain something particular (like my LaTeX preambles)
+and then also give bits of how everything is put together underneath.
+
+* Regarding the License
+
+Maybe the GPL is not the absolute best for this type of work,
+but it does no harm to have it.
+
+I do believe free software to be important enough to make the effort to license everything I do that can be remotely considered software under a copyleft license.

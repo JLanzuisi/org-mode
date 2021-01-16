@@ -100,7 +100,7 @@ Los márgenes se configuran aquí. Junto con el tamaño del papel, actualmente e
 
 ** Tipografías compartidas
   :PROPERTIES:
-  :header-args: :noweb-ref fonts-common :eval never
+  :header-args: :noweb-ref fonts-common :eval never :exports code
   :END:
 
 Esta sección describe las fuentes que ambas clases comparten.
@@ -170,7 +170,7 @@ La fuente de los títulos viene dada por el siguiente bloque.
 
 ** Paquetes compartidos
   :PROPERTIES:
-  :header-args: :noweb-ref packages-common  :eval never
+  :header-args: :noweb-ref packages-common  :eval never :exports code
   :END:
 
 Primero, un línea que permite cargar las imágenes del documente según hagan falta.
@@ -201,7 +201,7 @@ La mayoría son fáciles de entender, en cualquier caso chequeen la documentaci�
 
 * Referencias y bibliografía
   :PROPERTIES:
-  :header-args: :noweb-ref bib-common  :eval never
+  :header-args: :noweb-ref bib-common  :eval never :exports code
   :END:
 
 El siguiente bloque configura el estylo de la bibliografía,
@@ -243,7 +243,7 @@ citecolor=\linkcolor
 
 * Notas al márgen
   :PROPERTIES:
-  :header-args: :noweb-ref margin-notes-article  :eval never
+  :header-args: :noweb-ref margin-notes-article  :eval never :exports code
   :END:
 
 Esta parte define los comandos para añadir notas al margen.
@@ -290,7 +290,7 @@ Por último, que el comando =footnote= sea lo mismo que =nota=, para que el docu
 
 * Listas
   :PROPERTIES:
-  :header-args: :noweb-ref lists-common  :eval never
+  :header-args: :noweb-ref lists-common  :eval never :exports code
   :END:
 
 Este bloque se encarga de la apriencia de las listas, nada mas.
@@ -302,9 +302,13 @@ Este bloque se encarga de la apriencia de las listas, nada mas.
 \setlist[itemize]{label={\small\textbullet},left=-11pt}
 #+END_SRC
 
-* Redefinir el comando =maketitle=
+* Página de título en los artículos
+  :PROPERTIES:
+  :header-args: :noweb-ref article-maketitle  :eval never :exports code
+  :END:
+
 Un comando para el título diferente, se puede ignorar y usar el valor por defecto.
-Antes, hace falta una manera de establecer para cual asignatura se esta escribiendo,
+Hace falta una manera de establecer para cual asignatura se esta escribiendo,
 de eso se encarga el siguiente bloque.
 
 #+BEGIN_SRC latex
@@ -352,12 +356,14 @@ Ahora si, la definicón de =maketitle=
 	}
 \makeatother
 #+END_SRC
-* Bloques de código (PDF)
+* Bloques de código
+  :PROPERTIES:
+  :header-args: :noweb-ref code-listings-common  :eval never :exports code
+  :END:
 
 La apaciencia de los bloques de código, dando resaltado a la sintaxis, se configura a continuación.
-Esto de cuanto programe un poco de =R=, por eso es el único lenguaje.
-Escribir código en LaTeX es en general incómodo, solo es recomendable cuando no queda otra opción.
-Se pueden colocar varios =lsset= para configurar man lenguajes.
+Se debe usar el comando =\lsset= para configurar el lenguaje que se va a usar en cada archivo,
+o si se usarán varios lenguajes estos se especifican en cada bloque.
 
 #+BEGIN_SRC latex
 \usepackage[final]{listings} 
@@ -374,6 +380,10 @@ columns=flexible
 #+END_SRC
 
 * Leyendas para figuras y tablas
+  :PROPERTIES:
+  :header-args: :noweb-ref captions-common  :eval never :exports code
+  :END:
+
 La apariencia de las leyendas. Nada interesante.
 
 #+BEGIN_SRC latex
@@ -589,6 +599,11 @@ y al mismo tiempo coloca una copia de dicho archivo en el documento exportado.
 <<margin-notes-article>>
 
 <<lists-common>>
+
+<<article-maketitle>>
+
+<<code-listings-common>>
+<<captions-common>>
 #+END_SRC
 
 ** Libros
