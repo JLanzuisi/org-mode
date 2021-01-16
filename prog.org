@@ -8,28 +8,37 @@ Quizás tengan que ver con editores de texto, u otras cosas cercanas a programar
 
 * Emacs :emacs:
 ** TODO Buscar mas información
+
    Terminar tutorial de emacs. Documentación online.
+
 ** TODO Lista de juegos terminados en org mode. Poner enlaces.
 ** DONE Investigar sobre ediff
    CLOSED: [2021-01-10 dom 17:07]
+
 ** TODO Cambiar los programas de C a Org.
 ** TODO Makefile para compilar LaTeX
 ** TODO Hacer plantillas de cosas de org, los prgramas de C y notas.
 ** TODO Compilar emacs en la tablet, sin x11, con modulos
 * LISP :lisp:
+
     
+
 * CS50 EdX :cs50:
 ** TODO Ver videos de la semana 3
 ** TODO Hacer segundo ejercicio de la semana 3
-
 * Github :git:
 ** TODO EPUB de robert
+
    Colocar bien el epub de robert en su repo de github
+
 ** TODO cambiar nombres de las repos en github a usar solo minúsculas
 ** TODO repo de text-files(renombrar) y
 ** TODO repo de c-files
 ** GLPv3
 *** TODO Pasar todas las repos menos la del trabajo a la GPL.
 *** TODO Poner el license notice en cada archivo:
+
    + Para los TeX, añadirlo en la plantilla de org mode, que haga tangle pero no se exporte
    + Para los archivos de C, añadirlo en cada archivo org, quizas igual con plantillas
+
+** TODO Poner READMEs en org
