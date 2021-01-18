@@ -44,4 +44,5 @@ Para solucionar esto se puede usar:
 + emulación (retroarch + dolphin)
 + transmission
 
-* TODO Pasar las peliculas de la laptop
+* DONE Pasar las peliculas de la laptop
+  CLOSED: [2021-01-17 dom 14:33]

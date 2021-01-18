@@ -21,3 +21,5 @@
 * Ori
 ** DONE Poner en el primer articulo bullet points en alguna parte.
    CLOSED: [2020-12-23 mié 18:24]
+* Otros
+** TODO Responder a optimate. Rellenar planilla.

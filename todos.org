@@ -47,7 +47,8 @@
    + Kurosagua
 
 * Ori y an llamadas :ori: 
-** TODO Revisara utoras de la lista
+** CANCELED Revisara utoras de la lista
+   CLOSED: [2021-01-17 dom 14:33]
 ** Revisar libros de la lista que descargue:
    [ ] Pankhurst
 ** DONE Equipaje de mano de ori. Confirmar!!!!! Llamar 0800 CONVIASA

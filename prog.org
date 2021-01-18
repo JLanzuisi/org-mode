@@ -11,19 +11,22 @@ Quizás tengan que ver con editores de texto, u otras cosas cercanas a programar
 
    Terminar tutorial de emacs. Documentación online.
 
-** TODO Cambiar los programas de C a Org.
+** CANCELED Cambiar los programas de C a Org.
+   CLOSED: [2021-01-17 dom 15:03]
 ** TODO Makefile para compilar LaTeX
-** TODO Hacer plantillas de cosas de org, los prgramas de C y notas.
+** CANCELED Hacer plantillas de cosas de org, los prgramas de C y notas.
+   CLOSED: [2021-01-17 dom 15:03]
 ** TODO Compilar emacs en la tablet, sin x11, con modulos
 * LISP :lisp:
 
     
 
 * CS50 EdX :cs50:
-** TODO Ver videos de la semana 3
-** TODO Hacer segundo ejercicio de la semana 3
+** WAIT Ver videos de la semana 3
+** WAIT Hacer segundo ejercicio de la semana 3
 * Github :git:
-** TODO EPUB de robert
+** CANCELED EPUB de robert
+   CLOSED: [2021-01-17 dom 09:50]
 
    Colocar bien el epub de robert en su repo de github
 
@@ -37,4 +40,5 @@ Quizás tengan que ver con editores de texto, u otras cosas cercanas a programar
    + Para los TeX, añadirlo en la plantilla de org mode, que haga tangle pero no se exporte
    + Para los archivos de C, añadirlo en cada archivo org, quizas igual con plantillas
 
-** TODO Poner READMEs en repo de org
+** DONE Poner READMEs en repo de org
+   CLOSED: [2021-01-17 dom 14:33]
