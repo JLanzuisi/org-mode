@@ -10,11 +10,11 @@
    Repasar analisis
 
 ** Algoritmos
-*** TODO Primera tarea corta de algo1
-    DEADLINE: <2021-01-19 mar>
+*** DONE Primera tarea corta de algo1
+    CLOSED: [2021-01-18 Mon 20:06] DEADLINE: <2021-01-19 mar>
 
-*** TODO Video prof ravelo (15 min)
-    DEADLINE: <2021-01-19 mar>
+*** DONE Video prof ravelo (15 min)
+    CLOSED: [2021-01-18 Mon 20:07] DEADLINE: <2021-01-19 mar>
 
 *** Exámenes parciales.
 **** 1er parcial (25%).
