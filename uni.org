@@ -6,41 +6,56 @@
 * Enero marzo 2021
 ** CANCELED Repasar contenidos del trimestre
    CLOSED: [2021-01-17 dom 14:33]
+
    Repasar analisis
 
 ** Algoritmos
-*** TODO Primera tarea corta
-    DEADLINE: <2021-01-19 mar>
-*** TODO Video prof ravelo (15 min) 
-    DEADLINE: <2021-01-19 mar>
+*** DONE Primera tarea corta de algo1
+    CLOSED: [2021-01-18 Mon 20:06] DEADLINE: <2021-01-19 mar>
+
+*** DONE Video prof ravelo (15 min)
+    CLOSED: [2021-01-18 Mon 20:07] DEADLINE: <2021-01-19 mar>
+
 *** Exámenes parciales.
-**** 1er parcial (25%). 
+**** 1er parcial (25%).
      DEADLINE: <2021-02-04 jue>
+
 **** 2do parcial.
      DEADLINE: <2021-03-04 jue>
+
 **** 3er parcial.
      DEADLINE: <2021-04-06 mar>
+
 ** Laboratorio de Algoritmos
 *** Exámenes parciales
-**** Primer parcial (20%). 
+**** Primer parcial (20%).
      DEADLINE: <2021-02-10 mié>
+
 **** Segundo parcial (30%).
      DEADLINE: <2021-03-10 mié>
+
 ** Analisis
 *** Repaso.
     DEADLINE: <2021-01-21 jue>
+
     Tengo que terminar de repasar lo mas que pueda esta semana.
+
 *** Ejercicios de la guia.
-**** TODO Ejercicios de integrales 
+**** TODO Ejercicios de integrales
      SCHEDULED: <2021-01-22 vie>
+
 *** Exámenes parciales.
-**** Primer parcial 35%. 
+**** Primer parcial 35%.
      DEADLINE: <2021-02-08 lun>
+
 **** Segundo parcial 35%.
      DEADLINE: <2021-03-08 lun>
+
 **** Tercer parcial 30%.
      DEADLINE: <2021-04-07 mié>
+
 ** General
-*** TODO primera tarea, ver en el classroom 
-    SCHEDULED: <2021-01-18 lun>
+*** DONE primera tarea del gen, ver en el classroom
+    CLOSED: [2021-01-19 Tue 12:01] SCHEDULED: <2021-01-18 lun>
+
 ** Ingles
