@@ -30,7 +30,6 @@
 # --------------
 
 * Describe Annie and Mrs. Rogers.
-
 Annie and Mrs. Rogers are two old women,
 who knew each other and are,
 according to the events portrayed in the play by cite:nla.cat-vn2311401,
@@ -44,15 +43,56 @@ Annie also seems to be slimmer than Mrs. Rogers,
 who is described as `looking fat'. 
 
 * Why has Annie gone to their house?
-
+Annie is finding herself in difficult times,
+she has a nephew to take care of and very little money to do so.
+Her job doesn't pay well enough,
+so she has come to Mrs. and Mr. Rogers, her past employers,
+to ask for a bit of help.
 
 * What is Mrs. Rogers attitude towards her?
+Mostly dismissive, like trying to get Annie to leave as soon as possible.
+Mrs. Rogers gets irritated easily,
+probably because she doesn't give much importance to the problems of her old maid.
+This attitude coupled with the one Mr. Roger has,
+proves how little they care for someone who they consider not worth even remembering.
 
 * Do you notice any difference in the way they speak?
+Yes, Annie speaks in a less articulate way. 
+She misspells or gives words different spellings than usual.
+This is likely because she hasn't had any formal education,
+and thus English is not a language she has studied.
+It's rather something she has picked up from usage and need.
+
+Mrs. Rogers is in this regard the opposite,
+she speaks well and correctly.
+Being from an upper class, compared to Annie, this is no surprise.
 
 * Describe the differences between Jean and Carlton.
+Aside from the obvious physical differences,
+that Jean is a teenage girl and Carlton a small boy,
+there are social differences.
+
+For starters, Jean is part of a different social strata,
+so she'll likely be better off in life simply because she was born in the right family.
+Carlton is not only poor but an orphan,
+her custodian (Annie) is likely to not make enough money for both of them,
+so he has to work at a young age, in precarious and dangerous conditions.
+In this sense, they're as far apart as can be.
 
 * Why do you think the play is called Return to Paradise?
+I'm not sure.
+In one superficial sense it could be because Annie seems to like the place so much,
+she thinks it's so beautiful and all that.
+
+But I think it must be ironic,
+the place she is returning to is not paradise:
+she, and her nephew, would have been treated as subhuman,
+disposable at any moment.
+In this sense the clear class divide does not describe a paradise,
+it rather describes the opposite:
+#+begin_quote
+`` /(she lifts an anguished face)/ Lord me god.."
+#+end_quote
 
 \printbibliography
 # #+BIBLIOGRAPHY: 
