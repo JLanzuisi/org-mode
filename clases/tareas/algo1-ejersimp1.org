@@ -1,0 +1,71 @@
+#+TITLE: Solución al ejercicio 0: selección.
+#+SUBTITLE: Ejercicios: porgramas sencillos en GCL.
+#+AUTHOR: Jhonny Lanzuisi
+#+EMAIL: jalb97@gmail.com
+#+STARTUP: latexpreview
+#+TAGS: :uni:algo1:
+#+LANGUAGE: es
+#+OPTIONS: toc:2
+#+LATEX_CLASS: article
+#+HTML_MATHJAX: align: left indent: 5em tagside: left font: "STIX General"
+#+HTML_MATHJAX: cancel.js noErrors.js
+#+SETUPFILE: /home/jhonny/git/org-mode/style.css.org
+#+LATEX_HEADER: \asignatura{Algoritmos y estructuras I}\lstset{emph={skip,fi},emphstyle={\bfseries}}
+
+# ----LICENSE---
+# Copyright 2021 Jhonny Lanzuisi (jalb97@gmail.com)
+# More source files at github.com/JLanzuisi
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+# --------------
+
+* Enunciado
+Dada la siguiente intrucción de selección:
+
+#+BEGIN_SRC pascal
+{true}
+if x > 5   (*\(\to\)*) skip
+[] x > -10 (*\(\to\)*) y (*\(\coloneqq\)*) x+20 ; x (*\(\coloneqq\)*) y+1
+[] x < -5  (*\(\to\)*) x (*\(\coloneqq\)*) -x
+fi
+{x (*\(\leq\)*) 4}
+#+END_SRC
+
+Si la instrucción es correcta, demuéstrelo formalmente. 
+En caso contrario, explique detalladamente cuáles tripletas de Hoare son falsas, 
+y demuestre las restantes. Anote el programa con las pruebas realizadas.
+
+* Solución
+Comenzamos demostrando que no todas las guardias se evaluan falsas,
+esto es:
+
+#+BEGIN_SRC pascal
+(*\(P\)*) (*\(\implies\)*) (*\(B_1\)*) (*\(\lor\)*) (*\(B_2\)*) (*\(\lor\)*) (*\(B_3\)*),
+#+END_SRC
+
+que en nuestro caso significa:
+
+#+BEGIN_SRC pascal
+true (*\(\implies\)*) x > 5 (*\(\lor\)*) x > -10 (*\(\lor\)*) x < -5.
+#+END_SRC
+
+Esto intuitivamente nos dice que es cierto que o x es mayor que 5,
+o es mayor que -10,
+o es menor que -5.
+Formalmente, tenemos que
+
+#+CAPTION:Demostración por fortalecimiento \(P_3\).
+#+BEGIN_SRC pascal
+x > 5 (*\(\lor\)*) x > -10 (*\(\lor\)*) x < -5.
+#+END_SRC

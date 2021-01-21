@@ -16,6 +16,9 @@
 *** DONE Video prof ravelo (15 min)
     CLOSED: [2021-01-18 Mon 20:07] DEADLINE: <2021-01-19 mar>
 
+*** TODO Primer ejercicio sencillo.
+    DEADLINE: <2021-01-25 lun>
+
 *** Exámenes parciales.
 **** 1er parcial (25%).
      DEADLINE: <2021-02-04 jue>
@@ -27,6 +30,9 @@
      DEADLINE: <2021-04-06 mar>
 
 ** Laboratorio de Algoritmos
+*** Laboratorios
+**** Lab sem 2 
+     DEADLINE: <2021-01-26 mar>
 *** Exámenes parciales
 **** Primer parcial (20%).
      DEADLINE: <2021-02-10 mié>
@@ -42,7 +48,7 @@
 
 *** Ejercicios de la guia.
 **** TODO Ejercicios de integrales
-     SCHEDULED: <2021-01-22 vie>
+     SCHEDULED: <2021-01-24 vie>
 
 *** Exámenes parciales.
 **** Primer parcial 35%.
