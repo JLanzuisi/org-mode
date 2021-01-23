@@ -2,11 +2,11 @@
 #+SUBTITLE: Ejercicios: porgramas sencillos en GCL.
 #+AUTHOR: Jhonny Lanzuisi
 #+EMAIL: jalb97@gmail.com
-#+STARTUP: latexpreview
 #+TAGS: :uni:algo1:
 #+LANGUAGE: es
 #+OPTIONS: toc:2
 #+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [fleqn,leqno]
 #+HTML_MATHJAX: align: left indent: 5em tagside: left font: "STIX General"
 #+HTML_MATHJAX: cancel.js noErrors.js
 #+SETUPFILE: /home/jhonny/git/org-mode/style.css.org
@@ -39,7 +39,7 @@ if x > 5   (*\(\to\)*) skip
 [] x > -10 (*\(\to\)*) y (*\(\coloneqq\)*) x+20 ; x (*\(\coloneqq\)*) y+1
 [] x < -5  (*\(\to\)*) x (*\(\coloneqq\)*) -x
 fi
-{x (*\(\leq\)*) 4}
+{x (*\(\geq\)*) 4}
 #+END_SRC
 
 Si la instrucción es correcta, demuéstrelo formalmente. 
@@ -50,22 +50,133 @@ y demuestre las restantes. Anote el programa con las pruebas realizadas.
 Comenzamos demostrando que no todas las guardias se evaluan falsas,
 esto es:
 
-#+BEGIN_SRC pascal
-(*\(P\)*) (*\(\implies\)*) (*\(B_1\)*) (*\(\lor\)*) (*\(B_2\)*) (*\(\lor\)*) (*\(B_3\)*),
-#+END_SRC
+\[
+P \implies B_0 \lor B_1 \lor B_2,
+\]
 
 que en nuestro caso significa:
 
-#+BEGIN_SRC pascal
-true (*\(\implies\)*) x > 5 (*\(\lor\)*) x > -10 (*\(\lor\)*) x < -5.
-#+END_SRC
+\[
+\text{true} \implies x > 5 \lor x > -10 \lor x < -5.
+\]
 
-Esto intuitivamente nos dice que es cierto que o x es mayor que 5,
-o es mayor que -10,
-o es menor que -5.
-Formalmente, tenemos que
+Como la predondición true es aquella que no coloca ninguna restricción sobre el valor de \(x\),
+tenemos que \(x\) puede tomar cualquier valor real.
+Se sigue entonces que o \(x<-5\) o \(x  \in (-5,5)\) o \(x>5\) o \(x = 5,-5\).
+Y queda demostrado que para cualquier valor de \(x\) se ejecuta alguna guardia.
+Llamemos a esta demostración \(P_3\).
 
-#+CAPTION:Demostración por fortalecimiento \(P_3\).
+** Tripleta de hoare de \(B_0\)
+Veremos ahora si la tripleta 
+\[\{P \land B_0\}\; S_0 \;\{Q\},\]
+que en nuestro caso significa
+\begin{align*}
+	    & \{\text{true}\, \land x>5 \} \quad\text{skip}\quad \{x\leq 4\} \\
+	  \equiv & \qquad  <\text{true}\land p \equiv p> \\
+	    & \{ x>5 \} \quad\text{skip}\quad \{x\geq 4\},
+\end{align*}
+es verdadera.
+
+Para esto tenemos (Demostración por debilitamiento \(P_0\)):
+
+\begin{align*}
+	  & x>5\\
+\implies  & x>5 \\
+\equiv  & \qquad<\text{usando que \(5>4\equiv true\)}>\\
+	  & x>5 \land 5>4\\
+\implies  & \qquad<\text{transitividad de `\(>\)'}> \\
+	  & x>4 \\
+\equiv  & \qquad<\text{\(p\implies p\lor q\)}>\\
+	  & x>4 \lor x=4 \\
+\equiv  & \qquad<\text{\(\geq\) abbrev}>\\
+	  & x\geq 4.
+\end{align*}
+
+** Tripleta de hoare de \(B_1\)
+Ahora queremos ver si la tripleta
+\[\{P \land B_1\} \;S_1\; \{Q\},\]
+que en este caso es
+\[\{\text{true} \land x>-10\} \quad y\coloneqq x+20\,;\, x\coloneqq y+1\quad \{x\geq 4\}, \]
+es verdadera.
+
+Debemos ahora hallar un predicado \(R\) tal que las tripletas
+\[\{x>-10\} \quad y\coloneqq x+20\quad \{R\}\]
+y
+\[\{R\} \quad x\coloneqq y+1\quad \{x\geq 4\}\]
+sean ambas verdaderas (omitimos el predicado true por la misma razon que la sección anterior).
+
+Proponemos el predicado \(R\) dado por \(y>10\).
+La demostración consiste ahora en ver si las últimas dos tripletas son correctas
+con el predicado \(R\) propuesto.
+Llamemos a la demostración de esta sección \(P_1\).
+
+Comenzamos demostrando la primera tripleta:
+\[\{x>-10\} \quad y\coloneqq x+20\quad \{y>10\},\]
+que se reduce a demostrar que
+\[\{x>-10\}\implies \{x+20>10\}.\]
+Demostración \(P_1(a)\):
+\begin{align*}
+	 & x>-10\\
+\implies & x>-10\\
+\implies & \qquad<a>b \implies a+c>b+c\; \text{en los reales}>\\
+	 & x+20>10.
+\end{align*}
+
+Falta ahora demostrar la tripleta:
+\[\{y>10\} \quad x\coloneqq y+1\quad \{x\geq 4\}\]
+que se reduce a
+\[\{y>10\} \implies \{y+1\geq 4\},\]
+que a su vez es equivalente a
+\[\{y>10\} \implies \{y\geq 3\}.\]
+
+Demostración por debilitamiento \(P_1(b)\):
+\begin{align*}
+	 & y>10\\
+\implies & y>10\\
+\equiv        & \qquad <\text{puesto que \(10>3\equiv\text{true}\)}>\\
+	 & y > 10 \land 10 > 3\\
+\implies & \qquad <\text{Por la transitividad de `\(>\)'}> \\
+	 & y > 3 \\
+\equiv 	 & \qquad< p \implies p\lor q> \\
+	 & y > 3 \lor y = 3 \\
+\equiv	 & \qquad < \geq \text{abrev}>\\
+	 & y\geq 3.
+\end{align*}
+
+** Tripleta de hoare de \(B_2\)
+Nos queda, finalmente, por demostrar la tripleta
+\[\{P\land B_2\} \;S_2\; \{Q\},\]
+que en este caso es
+\[\{\text{true} \land x<-5\} \quad x\coloneqq -x\quad \{x\geq 4\}.\]
+
+Para demostrar esta tripleta debemos ver que
+\[x<-5 \implies -x\geq 4\]
+es verdadera.
+
+Demostración por debilitamiento \(P_2\):
+\begin{align*}
+	 & x<-5 \\
+\implies & x<-5 \\
+\implies & \qquad < a>b\implies -a<-b\;\text{en los reales}> \\
+	 & -x>5\\
+\equiv 	 & \qquad <\text{Usando el hecho \(5>4\equiv \text{true}\)}>\\
+	 & -x>5 \land 5>4\\
+\implies & \qquad <\text{Por transitividad de '\(>\)'}>\\
+	 & -x>4\\
+\equiv 	 & \qquad <p\equiv p\lor q>\\
+	 & -x>4 \land -x=4\\
+\equiv	 & \qquad <\text{\(\geq\) abrev}>\\
+	 & -x\geq 4
+\end{align*}
+
+** Programa anotado
+
 #+BEGIN_SRC pascal
-x > 5 (*\(\lor\)*) x > -10 (*\(\lor\)*) x < -5.
+{true}
+if x > 5   (*\(\to\)*) {(*\(P\land B_0\)*)} skip {(*\(Q, P_0\)*)}
+[] x > -10 (*\(\to\)*) {(*\(P\land B_1\)*)} y (*\(\coloneqq\)*) x+20 {(*\(R, P_1(a)\)*)}
+	    ; {(*\(R\)*)} x (*\(\coloneqq\)*) y+1 {(*\(Q, P_1(b)\)*)}
+[] x < -5  (*\(\to\)*) {(*\(P\land B_2\)*)} x (*\(\coloneqq\)*) -x {(*\(Q, P_2\)*)}
+fi
+{x (*\(\geq\)*) 4 (*\(P_3\)*)}
 #+END_SRC

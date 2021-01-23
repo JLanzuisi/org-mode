@@ -41,10 +41,6 @@
      DEADLINE: <2021-03-10 mié>
 
 ** Analisis
-*** Repaso.
-    DEADLINE: <2021-01-21 jue>
-
-    Tengo que terminar de repasar lo mas que pueda esta semana.
 
 *** Ejercicios de la guia.
 **** TODO Ejercicios de integrales
