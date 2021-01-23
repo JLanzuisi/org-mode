@@ -16,8 +16,8 @@
 *** DONE Video prof ravelo (15 min)
     CLOSED: [2021-01-18 Mon 20:07] DEADLINE: <2021-01-19 mar>
 
-*** TODO Primer ejercicio sencillo.
-    DEADLINE: <2021-01-25 lun>
+*** DONE Primer ejercicio sencillo.
+    CLOSED: [2021-01-22 Fri 21:06] DEADLINE: <2021-01-25 lun>
 
 *** Exámenes parciales.
 **** 1er parcial (25%).
@@ -31,8 +31,9 @@
 
 ** Laboratorio de Algoritmos
 *** Laboratorios
-**** Lab sem 2 
-     DEADLINE: <2021-01-26 mar>
+**** DONE Lab sem 2
+     CLOSED: [2021-01-22 Fri 21:06] DEADLINE: <2021-01-26 mar>
+
 *** Exámenes parciales
 **** Primer parcial (20%).
      DEADLINE: <2021-02-10 mié>
@@ -41,11 +42,6 @@
      DEADLINE: <2021-03-10 mié>
 
 ** Analisis
-*** Repaso.
-    DEADLINE: <2021-01-21 jue>
-
-    Tengo que terminar de repasar lo mas que pueda esta semana.
-
 *** Ejercicios de la guia.
 **** TODO Ejercicios de integrales
      SCHEDULED: <2021-01-24 vie>
@@ -60,8 +56,16 @@
 **** Tercer parcial 30%.
      DEADLINE: <2021-04-07 mié>
 
+*** TODO Videos de la profe semanas 1 y 2
+    DEADLINE: <2021-01-25 Mon>
+
+Los vídeos están en su canal de youtube. el whatsapp dice cuales son
+
 ** General
 *** DONE primera tarea del gen, ver en el classroom
     CLOSED: [2021-01-19 Tue 12:01] SCHEDULED: <2021-01-18 lun>
+
+*** gen segunda tarea
+    DEADLINE: <2021-01-29 Fri>
 
 ** Ingles
