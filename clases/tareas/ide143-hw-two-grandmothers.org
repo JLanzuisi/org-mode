@@ -1,0 +1,54 @@
+#+TITLE: Answers to the questions on the two grandmothers.
+#+SUBTITLE:Second homework.
+#+AUTHOR: Jhonny Lanzuisi
+#+EMAIL: jalb97@gmail.com
+#+TAGS: :uni::
+#+LANGUAGE: es
+#+OPTIONS: toc:2
+#+LATEX_CLASS: article
+#+HTML_MATHJAX: align: left indent: 5em tagside: left font: "STIX General"
+#+HTML_MATHJAX: cancel.js noErrors.js
+#+SETUPFILE: /home/jhonny/git/org-mode/style.css.org
+#+LATEX_HEADER: \asignatura{El Mundo de la Literatura en Inglés. IDE143.}
+
+# ----LICENSE---
+# Copyright 2021 Jhonny Lanzuisi (jalb97@gmail.com)
+# More source files at github.com/JLanzuisi
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+# --------------
+
+* How is living at Grandma Del's different from living at home?
+a test
+
+* Name 3 things about Grandma Del that she likes
+a test
+
+* State 3 ways in which Grandma Elaine is different from Grandma Del
+a test
+
+* What is Grandma Elaine's opinion of the physical appearance of the author?
+a test
+
+* What is the author's attitude to Pearlie when she first meets her?
+a test
+
+* Does her attitude change? Why?
+a test
+
+* How does she feel about her physical appearance after going to visit her cousins in Clearwater?
+a test
+
+* How does her attitude to Grandma Del change at the end of the play? 
+a test

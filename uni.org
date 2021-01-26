@@ -44,7 +44,7 @@
 ** Analisis
 *** Ejercicios de la guia.
 **** TODO Ejercicios de integrales
-     SCHEDULED: <2021-01-24 vie>
+     SCHEDULED: <2021-02-01 lun>
 
 *** Exámenes parciales.
 **** Primer parcial 35%.
@@ -57,7 +57,7 @@
      DEADLINE: <2021-04-07 mié>
 
 *** TODO Videos de la profe semanas 1 y 2
-    DEADLINE: <2021-01-25 Mon>
+    SCHEDULED: <2021-01-28 jue>
 
 Los vídeos están en su canal de youtube. el whatsapp dice cuales son
 
@@ -65,7 +65,9 @@ Los vídeos están en su canal de youtube. el whatsapp dice cuales son
 *** DONE primera tarea del gen, ver en el classroom
     CLOSED: [2021-01-19 Tue 12:01] SCHEDULED: <2021-01-18 lun>
 
-*** gen segunda tarea
+*** TODO gen segunda tarea
     DEADLINE: <2021-01-29 Fri>
 
 ** Ingles
+*** TODO Ing Mat Tarea semana 2
+    DEADLINE: <2021-01-31 dom>
