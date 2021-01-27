@@ -44,7 +44,7 @@
 ** Analisis
 *** Ejercicios de la guia.
 **** TODO Ejercicios de integrales
-     SCHEDULED: <2021-01-24 vie>
+     SCHEDULED: <2021-01-25 Mon>
 
 *** Exámenes parciales.
 **** Primer parcial 35%.
