@@ -20,13 +20,13 @@
     CLOSED: [2021-01-22 Fri 21:06] DEADLINE: <2021-01-25 lun>
 
 *** Exámenes parciales.
-**** 1er parcial (25%).
+**** Algo1 1er parcial (25%).
      DEADLINE: <2021-02-04 jue>
 
-**** 2do parcial.
+**** Algo1 2do parcial.
      DEADLINE: <2021-03-04 jue>
 
-**** 3er parcial.
+**** Algo1 3er parcial.
      DEADLINE: <2021-04-06 mar>
 
 ** Laboratorio de Algoritmos
@@ -35,10 +35,10 @@
      CLOSED: [2021-01-22 Fri 21:06] DEADLINE: <2021-01-26 mar>
 
 *** Exámenes parciales
-**** Primer parcial (20%).
+**** Lab Primer parcial (20%).
      DEADLINE: <2021-02-10 mié>
 
-**** Segundo parcial (30%).
+**** Lab Segundo parcial (30%).
      DEADLINE: <2021-03-10 mié>
 
 ** Analisis
@@ -47,13 +47,13 @@
      SCHEDULED: <2021-02-01 lun>
 
 *** Exámenes parciales.
-**** Primer parcial 35%.
+**** Ana Primer parcial 35%.
      DEADLINE: <2021-02-08 lun>
 
-**** Segundo parcial 35%.
+**** Ana Segundo parcial 35%.
      DEADLINE: <2021-03-08 lun>
 
-**** Tercer parcial 30%.
+**** Ana Tercer parcial 30%.
      DEADLINE: <2021-04-07 mié>
 
 *** TODO Videos de la profe semanas 1 y 2
@@ -69,5 +69,5 @@ Los vídeos están en su canal de youtube. el whatsapp dice cuales son
     DEADLINE: <2021-01-29 Fri>
 
 ** Ingles
-*** TODO Ing Mat Tarea semana 2
-    DEADLINE: <2021-01-31 dom>
+*** DONE Ing Mat Tarea semana 2
+    CLOSED: [2021-01-27 mié 13:09] DEADLINE: <2021-01-31 dom>
