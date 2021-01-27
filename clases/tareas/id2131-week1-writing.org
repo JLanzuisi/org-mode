@@ -1,0 +1,80 @@
+#+TITLE: First week's Read/Writing.
+#+SUBTITLE: Homework comprised of two writings: 1A & 1B. ID2131
+#+AUTHOR: Jhonny Lanzuisi
+#+EMAIL: jalb97@gmail.com
+#+STARTUP: latexpreview
+#+TAGS: :uni:engmath:
+#+LANGUAGE: en
+#+OPTIONS: toc:2
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [fleqn,leqno]
+#+HTML_MATHJAX: align: left indent: 5em tagside: left font: "STIX General"
+#+HTML_MATHJAX: cancel.js noErrors.js
+#+SETUPFILE: /home/jhonny/git/org-mode/style.css.org
+#+ODT_STYLES_FILE: "/home/jhonny/git/org-mode/odt-style-template.ott"
+
+# ----LICENSE---
+# Copyright 2021 Jhonny Lanzuisi (jalb97@gmail.com)
+# More source files at github.com/JLanzuisi
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+# --------------
+
+* Writing 1A
+
+** What do you think the title of the text should be?
+I think it could be titled something like "The dawn of math in ancient Sumeria and Babylonia",
+because the text's about the origin of mathematics and it makes a lot of emphasis in the fact
+that Sumerian and Babylonian societies were the first to develop proper mathematics.
+
+** How did the study of patterns begin?
+If we mean the systematic study of patterns then,
+according to the text,
+it began as something that increasingly bureaucratic societies couldn't live without.
+
+If by patterns we accept a broader meaning, 
+then the study of patterns would have begun the very moment
+that mankind recorded the day-night cycle or the passing of the seasons.
+The old cave paintings of prehistoric humanity are a proof that we have always
+been able to understand and represent patterns.
+
+** Did the counting systems develop at the same time in different places?
+Well, maybe some places had a counting system at around the same time.
+But the thing is that a counting system is something that deeply depends on the
+needs and cultural development of a given society.
+This means that some cultures, who flourish earlier, had counting systems, and others didn't.
+
+** What is the topic of the video?
+The video is about Pythagoras, the Greek philosopher and mathematician.
+It deals specifically with his mathematical discoveries,
+the secret society they were made in
+and objections from other cultures that claim to have "known" it long before Pythagoras. 
+
+** Please extract the math terminology used in the video and take notes
+Math terminology: right-angled triangle, hypotenuse, geometrical proof, squared root,
+fraction, irrational numbers, odd and even numbers, division and remainders, 
+triangular and square numbers, perfect numbers.
+
+* Writing 1B
+
+** Why I study mathematics
+
+This is kind of a difficult question.
+Not so much because I have no reason to study math,
+but rather because I have too many.
+So condensing them in a paragraph is, to me at least, impossible.
+
+Let's just say that I study mathematics because I find it infinitely interesting,
+unlike other disciplines that, although I deeply respect, 
+would put me to sleep in a matter of minutes.

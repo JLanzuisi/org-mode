@@ -20,3 +20,5 @@ tlcheck*
 *.thm
 *.toc
 *.odt
+*.doc
+*.docx
