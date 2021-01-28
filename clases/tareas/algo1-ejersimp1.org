@@ -5,11 +5,12 @@
 #+TAGS: :uni:algo1:
 #+LANGUAGE: es
 #+OPTIONS: toc:2
+#+STARTUP: latexpreview
 #+LATEX_CLASS: article
 #+HTML_MATHJAX: align: left indent: 5em tagside: left font: "STIX General"
 #+HTML_MATHJAX: cancel.js noErrors.js
 #+SETUPFILE: /home/jhonny/git/org-mode/style.css.org
-#+LATEX_HEADER: \asignatura{Algoritmos y estructuras I}\lstset{emph={skip,fi},emphstyle={\bfseries}}
+# +LATEX_HEADER: \asignatura{Algoritmos y estructuras I}\lstset{emph={skip,fi},emphstyle={\bfseries}}
 
 # ----LICENSE---
 # Copyright 2021 Jhonny Lanzuisi (jalb97@gmail.com)
