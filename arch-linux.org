@@ -47,11 +47,12 @@ Para solucionar esto se puede usar:
 * DONE Pasar las peliculas de la laptop
   CLOSED: [2021-01-17 dom 14:33]
 
-* TODO Update the system:
+* TODO Update the system (more bellow):
   SCHEDULED: <2021-02-27 sáb +1m>
 To Update:
 
-1. Check the arch [[https://archlinux.org/][bulletin]].
-2. Download all updates into cache =pacman -Syuw=.
+1. Check the arch [[https://archlinux.org/][bulletin]] & [[https://artixlinux.org/][artix site]].
+2. Download all updates into cache =pacman -Syyuw=.
 3. Switch to a tty and install updates with =pacman -Su=.
 4. Optionally, check for orphans with =pacman -Qtd=.
+5. Super optionally, check for foreing packages with =pacman -Qm=.

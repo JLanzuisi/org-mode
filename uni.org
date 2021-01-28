@@ -19,6 +19,9 @@
 *** DONE Primer ejercicio sencillo.
     CLOSED: [2021-01-22 Fri 21:06] DEADLINE: <2021-01-25 lun>
 
+*** TODO algo1 segunda tarea (factorial)
+    DEADLINE: <2021-02-01 lun>
+
 *** Exámenes parciales.
 **** Algo1 1er parcial (25%).
      DEADLINE: <2021-02-04 jue>
