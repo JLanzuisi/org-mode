@@ -68,9 +68,10 @@ Los vídeos están en su canal de youtube. el whatsapp dice cuales son
 *** DONE primera tarea del gen, ver en el classroom
     CLOSED: [2021-01-19 Tue 12:01] SCHEDULED: <2021-01-18 lun>
 
-*** TODO gen segunda tarea
-    DEADLINE: <2021-01-29 Fri>
+*** DONE gen segunda tarea
+    CLOSED: [2021-01-29 Fri 21:50] DEADLINE: <2021-01-29 Fri>
 
 ** Ingles
 *** DONE Ing Mat Tarea semana 2
     CLOSED: [2021-01-27 mié 13:09] DEADLINE: <2021-01-31 dom>
+
