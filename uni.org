@@ -36,6 +36,8 @@
 *** Laboratorios
 **** DONE Lab sem 2
      CLOSED: [2021-01-22 Fri 21:06] DEADLINE: <2021-01-26 mar>
+**** TODO Lab sem 3
+     DEADLINE: <2021-02-02 mar>
 
 *** Exámenes parciales
 **** Lab Primer parcial (20%).
