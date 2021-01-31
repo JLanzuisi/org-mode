@@ -1,0 +1,51 @@
+#+TITLE: Cosas de debian
+#+AUTHOR: Jhonny Lanzuisi
+
+# ----LICENSE---
+# Copyright 2021 Jhonny Lanzuisi (jalb97@gmail.com)
+# More source files at github.com/JLanzuisi
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+# --------------
+
+* Paquetes
+
+Debian tiene paquetes antiguos.
+Para solucionar esto se puede usar:
+
++ Flatpak + pip3 + compile-from-source (mas facil)
++ Guix (mas dificl)
+
+** Casos especiales
+
+*Youtube-dl y streamlink* se pueden instalar con pip3.
+
+*latex* se usa texlive directamente (ya descragado)
+
+** Lista de software
+
++ Firefox
++ Transmission
++ Calibre
++ VLC
++ emacs (compilar)
++ libreoffice
++ chromium
++ inkscape
++ emulación (retroarch + dolphin)
++ transmission
+
+* DONE Pasar las peliculas de la laptop
+  CLOSED: [2021-01-17 dom 14:33]
+
