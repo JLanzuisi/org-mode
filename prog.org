@@ -13,9 +13,11 @@ Quizás tengan que ver con editores de texto, u otras cosas cercanas a programar
 
 ** CANCELED Cambiar los programas de C a Org.
    CLOSED: [2021-01-17 dom 15:03]
+
 ** TODO Makefile para compilar LaTeX
 ** CANCELED Hacer plantillas de cosas de org, los prgramas de C y notas.
    CLOSED: [2021-01-17 dom 15:03]
+
 ** TODO Compilar emacs en la tablet, sin x11, con modulos
 * LISP :lisp:
 * CS50 EdX :cs50:
@@ -37,6 +39,11 @@ Quizás tengan que ver con editores de texto, u otras cosas cercanas a programar
    + Para los TeX, añadirlo en la plantilla de org mode, que haga tangle pero no se exporte
    + Para los archivos de C, añadirlo en cada archivo org, quizas igual con plantillas
 
+** TODO github pages
+
+Colocar "binarios" en el github pages 
+
+*** TODO averiguar tamaño máximo de pages
 ** DONE Poner READMEs en repo de org
-CLOSED: [2021-01-16 Sat 19:56]
+   CLOSED: [2021-01-16 Sat 19:56]
 
