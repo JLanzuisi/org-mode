@@ -36,8 +36,8 @@
 *** Laboratorios
 **** DONE Lab sem 2
      CLOSED: [2021-01-22 Fri 21:06] DEADLINE: <2021-01-26 mar>
-**** TODO Lab sem 3
-     DEADLINE: <2021-02-02 mar>
+**** DONE Lab sem 3
+     CLOSED: [2021-02-02 mar 09:14] DEADLINE: <2021-02-02 mar>
 
 *** Exámenes parciales
 **** Lab Primer parcial (20%).
@@ -49,7 +49,7 @@
 ** Analisis
 *** Ejercicios de la guia.
 **** TODO Ejercicios de integrales
-     SCHEDULED: <2021-02-01 lun>
+     SCHEDULED: <2021-02-06 sáb>
 
 *** Exámenes parciales.
 **** Ana Primer parcial 35%.
@@ -62,7 +62,7 @@
      DEADLINE: <2021-04-07 mié>
 
 *** TODO Videos de la profe semanas 1 y 2
-    SCHEDULED: <2021-01-31 dom>
+    SCHEDULED: <2021-02-04 jue>
 
 Los vídeos están en su canal de youtube. el whatsapp dice cuales son
 
@@ -72,6 +72,9 @@ Los vídeos están en su canal de youtube. el whatsapp dice cuales son
 
 *** DONE gen segunda tarea
     CLOSED: [2021-01-29 Fri 21:50] DEADLINE: <2021-01-29 Fri>
+
+*** TODO gen tercera tarea (far cry africa)
+    DEADLINE: <2021-02-05 vie>
 
 ** Ingles
 *** DONE Ing Mat Tarea semana 2

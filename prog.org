@@ -43,7 +43,9 @@ Quizás tengan que ver con editores de texto, u otras cosas cercanas a programar
 
 Colocar "binarios" en el github pages 
 
-*** TODO averiguar tamaño máximo de pages
+*** DONE averiguar tamaño máximo de pages
+    CLOSED: [2021-02-01 lun 18:13]
+    el tamaño máximo es 1GB
 ** DONE Poner READMEs en repo de org
    CLOSED: [2021-01-16 Sat 19:56]
 
