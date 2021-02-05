@@ -73,8 +73,8 @@ Los vídeos están en su canal de youtube. el whatsapp dice cuales son
 *** DONE gen segunda tarea
     CLOSED: [2021-01-29 Fri 21:50] DEADLINE: <2021-01-29 Fri>
 
-*** TODO gen tercera tarea (far cry africa)
-    DEADLINE: <2021-02-05 vie>
+*** DONE gen tercera tarea (far cry africa)
+    CLOSED: [2021-02-05 vie 18:48] DEADLINE: <2021-02-05 vie>
 
 ** Ingles
 *** DONE Ing Mat Tarea semana 2

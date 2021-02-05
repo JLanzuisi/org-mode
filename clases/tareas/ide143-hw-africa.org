@@ -1,10 +1,11 @@
-#+TITLE: Answers to the questions on 'A far cry from africa'.
+#+TITLE: Answers to the question on 'A far cry from Africa'.
 #+SUBTITLE: Third Homework.
 #+AUTHOR: Jhonny Lanzuisi
 #+EMAIL: jalb97@gmail.com
 #+TAGS: :uni:ide143hw:
 #+LANGUAGE: es
 #+OPTIONS: toc:2
+#+OPTIONS: \n:t
 #+LATEX_CLASS: article
 #+HTML_MATHJAX: align: left indent: 5em tagside: left font: "STIX General"
 #+HTML_MATHJAX: cancel.js noErrors.js
@@ -31,7 +32,31 @@
 * Question on the poem.
 After reading the poem and the different comments on it, what do you
 consider Walcott is expressing in his poem and why do you think he
-feels that way? Make referneces to the poem in your answer.(Answer in
+feels that way? Make references to the poem in your answer.(Answer in
 a paragraph.)
 
 * Answer
+I believe Walcott is trying to express a deep sentiment of division
+within himself.  He has, on one side, his African heritage and, on the
+other, is British colonial heritage:
+
+#+begin_center
+(Lines 27-28 about inner division)
+I who am poisoned with the blood of both,
+Where shall I turn, divided to the vein?
+#+end_center
+
+Both compel him, for he loves the english tongue and dislikes english
+culture, and he feels compassion for the African tribes although he
+dislikes their savagery.  He both commodes the horrors of the ruthless
+colonial and the African tribesmen:
+
+#+begin_center
+(Lines 6,7 about the British)
+Only the worm, colonel of carrion, cries:
+"Waste no compassion on these separate dead!"
+
+(Lines 19,20 about the African)
+Delirious as these worried beasts, his wars
+Dance to the tightened carcass of a drum,
+#+end_center

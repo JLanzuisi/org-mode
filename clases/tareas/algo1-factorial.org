@@ -62,8 +62,9 @@ es verdadera.
 Como se trata de una instrucción de asignación,
 la veracidad de la tripleta anterior se reduce a demostrar
 la siguiente implicación.
+  → ∏ ∑ x₂ + y³
 
-\[\{N\geq0\}\implies \{1=(\prod k: N< k\leq N: k)\land 0\leq N\leq N\}\]
+\[\{N\geq0\}→ \{1=(\prod k: N< k\leq N: k)\land 0\leq N\leq N\}\]
 
 Hagamos la demostración por fortalecimiento (*\(P_0\)*):
 \begin{align*}
