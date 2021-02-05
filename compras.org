@@ -37,7 +37,7 @@
 
 * Mercados
 ** Margarita
-*** TODO Por pagar 53.07
+*** TODO Por pagar 3.07
 *** 5 en sigo, 5 en Nova, 2.5 en rio, 5 carniceria. Total:17.5 (mié dic 30 16:39:29 -04 2020)
 *** 8 en nova, 2 en rio. Total: 10 (mié ene  6 20:32:43 -04 2021)
 *** 14 menos de la cuenta por pago del condominio (vie ene  8 17:38:18 -04 2021)
@@ -47,6 +47,9 @@
 *** 5 en nova (dom ene 17 14:58:44 -04 2021)
 *** 10 en nova (mié ene 20 21:12:34 -04 2021)
 ***  12.5 en sigo (jue 28 ene 2021 19:33:50 -04)
+*** ori pago 50
+*** 31 en sigo (total, mié 03 feb 2021 12:37:50 -04)
+*** 29.32 en sigo, pago ori con paypal
 
 * DONE preguntar cuanto se gasto en rio y la carniceria
   CLOSED: [2020-12-31 jue 11:59]
@@ -55,7 +58,8 @@
 ** PayPal
 
 Del trabajo del epub de graham se pago el nokia de telcentro.
-
+Vinitos de sigo, uno que otro mercado tambien.
+El odongotlogo, 53.17
 ** Efectivo (apartamento)
 *** Primeros 100$
 **** 20$ en farmatodo y 20$ en sushi (Wed Jan 13 15:21:06 -04 2021)
@@ -70,4 +74,9 @@ Del trabajo del epub de graham se pago el nokia de telcentro.
 ** Otros
 * Internet wipod
 
+Van 20$ recargados desde el 30 de enero
+	
+15.447.143,4bs (mar 02 feb 2021 16:02:03 -04)
+
+recargaron 8 millones hoy (vie 05 feb 2021 18:06:15 -04)
    

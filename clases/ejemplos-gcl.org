@@ -1,0 +1,313 @@
+#+TITLE: Ejemplos de programas en GCL.
+#+SUBTITLE: Para uso en el parcial.
+#+AUTHOR: Jhonny Lanzuisi
+#+EMAIL: jalb97@gmail.com
+#+STARTUP: latexpreview
+#+TAGS: :uni:algo1:
+#+LANGUAGE: es
+#+OPTIONS: toc:2
+#+LATEX_CLASS: article
+#+HTML_MATHJAX: align: left indent: 5em tagside: left font: "STIX General"
+#+HTML_MATHJAX: cancel.js noErrors.js
+#+SETUPFILE: /home/jhonny/git/org-mode/style.css.org
+#+LATEX_HEADER: \asignatura{Algoritmos y estructuras 1}\lstset{emph={skip,fi,od},emphstyle={\bfseries}}
+
+# ----LICENSE---
+# Copyright 2021 Jhonny Lanzuisi (jalb97@gmail.com)
+# More source files at github.com/JLanzuisi
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+# --------------
+
+* Selección
+#+BEGIN_SRC pascal
+|[
+   {true}
+   if x > 5   -> skip
+   [] x > -10 -> y := x+20 ; x := y+1
+   [] x < -5  -> x := -x
+   fi
+   {x ≥ 4}
+]|
+#+END_SRC
+
+#+BEGIN_SRC pascal
+|[
+  const NUM;
+  var result : int;
+    {P: true}  // En GCL supondremos que las variables 
+               // y constantes son de tipo entero, 
+               // a menos que se indique lo contrario.
+     if  NUM mod 2  = 0  ->  result:= NUM + 2
+     []  NUM mod 2 != 0  ->  result:= NUM + 1
+     fi
+    {Q: result mod 2 = 0 /\ NUM < result  /\ result < NUM +3}
+]|  
+#+END_SRC
+
+Valor absoluto en GLC
+#+BEGIN_SRC pascal
+|[
+  const NUMBER : int;
+  var   result : int;
+    {P: true}
+     result := NUMBER
+
+    ;if NUMBER < 0  -> result := - NUMBER 
+     [] NUMBER >= 0 -> skip
+     fi
+    {Q: result >= 0 /\ (result == NUMBER  \/ result == - NUMBER)}
+]|  
+#+END_SRC
+
+\pagebreak
+Calcula si año dado es bisiesto año bisiesto
+#+BEGIN_SRC pascal
+|[
+    const YEAR : int;
+    var isleap : bool;
+
+    {P: YEAR > 0}
+
+    isleap := true
+    ;if YEAR mod 4 = 0 /\ YEAR mod 100 != 0 ->
+        skip
+    [] YEAR mod 400 = 0 ->
+        skip
+    [] YEAR mod 4 = 0 /\ YEAR mod 100 = 0 /\ YEAR mod 400 != 0 ->
+        isleap := false
+    [] YEAR mod 4 != 0 ->
+        isleap := false
+    fi
+
+    {Q: 
+       (YEAR mod 4 = 0 /\ YEAR mod 100 != 0 /\ isleap = true)
+    \/ (YEAR mod 400 = 0 /\ isleap = true)
+    \/ (YEAR mod 4 = 0 /\ YEAR mod 100 = 0 /\ YEAR mod 400 != 0 /\ isleap = false)
+    \/ (YEAR mod 4 != 0 /\ isleap = false)
+    }
+]|
+#+END_SRC
+
+\pagebreak
+Competencia de Programación en GCL (if anidado)
+#+BEGIN_SRC pascal
+|[
+    const AGE : int;
+    const UNDER5Y: bool;
+  
+    var  can_register: bool;
+
+    { P: 0 < AGE /\ AGE < 121 }
+
+    can_register := true
+    ;if AGE > 25  ->
+         if  !UNDER5Y  ->
+             can_register = false
+         []  UNDER5Y ->
+             skip
+         fi  
+     [] AGE >= 18 /\ AGE <= 25  ->
+         skip
+     [] AGE < 18  ->
+         can_register := false
+     fi
+
+    { Q: 
+       (AGE >= 18 /\ AGE < 25 /\ can_register = true)
+    \/ (AGE > 25 /\ AGE < 121 /\ UNDER5Y = true /\ can_register = true)
+    \/ (AGE > 25 /\ AGE < 121 /\ UNDER5Y = false /\ can_register = false)
+    \/ (AGE < 18 /\ can_register = false)
+    }
+]|
+#+END_SRC
+
+\pagebreak
+Transportes de la USB
+#+BEGIN_SRC pascal
+|[
+  const TIENECARNE: bool;
+  const ESTUDIA: bool;
+  const TRABAJA: bool
+  var puedeusarbus: bool;
+
+  {P: true}
+
+  if TIENECARNE = true ->
+     if DEFECTUOSO = true ->
+        if ESTUDIA = true \/ TRABAJA = true ->
+	   puedeusarbus := true
+	[] ESTUDIA = false /\ TRABAJA = false ->
+	   puedeusarbus := false
+	fi
+     [] DEFECTUOSO = false ->
+        puedeusarbus := true
+     fi
+  [] TIENECARNE = false ->
+     skip
+  fi
+
+  {Q: }
+  
+]|
+#+END_SRC
+
+\pagebreak
+* Iteración
+#+BEGIN_SRC pascal
+|[
+   var i,factorial: int;
+     {N ≥ 0}
+       factorial,i ≔ 1,N
+       {P: factorial= (∏ k ∶ i < k ≤ N ∶ k) ∧ 0 ≤ i ≤ N}
+       {Cota t: i}
+       ;do i > 1 → factorial, i ≔ factorial*i, i-1
+       od
+     {(factorial = ∏ i ∶ 1 ≤ i ≤ N ∶ i)}
+]|
+#+END_SRC
+
+Sumar N hasta M en GCL
+#+BEGIN_SRC pascal
+|[
+  const N, M: int;
+  var summ, i: int;
+
+    {H: N <= M}
+
+    summ, i := 0, N 
+
+    {Inv P:  summ = (+ k: N <= k < i: k) /\   N<= i <=M+1  }
+    {Cota t: M + 1 - i}
+
+    ;do  i != M + 1  ->
+       summ := summ + i, i+1 
+     od
+
+    {Q: summ = (+i: N<= i<=M : i) }
+]|
+#+END_SRC
+
+\pagebreak
+Divisores Positivos en GCL
+#+BEGIN_SRC pascal
+|[
+const N: int;
+var divisors: int;
+var i: int;
+
+{H: N > 0}
+
+divisors,i := 0,1;
+{Inv P:  divisors=(+j: 0< j < i /\ N mod j = 0 : 1) /\ 0< i <= N+1 }
+{Cota t: N+1-i }
+
+do  i != N+1  ->
+    if  N mod i = 0  ->  divisors := divisors + 1;
+    []  N mod i != 0 ->  skip
+    fi;
+    i = i+1
+od
+
+{Q: divisors = (+i: 0< i <=  N  /\  N mod i = 0 : 1)}
+]|
+#+END_SRC
+
+\pagebreak
+Cantidad de pares e impares antes que N
+#+BEGIN_SRC pascal
+|[
+const N: int;
+var evencount: int;
+var oddcount: int;
+var i: int;
+
+{N > 0}
+
+i := 1
+evencount := 0
+oddcount := 0
+
+{P: (evencount = (+j: 1 <= j <= i /\ j mod 2 = 0 : 1)) /\ (oddcount = (+j: 1 <= j <= i /\ j mod 2 != 0 : 1)) /\ 1 <= i <= N}
+{Cota: N + 1 - i}
+
+do i != N ->
+   if i mod 2 = 0 ->
+      evencount := evencount + 1
+   [] i mod 2 != 0 ->
+      oddcount := oddcount + 1
+   fi
+   i := i + 1
+od
+
+{Q: (evencount = (+j: 1 <= j <= N /\ j mod 2 = 0 : 1)) /\ oddcount = (+j: 1 <= j <= N /\ j mod 2 != 0 : 1))}
+]|
+#+END_SRC
+
+\pagebreak
+Raiz y resto:
+cuantos numeros i hay antes de n tales que i*i <= n
+
+#+BEGIN_SRC pascal
+const N: int;
+var floorsqrt: int;
+var remainder: int;
+
+{N >= 0}
+
+i := 0
+floorsqrt := 0
+remainder := 0
+
+
+{P: 
+   floorsqrt = (+k: 0 <= k < i /\ k*k <= i : 1) 
+/\ 0 <= i <= N
+}
+{Cota: N - i}
+
+; do i*i <= N ->
+   floorsqrt := floorsqrt + 1;
+   i := i+1
+  od
+
+remainder := N - (floorsqrt*floorsqrt)
+
+{Q: 
+   floorsqrt = (+i: i*i <= N : 1) 
+/\ remainder = N - (floorsqrt*floorsqrt) 
+/\ 0 <= remainder <= floorsqrt*floorsqrt
+}
+#+END_SRC
+
+Ejemplo *anotado* del do
+#+BEGIN_SRC pascal
+|[
+var x,y,N: int;
+{N >= 0}
+x,y := 0,0
+
+{invariante P: 
+   0 <= x 
+/\ y <= N, 
+Demostración 0}
+{Cota: x + 2(N - y)}
+
+;do x != 0 ->
+    {P /\ x != 0}
+
+ [] y != N ->
+ od
+]|
+#+END_SRC

@@ -1,15 +1,14 @@
-#+TITLE: Notas durante las clases de algo1.
-#+SUBTITLE: Unas notas desordenadas.
+#+TITLE: Answers to the questions on 'A far cry from africa'.
+#+SUBTITLE: Third Homework.
 #+AUTHOR: Jhonny Lanzuisi
 #+EMAIL: jalb97@gmail.com
-#+TAGS: :uni::
+#+TAGS: :uni:ide143hw:
 #+LANGUAGE: es
 #+OPTIONS: toc:2
 #+LATEX_CLASS: article
 #+HTML_MATHJAX: align: left indent: 5em tagside: left font: "STIX General"
 #+HTML_MATHJAX: cancel.js noErrors.js
 #+SETUPFILE: /home/jhonny/git/org-mode/style.css.org
-#+LATEX_HEADER: \asignatura{Algoritmos y Estructuras I}
 
 # ----LICENSE---
 # Copyright 2021 Jhonny Lanzuisi (jalb97@gmail.com)
@@ -29,6 +28,10 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 # --------------
 
-* Primera clase, introductoria (19-01-21).
+* Question on the poem.
+After reading the poem and the different comments on it, what do you
+consider Walcott is expressing in his poem and why do you think he
+feels that way? Make referneces to the poem in your answer.(Answer in
+a paragraph.)
 
-** TODO practicar algo de lógica, lo suficiente para los ejercicios.
+* Answer
