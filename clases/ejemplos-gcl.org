@@ -30,7 +30,12 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 # --------------
 
+Tenemos la siguiente integral
+
+\int_2^4 f(x-y) = \partial f - \partial g / x^2 - \sum^(k=10)_(k=2)k^0
+
 * Selección
+
 #+BEGIN_SRC pascal
 |[
    {true}
