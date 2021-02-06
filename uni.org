@@ -36,6 +36,7 @@
 *** Laboratorios
 **** DONE Lab sem 2
      CLOSED: [2021-01-22 Fri 21:06] DEADLINE: <2021-01-26 mar>
+
 **** DONE Lab sem 3
      CLOSED: [2021-02-02 mar 09:14] DEADLINE: <2021-02-02 mar>
 
@@ -79,4 +80,7 @@ Los vídeos están en su canal de youtube. el whatsapp dice cuales son
 ** Ingles
 *** DONE Ing Mat Tarea semana 2
     CLOSED: [2021-01-27 mié 13:09] DEADLINE: <2021-01-31 dom>
+
+*** TODO Ingles actividades de sem 3
+    DEADLINE: <2021-02-07 Sun>
 
