@@ -40,6 +40,9 @@
 **** DONE Lab sem 3
      CLOSED: [2021-02-02 mar 09:14] DEADLINE: <2021-02-02 mar>
 
+**** TODO Lab sem 4
+     DEADLINE: <2021-02-09 mar>
+
 *** Exámenes parciales
 **** Lab Primer parcial (20%).
      DEADLINE: <2021-02-10 mié>
@@ -76,6 +79,9 @@ Los vídeos están en su canal de youtube. el whatsapp dice cuales son
 
 *** DONE gen tercera tarea (far cry africa)
     CLOSED: [2021-02-05 vie 18:48] DEADLINE: <2021-02-05 vie>
+
+*** TODO gen ensayo del caribe
+    DEADLINE: <2021-02-12 vie>
 
 ** Ingles
 *** DONE Ing Mat Tarea semana 2
