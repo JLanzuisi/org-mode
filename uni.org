@@ -52,12 +52,12 @@
 
 ** Analisis
 *** Ejercicios de la guia.
-**** TODO Ejercicios de integrales
-     SCHEDULED: <2021-02-06 sáb>
+**** DONE Ejercicios de integrales
+     CLOSED: [2021-02-08 lun 17:50] SCHEDULED: <2021-02-06 sáb>
 
 *** Exámenes parciales.
-**** Ana Primer parcial 35%.
-     DEADLINE: <2021-02-08 lun>
+**** DONE Ana Primer parcial 35%.
+     CLOSED: [2021-02-08 lun 17:50] DEADLINE: <2021-02-08 lun>
 
 **** Ana Segundo parcial 35%.
      DEADLINE: <2021-03-08 lun>
@@ -65,8 +65,8 @@
 **** Ana Tercer parcial 30%.
      DEADLINE: <2021-04-07 mié>
 
-*** TODO Videos de la profe semanas 1 y 2
-    SCHEDULED: <2021-02-06 sáb>
+*** DONE Videos de la profe semanas 1 y 2
+    CLOSED: [2021-02-08 lun 17:49] SCHEDULED: <2021-02-06 sáb>
 
 Los vídeos están en su canal de youtube. el whatsapp dice cuales son
 
@@ -87,6 +87,6 @@ Los vídeos están en su canal de youtube. el whatsapp dice cuales son
 *** DONE Ing Mat Tarea semana 2
     CLOSED: [2021-01-27 mié 13:09] DEADLINE: <2021-01-31 dom>
 
-*** TODO Ingles actividades de sem 3
-    DEADLINE: <2021-02-07 Sun>
+*** DONE Ingles actividades de sem 3
+    CLOSED: [2021-02-08 lun 17:49] DEADLINE: <2021-02-07 Sun>
 

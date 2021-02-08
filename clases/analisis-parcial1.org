@@ -91,7 +91,7 @@ U(f,P_n) - L(f,P_n) &= \frac{a}{n\sqrt2} (\sqrt{a^2}-\sqrt{a^2/2})\\
 		 &\leq \frac{1}{n\sqrt2}
 \end{align*}
 
-Por lo que basta tomar \(n=1/(\epsilon\sqrt2)\)
+Por lo que basta tomar \(n>N\) donde \(N=1/(\epsilon\sqrt2)\)
 para obtener que \(U(f,P_n)-L(f,P_n)\leq \epsilon\).
 # Podemos tomar \(n\) suficientemente grande de tal forma que 
 # el factor \(a/n\sqrt2\) tenderá a \(0\),
@@ -121,7 +121,7 @@ para \(x\) en el intervalo \([0,1]\).
 Con esta \(f\) tenemos que \(|f|\) es la función constantemente igual a \(1\),
 la cual sabemos es integrable y el valor de dicha integral es 1.
 
-Pero la función \(f\) /no es integrable/. Consideremos la partición canónica \(P\)
+Pero la función \(f\) /no es integrable/. Consideremos cualquier partición \(P\)
 del intervalo \([0,1]\), si \([x_{i-1},x_i]\) es un intervalo de dicha partición,
 entonces \(m_i = -1\) pues exiten irracionales en el intervalo.
 De la misma forma, \(M_i = 1\) pues existen racionales en dicho intervalo.
@@ -189,3 +189,57 @@ por lo que las \(f_i\) han de ser integrables,
 y esto hace que \(f\) también lo sea.
 
 * Sexto ejercicio
+
+Sea \(\epsilon > 0\) y consideremos la partición del intervalo \([0,1]\)
+dada por 
+\[P = \left\{ \frac1k \right\}_{k=1}^n \cup 0. \]
+
+Para estimar las sumas superiores e inferiores,
+tenemos primero que considerar los supremos e ínfimos siguientes.
+Para \(1\leq i\leq n\),
+\begin{gather*}
+m_i = \inf \{f(x): x\in \left[ \frac{1}{i+1},\frac1i \right] \}\\
+M_i = \sup \{f(x): x\in \left[ \frac{1}{i+1},\frac1i \right] \}.
+\end{gather*}
+
+Los \(m_i\) son relativamente sencillos,
+pues en cada intervalo existen número irracionales
+y esto obligará a que la función \(f\) tome el valor \(0\).
+Más aún, este es el menor valor que toma la función,
+pues las fracciones de la forma \(1/q: q\in\mathbb{N}\) son siempre mayores que \(0\).
+Se sigue entonces que \(m_i=0\) para todo \(i\).
+
+Ahora pensemos en los \(M_i\).
+La fracción mas grande en el intervalo \([1/(1+i),1/i]\)
+es \(1/i\).
+Esta es además la fracción irreducible, en dicho intervalo, mas grande.
+De esto se deduce que \(f\) alcanza su valor máximo en el extremo \(1/i\).
+
+Con lo anterior podemos evaluar las sumas superiores e inferiores.
+Por lo que dijimos de los \(m_i\) es evidente que:
+\[L(f,P) = 0.\]
+
+Ahora, consideremos las sumas superiores.
+La longitud de cualquier intervalo en la partición
+viene dada por:
+\[\frac{1}{i^2+i}.\]
+De esto se sigue que,
+\begin{align*}
+U(f,P) &= \sum_{i=1}^n \frac{1}{i^2+i} f(\frac1i)\\
+       &= \sum_{i=1}^n \frac{1}{i^3+i^2}\\
+       &\leq \sum_{i=1}^n \frac{1}{i^2}\\
+       &\leq n.
+\end{align*}
+
+Si hacemos \(N=\lfloor\epsilon\rfloor\) entonces cualquier \(n\leq N\),
+será tal que \(U(f,P)-L(f,P)\leq \epsilon\). Y tenemos entonces que \(f\)
+es integrable.
+
+Además, el \(\inf\{U(f,P)\}\) viene dado por
+\[\lim_{n\to∞}  \sum_{i=1}^n \frac{1}{i^2},\]
+que es cero, pues esta es una serie convergente,
+de la familia de las series p.
+
+Pero entonces
+\[\inf\{U(f,P)\} = \sup \{L(f,P)\} = 0,\]
+y se obtiene el valor buscado para la integral de \(f\).
