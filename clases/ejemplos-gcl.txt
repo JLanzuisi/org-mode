@@ -1,0 +1,381 @@
+		    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+		     EJEMPLOS DE PROGRAMAS EN GCL.
+			Para uso en el parcial.
+
+			    Jhonny Lanzuisi
+		    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+Índice
+──────
+
+1. Selección
+2. Iteración
+
+
+
+
+
+1 Selección
+═══════════
+
+  ┌────
+  │ |[
+  │    {true}
+  │    if x > 5   -> skip
+  │    [] x > -10 -> y := x+20 ; x := y+1
+  │    [] x < -5  -> x := -x
+  │    fi
+  │    {x ≥ 4}
+  │ ]|
+  └────
+
+  ┌────
+  │ |[
+  │   const NUM;
+  │   var result : int;
+  │     {P: true}  // En GCL supondremos que las variables 
+  │ 	       // y constantes son de tipo entero, 
+  │ 	       // a menos que se indique lo contrario.
+  │      if  NUM mod 2  = 0  ->  result:= NUM + 2
+  │      []  NUM mod 2 != 0  ->  result:= NUM + 1
+  │      fi
+  │     {Q: result mod 2 = 0 /\ NUM < result  /\ result < NUM +3}
+  │ ]|  
+  └────
+
+  Valor absoluto en GLC
+  ┌────
+  │ |[
+  │   const NUMBER : int;
+  │   var   result : int;
+  │     {P: true}
+  │      result := NUMBER
+  │ 
+  │     ;if NUMBER < 0  -> result := - NUMBER 
+  │      [] NUMBER >= 0 -> skip
+  │      fi
+  │     {Q: result >= 0 /\ (result == NUMBER  \/ result == - NUMBER)}
+  │ ]|  
+  └────
+
+  \pagebreak Calcula si año dado es bisiesto año bisiesto
+  ┌────
+  │ |[
+  │     const YEAR : int;
+  │     var isleap : bool;
+  │ 
+  │     {P: YEAR > 0}
+  │ 
+  │     isleap := true
+  │     ;if YEAR mod 4 = 0 /\ YEAR mod 100 != 0 ->
+  │ 	skip
+  │     [] YEAR mod 400 = 0 ->
+  │ 	skip
+  │     [] YEAR mod 4 = 0 /\ YEAR mod 100 = 0 /\ YEAR mod 400 != 0 ->
+  │ 	isleap := false
+  │     [] YEAR mod 4 != 0 ->
+  │ 	isleap := false
+  │     fi
+  │ 
+  │     {Q: 
+  │        (YEAR mod 4 = 0 /\ YEAR mod 100 != 0 /\ isleap = true)
+  │     \/ (YEAR mod 400 = 0 /\ isleap = true)
+  │     \/ (YEAR mod 4 = 0 /\ YEAR mod 100 = 0 /\ YEAR mod 400 != 0 /\ isleap = false)
+  │     \/ (YEAR mod 4 != 0 /\ isleap = false)
+  │     }
+  │ ]|
+  └────
+
+  \pagebreak Competencia de Programación en GCL (if anidado)
+  ┌────
+  │ |[
+  │     const AGE : int;
+  │     const UNDER5Y: bool;
+  │ 
+  │     var  can_register: bool;
+  │ 
+  │     { P: 0 < AGE /\ AGE < 121 }
+  │ 
+  │     can_register := true
+  │     ;if AGE > 25  ->
+  │ 	 if  !UNDER5Y  ->
+  │ 	     can_register = false
+  │ 	 []  UNDER5Y ->
+  │ 	     skip
+  │ 	 fi  
+  │      [] AGE >= 18 /\ AGE <= 25  ->
+  │ 	 skip
+  │      [] AGE < 18  ->
+  │ 	 can_register := false
+  │      fi
+  │ 
+  │     { Q: 
+  │        (AGE >= 18 /\ AGE < 25 /\ can_register = true)
+  │     \/ (AGE > 25 /\ AGE < 121 /\ UNDER5Y = true /\ can_register = true)
+  │     \/ (AGE > 25 /\ AGE < 121 /\ UNDER5Y = false /\ can_register = false)
+  │     \/ (AGE < 18 /\ can_register = false)
+  │     }
+  │ ]|
+  └────
+
+  \pagebreak Transportes de la USB
+  ┌────
+  │ |[
+  │   const TIENECARNE: bool;
+  │   const ESTUDIA: bool;
+  │   const TRABAJA: bool
+  │   var puedeusarbus: bool;
+  │ 
+  │   {P: true}
+  │ 
+  │   if TIENECARNE = true ->
+  │      if DEFECTUOSO = true ->
+  │ 	if ESTUDIA = true \/ TRABAJA = true ->
+  │ 	   puedeusarbus := true
+  │ 	[] ESTUDIA = false /\ TRABAJA = false ->
+  │ 	   puedeusarbus := false
+  │ 	fi
+  │      [] DEFECTUOSO = false ->
+  │ 	puedeusarbus := true
+  │      fi
+  │   [] TIENECARNE = false ->
+  │      skip
+  │   fi
+  │ 
+  │   {Q: }
+  │ 
+  │ ]|
+  └────
+
+  \pagebreak
+
+
+2 Iteración
+═══════════
+
+  ┌────
+  │ |[
+  │    var i,factorial: int;
+  │      {N ≥ 0}
+  │        factorial,i ≔ 1,N
+  │        {P: factorial= (∏ k ∶ i < k ≤ N ∶ k) ∧ 0 ≤ i ≤ N}
+  │        {Cota t: i}
+  │        ;do i > 1 → factorial, i ≔ factorial*i, i-1
+  │        od
+  │      {(factorial = ∏ i ∶ 1 ≤ i ≤ N ∶ i)}
+  │ ]|
+  └────
+
+  Sumar N hasta M en GCL
+  ┌────
+  │ |[
+  │   const N, M: int;
+  │   var summ, i: int;
+  │ 
+  │     {H: N <= M}
+  │ 
+  │     summ, i := 0, N 
+  │ 
+  │     {Inv P:  summ = (+ k: N <= k < i: k) /\   N<= i <=M+1  }
+  │     {Cota t: M + 1 - i}
+  │ 
+  │     ;do  i != M + 1  ->
+  │        summ := summ + i, i+1 
+  │      od
+  │ 
+  │     {Q: summ = (+i: N<= i<=M : i) }
+  │ ]|
+  └────
+
+  \pagebreak Divisores Positivos en GCL
+  ┌────
+  │ |[
+  │ const N: int;
+  │ var divisors: int;
+  │ var i: int;
+  │ 
+  │ {H: N > 0}
+  │ 
+  │ divisors,i := 0,1;
+  │ {Inv P:  divisors=(+j: 0< j < i /\ N mod j = 0 : 1) /\ 0< i <= N+1 }
+  │ {Cota t: N+1-i }
+  │ 
+  │ do  i != N+1  ->
+  │     if  N mod i = 0  ->  divisors := divisors + 1;
+  │     []  N mod i != 0 ->  skip
+  │     fi;
+  │     i = i+1
+  │ od
+  │ 
+  │ {Q: divisors = (+i: 0< i <=  N  /\  N mod i = 0 : 1)}
+  │ ]|
+  └────
+
+  \pagebreak Cantidad de pares e impares antes que N
+  ┌────
+  │ |[
+  │ const N: int;
+  │ var evencount: int;
+  │ var oddcount: int;
+  │ var i: int;
+  │ 
+  │ {N > 0}
+  │ 
+  │ i := 1
+  │ evencount := 0
+  │ oddcount := 0
+  │ 
+  │ {P: (evencount = (+j: 1 <= j <= i /\ j mod 2 = 0 : 1)) /\ (oddcount = (+j: 1 <= j <= i /\ j mod 2 != 0 : 1)) /\ 1 <= i <= N}
+  │ {Cota: N + 1 - i}
+  │ 
+  │ do i != N ->
+  │    if i mod 2 = 0 ->
+  │       evencount := evencount + 1
+  │    [] i mod 2 != 0 ->
+  │       oddcount := oddcount + 1
+  │    fi
+  │    i := i + 1
+  │ od
+  │ 
+  │ {Q: (evencount = (+j: 1 <= j <= N /\ j mod 2 = 0 : 1)) /\ oddcount = (+j: 1 <= j <= N /\ j mod 2 != 0 : 1))}
+  │ ]|
+  └────
+
+  \pagebreak Raiz y resto: cuantos numeros i hay antes de n tales que
+  i*i <= n
+
+  ┌────
+  │ const N: int;
+  │ var floorsqrt: int;
+  │ var remainder: int;
+  │ 
+  │ {N >= 0}
+  │ 
+  │ i := 0
+  │ floorsqrt := 0
+  │ remainder := 0
+  │ 
+  │ 
+  │ {P: 
+  │    floorsqrt = (+k: 0 <= k < i /\ k*k <= i : 1) 
+  │ /\ 0 <= i <= N
+  │ }
+  │ {Cota: N - i}
+  │ 
+  │ ; do i*i <= N ->
+  │    floorsqrt := floorsqrt + 1;
+  │    i := i+1
+  │   od
+  │ 
+  │ remainder := N - (floorsqrt*floorsqrt)
+  │ 
+  │ {Q: 
+  │    floorsqrt = (+i: i*i <= N : 1) 
+  │ /\ remainder = N - (floorsqrt*floorsqrt) 
+  │ /\ 0 <= remainder <= floorsqrt*floorsqrt
+  │ }
+  └────
+
+  Ejemplo *anotado* del do
+  ┌────
+  │ |[
+  │ var x,y,N: int;
+  │ {N >= 0}
+  │ x,y := 0,0
+  │ 
+  │ {invariante P: 
+  │    0 <= x 
+  │ /\ y <= N, 
+  │ Demostración 0}
+  │ {Cota: x + 2(N - y)}
+  │ 
+  │ ;do x != 0 ->
+  │     {P /\ x != 0}
+  │ 
+  │  [] y != N ->
+  │  od
+  │ ]|
+  └────
+
+  Ejercicio 1 lab 4
+
+  ┌────
+  │ |[
+  │ (* El programa recibe tres números enteros, A, B, C.
+  │    Estos actuan como constantes, pues su valor no se altera en la iteración.
+  │    La variable que se usará para iterar es i, también de tipo entero. 
+  │    El programa devuelve una suma, que depende del valor de C. *)
+  │ CONST A,B,C: int;
+  │ var i: int;
+  │ var sum: int;
+  │ 
+  │ (* La predondición no necesita colocar ninguna restricción,
+  │    por lo que true es un valor aceptable *)
+  │ {true}
+  │ 
+  │ (* Siempre se necesitará el valor absoluto de B, 
+  │    así que conviene calcularlo al inicio
+  │    con una selección sencilla. *)
+  │ ;
+  │ if B >= 0 ->
+  │    B := B;
+  │ [] B < 0 ->
+  │    B := -B;
+  │ fi
+  │ 
+  │ (* El valor inicial para la suma es cero. 
+  │    Este valor resulta ser muy conveniente, pues es el neutro de la
+  │    cuantificación. *)
+  │ sum := 0
+  │ 
+  │ (* Dependiendo del valor de C, se inicializan las variables,
+  │    de tal forma que la iteración ocurra en el rango correcto.
+  │    Si tenemos C < 0 podemos colocar el valor de sum de una vez,
+  │    y este será el valor que quede guardado al final, pues el do
+  │    no se ejecutará. *)
+  │ ;
+  │ if C = 0 ->
+  │    i = 0
+  │ [] C > 0 ->
+  │    i = A
+  │ [] C < 0 ->
+  │    sum := -1
+  │ fi
+  │ 
+  │ (* El invariante se encarga de revisar que el valor de sum
+  │    sea el correcto.*)
+  │ {P:    sum = 0 
+  │    \/ (sum = -1 /\ C < 0)
+  │    \/ (sum = (+k: 0 <= k <= i: A * i) /\ 0<= i <= B /\ C = 0)
+  │    \/ (sum = (+k: A <= k <= i /\ k mod C = 0: k) /\ A <= i <= B /\ C >=0)
+  │ }
+  │ 
+  │ (* Dado que i se incremente hasta B, la siguiente cota funciona. *)
+  │ {t: B-i}
+  │ 
+  │ (* Dadas las selecciones hechas previamente,
+  │    y los valores iniciales elegidos,
+  │    la siguiente iteración es más bien sencilla.*)
+  │ do i <= B /\ C >= 0 ->
+  │    if C = 0 ->
+  │       sum := sum + (A * i);
+  │    [] C > 0 ->
+  │       if i mod C = 0 ->
+  │ 	 sum := sum + i;
+  │       [] i mod C != 0 ->
+  │ 	 skip;
+  │       fi;
+  │    fi;
+  │    i := i+1;
+  │ od
+  │ 
+  │ (* La poscondición, como suele ser el caso,
+  │    es muy parecida el invariante.*)
+  │ {Q:    sum = 0
+  │    \/ (sum = -1 /\ C < 0)
+  │    \/ (sum = (+i: 0 <= i <= B: A * i) /\ C = 0)
+  │    \/ (sum = (+i: A <= i <= B /\ i mod C = 0: i) /\ C >=0)
+  │ }
+  │ ]|
+  └────

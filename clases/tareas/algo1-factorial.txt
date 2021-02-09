@@ -1,0 +1,201 @@
+	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+		  DEMOSTRACIONES FORMALES DEL PROGRAMA
+			      `FACTORIAL'.
+		    Correción de un programa en GCL.
+
+			    Jhonny Lanzuisi
+	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+Índice
+──────
+
+1. Enunciado
+2. Solución
+.. 1. Demostración \(P_0\)
+.. 2. Demostración \(P_1\)
+.. 3. Demostración \(P_2\)
+.. 4. Demostración \(P_3\)
+.. 5. Demostración \(P_4\)
+
+
+
+
+
+1 Enunciado
+═══════════
+
+  El programa `factorial', el cual queremos ver si es correcto o no, es
+  el siguiente:
+
+  ┌────
+  │ var i,factorial: int;
+  │ {(*\(N\geq0\)*)}
+  │ factorial,i (*\(\coloneqq\)*) 1,N
+  │ {P: (*\(\factorial\)*)= (*\((\prod k: \vari< k\leq N: k)\land 0\leq \vari\leq N\)*)}
+  │ {Cota t: (*\(\vari\)*)}
+  │ ;do i > 1 (*\(\to\)*) factorial, i (*\(\coloneqq\)*) factorial*i, i-1
+  │ od
+  │ {((*\(\factorial = \prod \vari : 1\leq \vari\leq N: \vari\)*))}
+  └────
+
+
+2 Solución
+══════════
+
+2.1 Demostración \(P_0\)
+────────────────────────
+
+  Primero debemos demostrar que la precondición del programa hace
+  verdadero al invariante, es decir, que la siguiente tripleta
+  \begin{gather*}
+  \{N\geq0\} \\
+  \factorial,\vari \coloneqq 1,N\\
+   \{\factorial=(\prod k: \vari< k\leq N: k)\land 0\leq \vari\leq N\}
+  \end{gather*}
+  es verdadera.
+
+  Como se trata de una instrucción de asignación, la veracidad de la
+  tripleta anterior se reduce a demostrar la siguiente implicación.  → ∏
+  ∑ x₂ + y³
+
+  \[\{N\geq0\}→ \{1=(\prod k: N< k\leq N: k)\land 0\leq N\leq N\}\]
+
+  Hagamos la demostración por fortalecimiento (*\(P_0\)*):
+  \begin{align*}
+  	   & 1=(\prod k: N< k\leq N: k)\land 0\leq N\leq N\\
+  \impliedby & \qquad<\text{por la transitividad de `\(\leq\)' }>\\
+  	   & 1=(\prod k: N< k\leq N: k)\land 0\leq N\\
+  \equiv	   & \qquad<\text{puesto que el rango del producto esta vacío}>\\
+  	   & 1=1\land 0\leq N\\
+  \impliedby & \qquad<\text{puesto que \(1=1\equiv\text{true}\) y \(p\implies p\land\text{true}\)}>\\
+  	   & 0\leq N
+  \end{align*}
+
+
+2.2 Demostración \(P_1\)
+────────────────────────
+
+  Ahora debemos demostrar que al hacerse la guardia falsa, obtenemos un
+  estado en la post-condición.  Esto es,
+  \begin{align*}
+  	 & \{\factorial = (\prod k: \vari< k\leq N: k)\land 0\leq \vari\leq N\}\land \neg(\vari>1)\\
+  \implies & \\
+  	 & \{\factorial = (\prod \vari: 1\leq \vari\leq N: \vari)\}.
+  \end{align*}
+
+  Notemos que el lado derecho de la implicación se puede escribir,
+  puesto que \(\neg(\vari>1)\equiv\vari\leq1\), como: \[\factorial =
+  (\prod k: \vari< k\leq N: k)\land 0\leq \vari\leq N\land \vari\leq
+  1.\] Pero entonces el rango de \(\vari\) ha de cumplir que
+  \(0\leq\vari\leq 1\), es decir, que \(\vari=0 \lor \vari=1\). Podemos
+  hacer entonces una demostración por casos.
+
+
+2.2.1 Caso \(\vari=1\)
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Tenemos la siguiente demostración por debilitamiento.
+  \begin{align*}
+  	 & \factorial = \prod k: 1< k\leq N\\
+  \equiv	 & \qquad <\text{Dado que 1 es el neutro de la multiplicación}>\\
+  	 & (\factorial = \prod k: 1< k\leq N)\times1\\
+  \equiv	 & \qquad <\text{Por la definición de un producto}>\\
+  	 & \factorial = \prod k: 1\leq k\leq N\\
+  \implies & \qquad <\text{Haciendo la sustitución textual \(\vari=k\)}>\\
+  	 & \factorial = \prod \vari: 1\leq\vari\leq N.
+  \end{align*}
+
+
+2.2.2 Caso \(\vari=0\)
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Tenemos la siguiente demostración por debilitamiento.
+  \begin{align*}
+  	 & \factorial =\prod k: 0< k\leq N\\
+  \equiv	 & \qquad <\text{Para \(n\) entero se tiene que \(0<n\equiv1\leq n\)}>\\
+  	 & \factorial =\prod k: 1\leq k\leq N\\
+  \implies & \qquad <\text{Haciendo la sustitución textual \(\vari=k\)}>\\
+  	 & \factorial = \prod \vari: 1\leq\vari\leq N.
+  \end{align*}
+
+
+2.3 Demostración \(P_2\)
+────────────────────────
+
+  Sigue demostrar que al ocurrir una iteración el invariante sigue
+  siendo cierto, es decir, que la siguiente tripleta es verdadera.
+  \begin{gather*}
+  \{\factorial=(\prod k: \vari< k\leq N: k)\land 0\leq \vari\leq N\land 1<i\}\\
+  \factorial,\vari \coloneqq\factorial\times\vari, \vari-1\\
+  \{\factorial=(\prod k: \vari< k\leq N: k)\land 0\leq \vari\leq N\}.
+  \end{gather*}
+
+  Como se trata de una instrucción de asignación, la veracidad de la
+  tripleta anterior se reduce a demostrar que la siguiente implicación
+  es verdadera.
+  \begin{align*}
+  & \factorial=(\prod k: \vari< k\leq N: k)\land 0\leq \vari\leq N\land 1<i \\
+  \equiv & \qquad<\text{Uniendo los rangos de \(\vari\)}>\\
+  & \factorial=(\prod k: \vari< k\leq N: k)\land 1< \vari\leq N\\
+  \implies &\\
+  & \factorial\times\vari = (\prod k: \vari-1< k\leq N: k)\land 0\leq \vari-1\leq N).
+  \end{align*}
+
+  Tenemos la siguiente demostración por fortalecimiento.
+
+  \begin{align*}
+  	 & \factorial\times\vari = (\prod k: \vari-1< k\leq N: k)\land 0\leq \vari-1\leq N.\\
+  \equiv	 & \qquad <\text{Para enteros \(n,m\), se cumple \(n-1<m\equiv n\leq m\)}>\\
+  	 & \factorial\times\vari = (\prod k: \vari\leq k\leq N: k)\land 0\leq \vari-1\leq N.\\
+  \equiv	 & \qquad < a\leq b\leq c\equiv a+r\leq b+r\leq c+r: a,c,b,r\in\mathbb{Z} >\\
+  	 & \factorial\times\vari = (\prod k: \vari\leq k\leq N: k)\land 1\leq \vari\leq N+1.\\
+  \equiv	 & \qquad <\text{Ley de cancelación: \(ac=bc\equiv a=b\), valida pues \(\vari\neq0\)}>\\
+  	 & \factorial = (\prod k: \vari< k\leq N: k)\land 1\leq \vari\leq N+1.\\
+  \impliedby & \qquad < a\leq b\implies a\leq b+1 \;\text{en los enteros}>\\
+  	 & \factorial = (\prod k: \vari< k\leq N: k)\land 1\leq \vari\leq N \\
+  \impliedby & \qquad <p \implies p \lor q>\\
+  	 & \factorial = (\prod k: \vari< k\leq N: k)\land 1< \vari\leq N.
+  \end{align*}
+
+
+2.4 Demostración \(P_3\)
+────────────────────────
+
+  Solo nos queda por ver que el programa termina en algún momento.  Para
+  esto debemos ver que la función de cota esta acotada inferiormente por
+  cero en cualquier iteración.  Esto es lo mismo que ver si la siguiente
+  implicación es verdadera.  \[\factorial=(\prod k: \vari< k\leq N:
+  k)\land 0\leq \vari\leq N\land 1<i\implies \texttt{t}\geq 0.\]
+
+  Como la cota \texttt{t} se tomó igual a \vari, la anterior implicación
+  deviene en la siguiente implicación \[\factorial=(\prod k: \vari<
+  k\leq N: k)\land 0\leq \vari\leq N\land 1<\vari\implies \vari\geq 0,\]
+  que es cierta puesto que \(\vari\geq 0\land \vari>1\implies \vari\geq
+  0\) (\(p\land q\implies p\)).
+
+
+2.5 Demostración \(P_4\)
+────────────────────────
+
+  Por último, debemos comprobar que la función de cota es estrictamente
+  decreciente.  Es decir, queremos ver si la siguiente tripleta es
+  cierta.
+  \begin{gather*}
+  \{\factorial=(\prod k: \vari< k\leq N: k)\land 1< \vari\leq N\land \vari=C\}\\
+  \factorial,\vari\coloneqq\factorial\times\vari,\vari-1\\
+  \{\vari<C\}
+  \end{gather*}
+
+  Hacemos la sustitución textual en la post-condición y queremos
+  demostrar: \[\factorial=(\prod k: \vari< k\leq N: k)\land 1< \vari\leq
+  N\land \vari=C\implies \vari-1<C.\]
+
+  Lo demostraremos por debilitamiento:
+  \begin{align*}
+  	& 1< \vari\leq N\land \vari=C \\
+  \equiv 	& \qquad <\text{S. T. y \(a-1<a\)}>\\
+  	& 1 < \vari-1 < C \leq N\\
+  \implies &\\
+  	& \vari-1<C
+  \end{align*}

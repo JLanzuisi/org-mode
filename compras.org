@@ -37,7 +37,7 @@
 
 * Mercados
 ** Margarita
-*** TODO Por pagar 3.07
+*** TODO Por pagar (ver lista)
 *** 5 en sigo, 5 en Nova, 2.5 en rio, 5 carniceria. Total:17.5 (mié dic 30 16:39:29 -04 2020)
 *** 8 en nova, 2 en rio. Total: 10 (mié ene  6 20:32:43 -04 2021)
 *** 14 menos de la cuenta por pago del condominio (vie ene  8 17:38:18 -04 2021)
@@ -47,9 +47,12 @@
 *** 5 en nova (dom ene 17 14:58:44 -04 2021)
 *** 10 en nova (mié ene 20 21:12:34 -04 2021)
 ***  12.5 en sigo (jue 28 ene 2021 19:33:50 -04)
+--------------------------------------------------
 *** ori pago 50
 *** 31 en sigo (total, mié 03 feb 2021 12:37:50 -04)
 *** 29.32 en sigo, pago ori con paypal
+*** Mi mama pago 90 en mercado grande (mar 09 feb 2021 13:29:41 -04)
+
 
 * DONE preguntar cuanto se gasto en rio y la carniceria
   CLOSED: [2020-12-31 jue 11:59]
