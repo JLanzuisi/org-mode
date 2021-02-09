@@ -1,0 +1,360 @@
+			━━━━━━━━━━━━━━━━━━━━━━━━
+			 CONFIGURACIÓN DE EMACS
+
+			    Jhonny Lanzuisi
+			━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+Table of Contents
+─────────────────
+
+1. Apariencia general
+.. 1. Números en la líneas
+.. 2. Fuentes
+2. Variables
+.. 1. Variable `PATH'
+.. 2. Variables locales
+3. Archivos de respaldo
+4. Combinaciones de teclas para funcionalidades vanilla
+5. Configuraciones para código en C
+6. Otros
+7. Configuración inicial para usar paquetes
+.. 1. Configuración de `use-package'.
+8. Tema de Emacs
+9. El adimistrador de archivos `dired'
+10. Org Mode
+
+
+‖ Las porciones del tecto encerradas en doble línea vertical, como esta,
+tratan sobre la forma en que se implementa exta configuración en
+`org-mode'.  Si lo único que le interesa al lector es la configuración
+de emacs, pueden ignorarse estas partes del texto sin problemas.
+
+La idea es configurar emacs usando `org-mode'.  `org-mode' permite
+escribir el código mezclado con texto, de tal forma que documentar el
+código es más sencillo.  Además, es más fácil recordar en el futuro que
+significa alguna pieza de la contiguración si puedo leer lo que pensaba
+en el momento.
+
+El archivo `init.el' de configuración se crea a partir de un
+`emacs-init.org' usando `org-babel-tangle'.  Por ahora, no es más que
+una recopilación de cosas que tomo de otras configuraciones o que
+descubro en el manual de emacs.
+
+Para poder crear el archivo `init.el', uso la siguiente linea al inicio
+del archivo `.org', que permite cargar [variables locales].  Con esta
+linea se ejecuta la operación de tangle cada vez que se guarda el
+archivo.  Y con esto logro que al guardar el archivo `.org' los cambios
+de guarden también en el `.el', si tener que hacerlo manualmente.
+
+┌────
+│ # -*- eval: (add-hook 'after-save-hook (lambda ()(org-babel-tangle)) nil t) -*-
+└────
+
+Además, la siguiente linea hace que sea más conveniente escribir el
+código en el archivo `.org',
+
+┌────
+│ #+PROPERTY: header-args :exports code :tangle ~/.emacs.d/init-test.el
+└────
+
+pues establece ciertas opciones que quiero por defecto en practicamente
+todos los bloques de código.  ‖
+
+
+[variables locales] See section 2.2
+
+
+1 Apariencia general
+════════════════════
+
+  Estos comandos se encargar de desactivar ciertos elementos que vienen
+  por defecto en la interfaz de emacs.
+
+  ┌────
+  │ ;; Disable welcome screen
+  │ (setq inhibit-startup-message t
+  │       initial-buffer-choice  nil)
+  └────
+
+  Los nombres de las variables se explican a si mismos, así que no hay
+  mucho más que decir.
+
+  ┌────
+  │ (menu-bar-mode -1)          ; Disable the menu bar
+  │ (scroll-bar-mode -1)        ; Disable visible scrollbar
+  │ (tool-bar-mode -1)          ; Disable the toolbar
+  │ (tooltip-mode -1)           ; Disable tooltips
+  │ (set-fringe-mode 10)        ; Give some breathing room
+  │ (setq visible-bell t)       ; Set bell to visible, not sound
+  └────
+
+
+1.1 Números en la líneas
+────────────────────────
+
+  Los números de línea estan se habilitan de la siguiente forma.
+  Algunos modos, como los terminales, es usual que no tengan números de
+  línea en el buffer.
+
+  ┌────
+  │ ;; Display line numbers
+  │ (column-number-mode)
+  │ (global-display-line-numbers-mode t)
+  │ ;; Disable line numbers for certain modes
+  │ (dolist (mode '(eshell-mode-hook
+  │ 		term-mode-hook
+  │ 		vterm-mode-hook))
+  │   (add-hook mode (lambda () (display-line-numbers-mode 0))))
+  └────
+
+
+1.2 Fuentes
+───────────
+
+  Emacs permite configurar las fuentes de una manera bastante extensiva.
+  El siguiente bloque simplemente configura la fuente por defecto.
+
+  ┌────
+  │ ;; Font
+  │ (set-face-attribute 'default nil :font "Hack-11")
+  │ (set-frame-font "Hack-11" nil t)
+  └────
+
+
+2 Variables
+═══════════
+
+2.1 Variable `PATH'
+───────────────────
+
+  La variable `load-path' le dice a emacs donde encontrar código de lisp
+  del que tomar funciones, etc.  Además, se actualiza la variable `PATH'
+  para cargar ejecutables en `~/.local/bin/'.
+
+  ┌────
+  │ ;; Set PATH
+  │ (setenv "PATH" (concat (getenv "PATH") "~/.local/bin"))
+  │ (add-to-list 'load-path "~/.emacs.d/custom-elisp")
+  └────
+
+
+2.2 Variables locales
+─────────────────────
+
+  Las variables locales son formas de decirle a emacs que cambie une
+  variable para un solo archivo, el [bloque de código al inicio] de este
+  documento es un ejemplo de una variable local.  Lo siguiente se
+  encarga de que las variables locales /siempre/ sean aceptadas, y de
+  que el código en ellas siempre sea evaluado (podría ser peligroso si
+  se ejecutan archivos de terceros).
+
+  ┌────
+  │ (setq enable-local-variables :all)
+  │ (setq enable-local-eval t)
+  └────
+
+
+[bloque de código al inicio] See listing 1
+
+
+3 Archivos de respaldo
+══════════════════════
+
+  Emacs guarda, convenientemente, respaldos de todos los archivos que se
+  editan.  Personalmente, me molesta verlos en el mismo directorio que
+  dichos archivos, así que los muevo todos a un solo lugar.
+
+  ┌────
+  │ (setq backup-directory-alist `(("." . "~/.saves")))
+  └────
+
+
+4 Combinaciones de teclas para funcionalidades vanilla
+══════════════════════════════════════════════════════
+
+  Lo siguiente cambia las combinaciones de teclas que activan ciertas
+  funciones que vienen por defecto con emacs.  Para ver las
+  combinaciones de teclas asociadas a los paquetes, es necesario ir a la
+  sección correspondiente.
+
+  ┌────
+  │ ;; Make ESC quit prompts
+  │ (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
+  │ ;; Bind compile to F5 for C
+  │ (global-set-key (kbd "<f5>") 'compile)
+  │ ;; Better bindings for buffer switching
+  │ (global-set-key (kbd "C-ñ") 'previous-buffer)
+  │ (global-set-key (kbd "C-ç") 'next-buffer)
+  │ ;; Better window movement
+  │ (global-set-key (kbd "C-.") #'other-window)
+  │ (global-set-key (kbd "C-,") #'prev-window)
+  │ ;; Do what i mean shortcuts
+  │ (global-set-key (kbd "M-u") 'upcase-dwim)
+  │ (global-set-key (kbd "M-l") 'downcase-dwim)
+  │ (global-set-key (kbd "M-c") 'capitalize-dwim)
+  └────
+
+  Lo siguiente es una mejor manera de cambiar entre las ventanas
+  abiertas de emacs.
+
+  ┌────
+  │ ;; Better window movement
+  │ (global-set-key (kbd "C-.") #'other-window)
+  │ (global-set-key (kbd "C-,") #'prev-window)
+  │ 
+  │ (defun prev-window ()
+  │   (interactive)
+  │   (other-window -1))
+  └────
+
+
+5 Configuraciones para código en C
+══════════════════════════════════
+
+  Al escribir código en C, emacs posee un modo que se encarga
+  automáticamente de casi todo lo que necesito.  La identación es una de
+  las cosas que me interesa cambiar.
+
+  Con el siguiente bloque se configura el estilo de la identación y
+  también se activa la identación automática.  Todo esto junto con el
+  atajo para `'compile', configuran el entorno que uso para escribir en
+  C.
+
+  ┌────
+  │ ; C stuff
+  │ ;; Linux line indent style
+  │ (setq c-default-style "linux"
+  │ 	  c-basic-offset 4)
+  │ ;; Auto indent
+  │ (add-hook 'c-mode-common-hook '(lambda () (c-toggle-auto-state 1)))
+  └────
+
+
+6 Otros
+═══════
+
+  No insertar una linea al final de las plantillas.
+
+  ┌────
+  │ ;; No line after templates
+  │ (setq mode-require-final-newline nil)
+  └────
+
+
+7 Configuración inicial para usar paquetes
+══════════════════════════════════════════
+
+  Comenzamos cargando el administrador de paquetes.
+
+  ┌────
+  │ (require 'package)
+  └────
+
+  Sigue la configuración de los sitios web de los que descargar los
+  paquetes.
+
+  ┌────
+  │ (setq package-archives '(("melpa" . "https://melpa.org/packages/")
+  │ 			 ("org" . "https://orgmode.org/elpa/")
+  │ 			 ("elpa" . "https://elpa.gnu.org/packages/")))
+  └────
+
+  Y, si no hay descripciones de los paquetes, refrescar las
+  descripciones de todas las fuentes.
+
+  ┌────
+  │ (package-initialize)
+  │  (unless package-archive-contents
+  │    (package-refresh-contents))
+  └────
+
+  La sección `custom' suele ocupar mucho espacio y no ser muy fácil de
+  leer, por lo que prefiero colocarlo en otro archivo fuera de la
+  configuración principal.  El siguiente bloque se encarga de esto.
+
+  ┌────
+  │ (setq custom-file "~/.emacs.d/emacs-custom")
+  │ (if (file-exists-p custom-file)
+  │     (load custom-file))
+  └────
+
+
+7.1 Configuración de `use-package'.
+───────────────────────────────────
+
+  El paquete `use-package' permite cargar otros paquetes de una forma
+  ordenada y fácil de leer.  Además el `setq' en el bloque siguiente se
+  encarga de que los paquetes siempre sean descargados si no se
+  encuentran en la instalación local.  Este paquete no se encarga de
+  administrar el resto de paquetes.  Para más información veáse la
+  documentación oficial.
+
+  ┌────
+  │ (require 'use-package)
+  │ (setq use-package-always-ensure t)
+  └────
+
+
+8 Tema de Emacs
+═══════════════
+
+  Uso el tema `modus' en su versión clara.  Desactivar el subyarado de
+  los enlaces es algo esencial.  El resto es opcional, y la
+  documentación oficial hace un buen trabajo en explicarlo.
+
+  ┌────
+  │ ;; Theme
+  │ (use-package modus-themes
+  │   :config
+  │   (load-theme 'modus-operandi t)
+  │   (setq modus-themes-syntax 'faint)
+  │   (setq modus-themes-links 'no-underline)
+  │   (setq modus-themes-completions 'opinionated))
+  └────
+
+
+9 El adimistrador de archivos `dired'
+═════════════════════════════════════
+
+  `Dired' es un componente que viene con emacs por defecto.  Es mi
+  administrador de archivos cuando estoy editando textos.  Lo único que
+  añado a la funcionalidad original de `dired' son dos cosas:
+
+  1. Una forma de ir rápidamente de un archivo a su ubicación en el
+     sistema de archivos,usando `dired', con la función `dired-jump'; y
+
+  2. Unas opciones extras a la forma en que `dired' muestra los
+     archivos, para que agrupe primero las carpetas (es básicamente
+     darle opciones al comando de UNIX `ls' que `dired' utiliza).
+
+  ┌────
+  │ ;; Dired
+  │ (use-package dired
+  │   :ensure nil
+  │   :commands (dired dired-jump)
+  │   :custom ((dired-listing-switches "-agho --group-directories-first"))
+  │   :bind
+  │   ("C-x C-j" . dired-jump))
+  └────
+
+
+10 Org Mode
+═══════════
+
+  Creo que es imposible resumir lo que `org-mode' /es/.  Personalmente
+  lo uso para casi todo: archivos de configuración de mi sistema,
+  escribir artículos de todo tipo, organizar mis tareas por hacer y
+  mantener notas de las cosas que quiero hacer y las que he completado.
+
+  La configuración de `org-mode' es tan importante para mi uso de Emacs
+  que es de lejos la parte mas larga de la configuración.  Hasta tal
+  punto es así que tuve que separarla en varias partes, dejando cosas
+  que tienen que ver con LaTeX en un archivo separado.
+
+  La siguiente incantación inicia la configuración de `org-mode'.
+
+  ┌────
+  │ ;; Org-mode
+  │ (use-package org
+  └────
