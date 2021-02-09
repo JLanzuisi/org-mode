@@ -49,7 +49,7 @@ Para solucionar esto se puede usar:
 
 * TODO Update the system (more bellow):
   SCHEDULED: <2021-02-27 sáb +1m>
-To Update:
+To Update: aaa
 
 1. Check the arch [[https://archlinux.org/][bulletin]] & [[https://artixlinux.org/][artix site]].
 2. Download all updates into cache =pacman -Syyuw=.
