@@ -394,3 +394,23 @@ od
 }
 ]|
 #+END_SRC
+
+#+BEGIN_SRC pascal
+CONST x,y: int;
+var egcd: int;
+
+egcd := x
+
+do x != y ->
+   if x > y ->
+      x := x - y
+   [] x < y ->
+      y := y - x
+   [] x = y ->
+      skip
+   fi
+od
+
+egcd := x
+
+#+END_SRC
