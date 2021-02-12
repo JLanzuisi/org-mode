@@ -50,8 +50,8 @@
      DEADLINE: <2021-02-17 Wed 10:00>
 
 *** Exámenes parciales
-**** Lab Primer parcial (20%).
-     DEADLINE: <2021-02-10 mié>
+**** DONE Lab Primer parcial (20%).
+     CLOSED: [2021-02-12 Fri 07:44] DEADLINE: <2021-02-10 mié>
 
 **** Lab Segundo parcial (30%).
      DEADLINE: <2021-03-10 mié>
