@@ -7,31 +7,49 @@
 #+HTML_HEAD:  padding-left: .5em;
 #+HTML_HEAD: }
 #+HTML_HEAD: body {
-#+HTML_HEAD: margin-left: 22%;
-#+HTML_HEAD: margin-right: 22%;
-#+HTML_HEAD: font-family: "Bitstream Charter", "Charter", "Georgia", serif;
-#+HTML_HEAD: font-size: 1em;
-#+HTML_HEAD: line-height: 140%;
+#+HTML_HEAD: margin-left: 15%;
+#+HTML_HEAD: margin-right: 15%;
+#+HTML_HEAD: font-family: sourcesans;
+#+HTML_HEAD: font-size: 1.15em;
+#+HTML_HEAD: line-height: 155%;
+#+HTML_HEAD: }
+#+HTML_HEAD: @font-face {
+#+HTML_HEAD:   font-family: sourcesans;
+#+HTML_HEAD:   src: url(./fonts/SourceSans3-Regular.otf.woff);
+#+HTML_HEAD:   font-style: normal;
+#+HTML_HEAD: }
+#+HTML_HEAD: @font-face {
+#+HTML_HEAD:   font-family: sourcesans;
+#+HTML_HEAD:   src: url(./fonts/SourceSans3-Italic.otf.woff);
+#+HTML_HEAD:   font-style: italic;
+#+HTML_HEAD: }
+#+HTML_HEAD: @font-face {
+#+HTML_HEAD:   font-family: sourcesans;
+#+HTML_HEAD:   src: url(./fonts/SourceSans3-Bold.otf.woff);
+#+HTML_HEAD:   font-weight: bold;
 #+HTML_HEAD: }
 #+HTML_HEAD: a {
 #+HTML_HEAD: color: darkred;
 #+HTML_HEAD: text-decoration: none;
 #+HTML_HEAD: }
 #+HTML_HEAD: h1,h2,h3 {
-#+HTML_HEAD: font-family: "DejaVu Sans", "Verdana", sans;
+#+HTML_HEAD: font-family: sourcesans;
 #+HTML_HEAD: }
 #+HTML_HEAD: h1 {
 #+HTML_HEAD: font-size: 2em;
 #+HTML_HEAD: font-weight: lighter;
+#+HTML_HEAD: line-height: 145%;
 #+HTML_HEAD: }
 #+HTML_HEAD: h2 {
 #+HTML_HEAD: font-size: 1.5em;
 #+HTML_HEAD: font-weight: lighter;
 #+HTML_HEAD: line-height: 145%;
+#+HTML_HEAD: color: FireBrick;
 #+HTML_HEAD: }
 #+HTML_HEAD: h3 {
 #+HTML_HEAD: font-size: 1em;
 #+HTML_HEAD: font-weight: normal;
+#+HTML_HEAD: color: FireBrick;
 #+HTML_HEAD: }
 #+HTML_HEAD: @media only screen and (max-width: 800px) {
 #+HTML_HEAD:   body {
@@ -46,6 +64,17 @@
 #+HTML_HEAD: }
 #+HTML_HEAD: code {
 #+HTML_HEAD: font-size: 1.1em;
+#+HTML_HEAD: }
+#+HTML_HEAD: .topnav {
+#+HTML_HEAD:   overflow: hidden;
+#+HTML_HEAD:   text-align: center;
+#+HTML_HEAD: }
+#+HTML_HEAD: .topnav a {
+#+HTML_HEAD:   float: center;
+#+HTML_HEAD:   text-align: center;
+#+HTML_HEAD:   padding: 14px 16px;
+#+HTML_HEAD:   text-decoration: none;
+#+HTML_HEAD:   font-size: 1.25em;
 #+HTML_HEAD: }
 #+HTML_HEAD: pre                                      {background-color:#FFFFFF; border: none; box-shadow: none;}
 #+HTML_HEAD: pre span.org-builtin                     {color:#006FE0;font-weight:bold;}

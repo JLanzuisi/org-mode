@@ -1,5 +1,5 @@
 #+TITLE: Primer examen parcial.
-#+SUBTITLE: Una preuba
+#+SUBTITLE: Una prueba
 #+AUTHOR: Jhonny Lanzuisi
 #+EMAIL: jalb97@gmail.com
 #+STARTUP: latexpreview
