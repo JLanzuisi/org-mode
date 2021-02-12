@@ -22,6 +22,9 @@
 *** DONE algo1 segunda tarea (factorial)
     CLOSED: [2021-01-31 dom 17:39] DEADLINE: <2021-02-01 lun>
 
+*** TODO algo1 tercera tarea. iteración matrices
+    DEADLINE: <2021-02-17 Wed 10:00>
+
 *** Exámenes parciales.
 **** DONE Algo1 1er parcial (25%).
      CLOSED: [2021-02-04 jue 18:55] DEADLINE: <2021-02-04 jue>
@@ -43,10 +46,12 @@
 **** DONE Lab sem 4
      CLOSED: [2021-02-09 mar 13:28] DEADLINE: <2021-02-09 mar>
 
+**** TODO Lab semana 5, hay que hacer en colab
+     DEADLINE: <2021-02-17 Wed 10:00>
+
 *** Exámenes parciales
 **** DONE Lab Primer parcial (20%).
-     CLOSED: [2021-02-10 mié 18:04] DEADLINE: <2021-02-10 mié>
-
+     CLOSED: [2021-02-12 Fri 07:44] DEADLINE: <2021-02-10 mié>
 **** Lab Segundo parcial (30%).
      DEADLINE: <2021-03-10 mié>
 
@@ -82,6 +87,12 @@ Los vídeos están en su canal de youtube. el whatsapp dice cuales son
 
 *** TODO gen ensayo del caribe
     DEADLINE: <2021-02-12 vie>
+
+En introducción hablar de las obras estudiadas y los problemas que plantean, mencionar el periodo histórico. Links de wikipedia para el periodo histórico y los autores.
+
+Explicar los problemas que plantean las obras con ejemplos de las mismas. Al hablar del poema poner referencia a los comentarios.
+
+Concluir sobre el mensaje general y regresar sobre la tesis central del ensayo.
 
 ** Ingles
 *** DONE Ing Mat Tarea semana 2
