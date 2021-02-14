@@ -85,8 +85,8 @@ Los vídeos están en su canal de youtube. el whatsapp dice cuales son
 *** DONE gen tercera tarea (far cry africa)
     CLOSED: [2021-02-05 vie 18:48] DEADLINE: <2021-02-05 vie>
 
-*** TODO gen ensayo del caribe
-    DEADLINE: <2021-02-12 vie>
+*** DONE gen ensayo del caribe
+    CLOSED: [2021-02-12 vie 20:35] DEADLINE: <2021-02-12 vie>
 
 En introducción hablar de las obras estudiadas y los problemas que plantean, mencionar el periodo histórico. Links de wikipedia para el periodo histórico y los autores.
 
