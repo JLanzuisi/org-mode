@@ -52,7 +52,7 @@
 *** 31 en sigo (total, mié 03 feb 2021 12:37:50 -04)
 *** 29.32 en sigo, pago ori con paypal
 *** Mi mama pago 90 en mercado grande (mar 09 feb 2021 13:29:41 -04)
-
+*** Ori pago 10$ en heladito del 14 + leche
 
 * DONE preguntar cuanto se gasto en rio y la carniceria
   CLOSED: [2020-12-31 jue 11:59]
@@ -75,7 +75,9 @@ El odongotlogo, 53.17
 *** cuartos 100$
 **** 20$ para ori por el wipod
 **** 45$ maus y teclado 
-**** 18$ curros, 1$ prestado a mama
+**** 18$ churros, 1$ prestado a mama
+**** 20$ regalo a ori del 14 + 10$ de papa
+**** TODO le debo 10$ a papa
 *** Le cambie un billete de 100$ a ori por 5 de 20$ (dom ene 17 11:12:43 -04 2021)
 ** Otros
 * Internet wipod

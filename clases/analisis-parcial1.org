@@ -2,7 +2,6 @@
 #+SUBTITLE: Integrales de Rienmann.
 #+AUTHOR: Jhonny Lanzuisi
 #+EMAIL: jalb97@gmail.com
-#+STARTUP: latexpreview
 #+TAGS: :uni:ana:
 #+LANGUAGE: es
 #+OPTIONS: toc:2
@@ -30,8 +29,22 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 # ---------------
 
+#+BEGIN_EXPORT latex
+{\let\thefootnote\relax
+	\footnotetext{
+	\sffamily\scriptsize
+	\noindent Copyright (C)  2021 Jhonny Lanzuisi.
+	Permission is granted to copy, distribute and/or modify this document
+	under the terms of the GNU Free Documentation License, Version 1.3
+	or any later version published by the Free Software Foundation;
+	with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+	A copy of the license can be found at \url{https://www.gnu.org/licenses/fdl-1.3.en.html}.
+	}
+}
+#+END_EXPORT
+
 La numeración de los ejercicios es la misma que en la hoja de enunciados,
-los enunciados los omito aquí, mas que nada, para ahorrar tiempo.
+los enunciados los omito aquí, mas que nada, para ahorrar tiempo.\footnote{A test}
 
 * Primer ejercicio
 

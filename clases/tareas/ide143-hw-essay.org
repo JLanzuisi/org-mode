@@ -1,0 +1,186 @@
+#+TITLE: Essay on Caribbean literature.
+#+SUBTITLE: Problems & images depicted in selected Caribbean writings.
+#+AUTHOR: Jhonny Lanzuisi
+#+EMAIL: jalb97@gmail.com
+#+TAGS: :uni:ide143essay:
+#+LANGUAGE: es
+#+OPTIONS: toc:2
+#+LATEX_CLASS: article
+#+HTML_MATHJAX: align: left indent: 5em tagside: left font: "STIX General"
+#+HTML_MATHJAX: cancel.js noErrors.js
+#+SETUPFILE: /home/jhonny/git/org-mode/style.css.org
+#+LATEX_HEADER: \asignatura{IDE-143. El Mundo de la Literatura en Inglés.}
+
+# ----LICENSE----
+#  Copyright 2021 Jhonny Lanzuisi (jalb97@gmail.com)
+#  More source files at github.com/JLanzuisi
+#
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+#
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#
+#  You should have received a copy of the GNU General Public License
+#  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+# ---------------
+
+* Racism & poverty in the Caribbean
+
+The region of the Caribbean, formed by more than seven hundred islands cite:noauthor_caribbean_2021,
+is marked by inequality and the consequences of colonial rule.
+In this, it has a lot in common with many other countries of south and central America.
+Guided by three literary pieces of the Caribbean,
+comprising the period 1962-1989,
+these problems of inequality and racism will be explored.
+The images depicted in said works will be central to the explanation.
+
+We'll shortly examine carefully a play, by Cicely WaiteSmith cite:waite1966return,
+a short story, by Olive Senior cite:senior_arrival_2009, and a poem, by Derek Walcott cite:walcott_africa.
+The two former were Jamaican writers while the later was Saint Lucian.
+With these works, and the insight they provide,
+we'll be able to take a close look at the inner workings of their respective societies,
+and of the Caribbean as a whole.
+
+* These problems, depicted in literary works
+
+In the play /Return to paradise/, we are treated to a poor working class women, named Annie,
+that has to come back to the house of her former employees, where she used to work as a maid,
+to ask for work.
+This first point of contact with the Caribbean, trough the play,
+tells us how this woman is dismissed and rejected by her old employees,
+both being considerably better off than Annie. 
+
+The play is an interesting starting place,
+first it sets up the tone of silent racism and classism
+that'll become more apparent in the later works,
+as an example of this we could consider this small passage in which
+Mr. rogers, one of the employees, can't remember Annie even though she worked for him for many years:
+#+BEGIN_quote
+MR. ROGERS: (inside) Get me a cool drink, will you?
+(casually) By the way, who's the old woman at the back door?
+
+MRS. ROGERS: (inside) Ssh ... Not so loud (their voices jade). cite:waite1966return.
+#+END_quote
+
+This last quote, even though it doesn't offend Annie too much,
+tells how their former employees thinked of her as background decoration,
+as just being there to fulfill a task,
+like a broom or a toaster.
+
+The biggest takeaway from the play,
+is the contrast between social classes that is depicted,
+the absolute tranquility with which the middle class people can
+ignore a desperate women who used to be close to them:
+#+BEGIN_quote
+/(She lifts an anguished face)/ Lord me God ... cite:waite1966return.
+#+END_quote
+
+Another important aspect that we'll see depicted again later on
+are the horrible conditions in which poor children are force to live and survive,
+while their middle-upper class counterparts can grow up carelessly, like children should.
+
+Lastly, Waite-Smith tells us in his play a bit of how the society of 1966
+Jamaica looked like.
+An image that, unfortunately, is all too familiar for everyone except the most privileged:
+a social stratified society, in which human beings can be discarded and dismissed as garbage.
+
+Olive Senior, on /The two grandmothers/,
+depicts 1989 Jamaica.
+This time, from the point of view of a little girl
+whose grandmothers come from two different and opposing worlds:
+one is a country old woman, not poor but certainly not rich,
+and the other is a middle class city woman.
+
+Senior gives us a coming of age story,
+in which the little girl grows apart from her country side grandmother,
+and into the racist, classicist, world of her other grandmother.
+This short story makes more emphasis on the racist aspect,
+as the little girl gets mortified at being called `nigger':
+#+BEGIN_quote
+You are only a goddamn nigger you don't know any better. cite:senior_arrival_2009
+#+END_quote
+
+We see a society in which the color of one skin is central to one's social standing.
+Darker skin colors are seen as undesirable, for they mark the bearers of a sort of 'curse'.
+There is, of course, no such thing as a curse, only a social and political status quo
+that has defined this things and enforces them.
+
+Our little protagonists contrast directly with her best childhood friend,
+that lived in the country near her grandmother.
+Her friend, being poor, grows up to be just as poor, maybe even more.
+She and her brothers wear rags and go hungry, for that was her imposed destiny since the day she was born.
+Imposed, of course, by a social system.
+Our protagonist, on the other hand, goes to some nice city school,
+and is a pretty and well dressed young girl.
+
+The most important thing, to our thesis, of this story by Senior,
+is the fact that we live trough our protagonist
+the transition from a loving and caring little girl to
+a prejudiced and dismissive young lady,
+that has been completely changed by the racist society she lives in.
+This reinforces the fact that the Caribbean is composed of mostly broken
+and malfunctioning societies,
+exceptions of which are few and far between.
+
+So far, our selected works of literature
+have confirmed our early depiction of the Caribbean.
+And have shown an image of division and poverty,
+of inequality and injustice.
+They also have depicted a living, real, society,
+in which there's some sort of hope for decency,
+usually in the side of the poor.
+
+Walcotts poem, /A far cry from Africa/,
+situates us on Africa, away from the Caribbean.
+In this poem he responds to ``the Mau Mau Uprising in Kenya, 
+a guerrilla war fought by native Kenyans against British colonists from 1952-1960" cite:noauthor_litcharts_nodate.
+
+The author, even thought he's speaking of Africa,
+is also speaking of his Saint Lucian homeland
+which is under English control from 1814 onward cite:noauthor_saint_2021.
+In this poem we see his internal struggle,
+he feels torn apart between the english tongue that he loves,
+and the rightful fight for independence and justice,
+whether it be local or abroad.
+
+The poems depicts the acts of cruelty of the colonists,
+as well as the gruesome carnage the Kenyan,
+and any oppressed people for that matter,
+can cause in order to be free.
+
+* The twentieth century Caribbean
+
+Our journey so far has depicted an usual picture.
+A picture that defined the twentieth century.
+That of poverty and revolution,
+of social distress and inequality.
+
+The period we took literature work from
+is a crucial one for the region.
+World war II had finished more than a decade ago,
+and the world was submerge in the decolonization process,
+in Africa and also in the Americas.
+
+The Soviet Union played a major political and military role
+in the decolonization,
+and the United Stated along with part of Europe
+played the role of the colons who where losing ground.
+
+In this landscape the Caribbean appears
+injured and, for the most part, alone.
+Whether colonial rule, or imposed poverty,
+the Caribbean people had to suffer,
+and still has.
+
+But there are still some good things to hold on to,
+just like the grandmother of Senior's story
+who keep helping the poor even thought she couldn't change the world,
+our best bet is to try and keep as much of our humanity intact,
+that is, of our kindness.
+
+\printbibliography
