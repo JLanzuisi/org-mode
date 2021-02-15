@@ -63,6 +63,8 @@
 *** Exámenes parciales.
 **** DONE Ana Primer parcial 35%.
      CLOSED: [2021-02-08 lun 17:50] DEADLINE: <2021-02-08 lun>
+***** TODO Corección del parcial de analisis
+      DEADLINE: <2021-02-17 mié>
 
 **** Ana Segundo parcial 35%.
      DEADLINE: <2021-03-08 lun>
@@ -94,10 +96,16 @@ Explicar los problemas que plantean las obras con ejemplos de las mismas. Al hab
 
 Concluir sobre el mensaje general y regresar sobre la tesis central del ensayo.
 
+*** TODO gen tarea girls at war
+    DEADLINE: <2021-02-25 jue>
+
 ** Ingles
 *** DONE Ing Mat Tarea semana 2
     CLOSED: [2021-01-27 mié 13:09] DEADLINE: <2021-01-31 dom>
 
 *** DONE Ingles actividades de sem 3
     CLOSED: [2021-02-08 lun 17:49] DEADLINE: <2021-02-07 Sun>
+
+*** DONE Ingles quiz de 20pts
+    CLOSED: [2021-02-15 lun 14:13] DEADLINE: <2021-02-16 mar>
 
