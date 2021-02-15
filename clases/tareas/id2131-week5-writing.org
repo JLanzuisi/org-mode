@@ -1,0 +1,75 @@
+#+TITLE: Fifth week's read/writing.
+#+SUBTITLE:About "When am I ever going to use this?".
+#+AUTHOR: Jhonny Lanzuisi
+#+EMAIL: jalb97@gmail.com
+#+TAGS: :uni::
+#+LANGUAGE: es
+#+OPTIONS: toc:2
+#+LATEX_CLASS: article
+#+HTML_MATHJAX: align: left indent: 5em tagside: left font: "STIX General"
+#+HTML_MATHJAX: cancel.js noErrors.js
+#+SETUPFILE: /home/jhonny/git/org-mode/style.css.org
+#+ODT_STYLES_FILE: "/home/jhonny/git/org-mode/odt-style-template.ott"
+#+LATEX_HEADER: \subject{}
+#+LATEX_HEADER: \titlehead{Universidad Simón Bolívar.\hfill Caracas, Venezuela.}
+
+# ----LICENSE----
+#  Copyright 2021 Jhonny Lanzuisi (jalb97@gmail.com)
+#  More source files at github.com/JLanzuisi
+#
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+#
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#
+#  You should have received a copy of the GNU General Public License
+#  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+# ---------------
+
+#+BEGIN_EXPORT latex
+{\let\thefootnote\relax
+\footnotetext{
+\sffamily\scriptsize
+\noindent Copyright (C)  2021 Jhonny Lanzuisi.
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.3
+or any later version published by the Free Software Foundation;
+with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+A copy of the license can be found at \url{https://www.gnu.org/licenses/fdl-1.3.en.html}.
+}
+}
+#+END_EXPORT
+
+# Copyright (C)  2021 Jhonny Lanzuisi. Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. A copy of the license can be found at https://www.gnu.org/licenses/fdl-1.3.en.html.
+
+* How are maths used in cooking?
+They're used all the time when cooking.
+For example, when measuring ingredients or taking fractions (like 1/4 cup of water).
+Unit conversion is also a place where math appears,
+as in changing Fahrenheit to Celsius.
+Taking ratios and proportions is another common thing to do when cooking,
+and it's math like the rest.
+
+* What other(s) daily-life applications of math can you think of?
+Accounting is a good application of elementary statistics.
+As in checking your monthly expenses,
+or calculating taxes.
+
+* Mention one math concept/formula that has helped you in your daily life. Explain the concept/formula.
+I use the concept of the natural numbers a lot, as does everyone else.
+The natural numbers can be defined in many ways,
+one I like is the following:
+The natural numbers (N) are the smallest infinite set,
+that is,
+N is the smallest set such that N is equivalent to a proper subset of itself.
+This uniquely defines the natural numbers.
+
+* Make a 10-word list of the words in the text that are new for you. 
+No word from the text was new to me.
+
+
