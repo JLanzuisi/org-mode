@@ -1,0 +1,399 @@
+	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+	      ARCHIVOS DE CONFIGURACIÓN PARA MI ENTORNO DE
+			       GNU/LINUX.
+	    Compendio de 'dotfiles', archivos que usualmente
+		       se encuentran en `$HOME'.
+
+			    Jhonny Lanzuisi
+	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+Índice
+──────
+
+1. Programas que /no/ estan aquí
+2. Bourne Again SHell
+3. Email
+.. 1. Mbsync
+.. 2. Notmuch
+.. 3. Msmtp
+
+
+
+
+
+1 Programas que /no/ estan aquí
+═══════════════════════════════
+
+  Los siguientes programas no serán incluidos aquí.  En general,
+  cualquier programa que sea muy complejo tendrá su propio archivo .org,
+  en vez de este.
+
+  1. GNU Emacs. Mi configuración de Emacs es suficientemente grande como
+     para merecer un archivo solo para ella.
+  2. TeX. Las plantillas que uso para TeX también merecen tartamiento
+     aparte.
+  3. Aplicaciones de GUI grandes. Cosas como KDE Plasma, VLC, Firefox,
+     etc; son demasiado grandes como para que tenga sentido mantener su
+     configuración en un archivo de texto.  Lamentablemente ese es el
+     estado de las cosas.
+
+
+2 Bourne Again SHell
+════════════════════
+
+  Mi `bashrc' es bastante simple.
+
+  ┌────
+  │ # If not running interactively, don't do anything
+  │ [[ $- != *i* ]] && return
+  │ 
+  │ # don't put duplicate lines or lines starting with space in the history.
+  │ # See bash(1) for more options
+  │ HISTCONTROL=ignoreboth
+  │ 
+  │ # append to the history file, don't overwrite it
+  │ shopt -s histappend
+  │ 
+  │ # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
+  │ HISTSIZE=1000
+  │ HISTFILESIZE=2000
+  │ 
+  │ # check the window size after each command and, if necessary,
+  │ # update the values of LINES and COLUMNS.
+  │ shopt -s checkwinsize
+  │ 
+  │ # make less more friendly for non-text input files, see lesspipe(1)
+  │ [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+  │ 
+  │ # some more ls aliases
+  │ alias ll='ls -alF'
+  │ alias la='ls -A'
+  │ alias l='ls -CF'
+  │ alias ls='ls --color=auto'
+  │ 
+  │ # The look of the promtp.
+  │ PS1="\\$ "
+  │ 
+  │ # More aliases
+  │ alias cemacs='emacs -Q -nw'
+  │ alias getmail='mbsync -a -c ~/.emacs.d/notmuch/.mbsyncrc && notmuch new'
+  │ 
+  │ # Path
+  │ export PATH="$PATH:/home/jhonny/.local/bin:/home/jhonny/.scripts"
+  └────
+
+
+3 Email
+═══════
+
+3.1 Mbsync
+──────────
+
+  Este programa descarga mis emails de los servidores de google a mi
+  Maildir.
+
+  ┌────
+  │ # mbsyncrc based on
+  │ # http://www.ict4g.net/adolfo/notes/2014/12/27/EmacsIMAP.html
+  │ # ACCOUNT INFORMATION
+  │ IMAPAccount jalb97-gmail
+  │ # Address to connect to
+  │ Host imap.gmail.com
+  │ User jalb97@gmail.com
+  │ PassCmd "gpg2 --batch --yes --passphrase-file ~/.emacs.d/notmuch/passfile -q --for-your-eyes-only --no-tty -d ~/.emacs.d/notmuch/.mbsyncpass-jalb97.gpg"
+  │ AuthMechs LOGIN
+  │ SSLType IMAPS
+  │ SSLVersions TLSv1.2
+  │ CertificateFile /etc/ssl/certs/ca-certificates.crt
+  │ 
+  │ # THEN WE SPECIFY THE LOCAL AND REMOTE STORAGE
+  │ # - THE REMOTE STORAGE IS WHERE WE GET THE MAIL FROM (E.G., THE
+  │ #   SPECIFICATION OF AN IMAP ACCOUNT)
+  │ # - THE LOCAL STORAGE IS WHERE WE STORE THE EMAIL ON OUR COMPUTER
+  │ 
+  │ # REMOTE STORAGE (USE THE IMAP ACCOUNT SPECIFIED ABOVE)
+  │ IMAPStore jalb97-gmail-remote
+  │ Account jalb97-gmail
+  │ 
+  │ # LOCAL STORAGE (CREATE DIRECTORIES with mkdir -p ~/Maildir/acc1-gmail)
+  │ MaildirStore jalb97-gmail-local
+  │ Path ~/Maildir/jalb97-gmail/
+  │ Inbox ~/Maildir/jalb97-gmail/INBOX
+  │ # REQUIRED ONLY IF YOU WANT TO DOWNLOAD ALL SUBFOLDERS; SYNCING SLOWS DOWN
+  │ # SubFolders Verbatim
+  │ 
+  │ # CONNECTIONS SPECIFY LINKS BETWEEN REMOTE AND LOCAL FOLDERS
+  │ #
+  │ # CONNECTIONS ARE SPECIFIED USING PATTERNS, WHICH MATCH REMOTE MAIl
+  │ # FOLDERS. SOME COMMONLY USED PATTERS INCLUDE:
+  │ #
+  │ # 1 "*" TO MATCH EVERYTHING
+  │ # 2 "!DIR" TO EXCLUDE "DIR"
+  │ # 3 "DIR" TO MATCH DIR
+  │ 
+  │ Channel jalb97-gmail-inbox
+  │ Master :jalb97-gmail-remote:
+  │ Slave :jalb97-gmail-local:
+  │ Patterns "INBOX"
+  │ Create Both
+  │ Expunge Both
+  │ SyncState *
+  │ 
+  │ Channel jalb97-gmail-trash
+  │ Master :jalb97-gmail-remote:"[Gmail]/Trash"
+  │ Slave :jalb97-gmail-local:"[jalb97].Trash"
+  │ Create Both
+  │ Expunge Both
+  │ SyncState *
+  │ 
+  │ Channel jalb97-gmail-sent
+  │ Master :jalb97-gmail-remote:"[Gmail]/Sent Mail"
+  │ Slave :jalb97-gmail-local:"[jalb97].Sent Mail"
+  │ Create Both
+  │ Expunge Both
+  │ SyncState *
+  │ 
+  │ Channel jalb97-gmail-all
+  │ Master :jalb97-gmail-remote:"[Gmail]/All Mail"
+  │ Slave :jalb97-gmail-local:"[jalb97].All Mail"
+  │ Create Both
+  │ Expunge Both
+  │ SyncState *
+  │ 
+  │ Channel jalb97-gmail-starred
+  │ Master :jalb97-gmail-remote:"[Gmail]/Starred"
+  │ Slave :jalb97-gmail-local:"[jalb97].Starred"
+  │ Create Both
+  │ Expunge Both
+  │ SyncState *
+  │ 
+  │ # GROUPS PUT TOGETHER CHANNELS, SO THAT WE CAN INVOKE
+  │ # MBSYNC ON A GROUP TO SYNC ALL CHANNELS
+  │ #
+  │ # FOR INSTANCE: "mbsync gmail" GETS MAIL FROM
+  │ # "gmail-inbox", "gmail-sent", and "gmail-trash"
+  │ #
+  │ Group jalb97-gmail
+  │ Channel jalb97-gmail-inbox
+  │ Channel jalb97-gmail-sent
+  │ Channel jalb97-gmail-trash
+  │ Channel jalb97-gmail-all
+  │ Channel jalb97-gmail-starred
+  │ 
+  │ # ================================================================================
+  │ 
+  │ # Account information
+  │ IMAPAccount 15-10759-gmail
+  │ # Address to connect to
+  │ Host imap.gmail.com
+  │ User 15-10759@usb.ve
+  │ PassCmd "gpg2 --batch --yes --passphrase-file ~/.emacs.d/notmuch/passfile -q --for-your-eyes-only --no-tty -d ~/.emacs.d/notmuch/.mbsyncpass-15-10759.gpg"
+  │ AuthMechs LOGIN
+  │ SSLType IMAPS
+  │ SSLVersions TLSv1.2
+  │ CertificateFile /etc/ssl/certs/ca-certificates.crt
+  │ 
+  │ # Then we specify the local and remote storage
+  │ # - the remote storage is where we get the mail from (e.g., the
+  │ #   specification of an imap account)
+  │ # - the local storage is where we store the email on our computer
+  │ 
+  │ # REMOTE STORAGE (USE THE IMAP ACCOUNT SPECIFIED ABOVE)
+  │ IMAPStore 15-10759-gmail-remote
+  │ Account 15-10759-gmail
+  │ 
+  │ # Local storage (create directories with mkdir -p ~/maildir/15-10759-gmail)
+  │ MaildirStore 15-10759-gmail-local
+  │ Path ~/Maildir/15-10759-gmail/
+  │ Inbox ~/Maildir/15-10759-gmail/INBOX
+  │ 
+  │ # Connections specify links between remote and local folders
+  │ #
+  │ # Connections are specified using patterns, which match remote mail
+  │ # folders. some commonly used patters include:
+  │ #
+  │ # 1 "*" TO MATCH EVERYTHING
+  │ # 2 "!DIR" TO EXCLUDE "DIR"
+  │ # 3 "DIR" TO MATCH DIR
+  │ 
+  │ Channel 15-10759-gmail-inbox
+  │ Master :15-10759-gmail-remote:
+  │ Slave :15-10759-gmail-local:
+  │ Patterns "INBOX"
+  │ Create Both
+  │ Expunge Both
+  │ SyncState *
+  │ 
+  │ Channel 15-10759-gmail-trash
+  │ Master :15-10759-gmail-remote:"[Gmail]/Papelera"
+  │ Slave :15-10759-gmail-local:"[15-10759].Papelera"
+  │ Create Both
+  │ Expunge Both
+  │ SyncState *
+  │ 
+  │ Channel 15-10759-gmail-sent
+  │ Master :15-10759-gmail-remote:"[Gmail]/Enviados"
+  │ Slave :15-10759-gmail-local:"[15-10759].Enviados"
+  │ Create Both
+  │ Expunge Both
+  │ SyncState *
+  │ 
+  │ Channel 15-10759-gmail-all
+  │ Master :15-10759-gmail-remote:"[Gmail]/Todos"
+  │ Slave :15-10759-gmail-local:"[15-10759].Todos"
+  │ Create Both
+  │ Expunge Both
+  │ SyncState *
+  │ 
+  │ Channel 15-10759-gmail-starred
+  │ Master :15-10759-gmail-remote:"[Gmail]/Destacados"
+  │ Slave :15-10759-gmail-local:"[15-10759].Destacados"
+  │ Create Both
+  │ Expunge Both
+  │ SyncState *
+  │ 
+  │ # Groups put together channels, so that we can invoke
+  │ # mbsync on a group to sync all channels
+  │ #
+  │ # For instance: "mbsync gmail" gets mail from
+  │ # "gmail-inbox", "gmail-sent", and "gmail-trash"
+  │ #
+  │ Group 15-10759-gmail
+  │ Channel 15-10759-gmail-inbox
+  │ Channel 15-10759-gmail-sent
+  │ Channel 15-10759-gmail-trash
+  │ Channel 15-10759-gmail-all
+  │ Channel 15-10759-gmail-starred
+  └────
+
+
+3.2 Notmuch
+───────────
+
+  Este programa se encarga de indexar mis emails, además me proporciona
+  una interfaz para emacs en la que ver los emails.
+
+  ┌────
+  │ # .notmuch-config - Configuration file for the notmuch mail system
+  │ #
+  │ # For more information about notmuch, see https://notmuchmail.org
+  │ 
+  │ # Database configuration
+  │ #
+  │ # The only value supported here is 'path' which should be the top-level
+  │ # directory where your mail currently exists and to where mail will be
+  │ # delivered in the future. Files should be individual email messages.
+  │ # Notmuch will store its database within a sub-directory of the path
+  │ # configured here named ".notmuch".
+  │ #
+  │ [database]
+  │ path=/home/jhonny/Maildir/
+  │ 
+  │ # User configuration
+  │ #
+  │ # Here is where you can let notmuch know how you would like to be
+  │ # addressed. Valid settings are
+  │ #
+  │ #	name		Your full name.
+  │ #	primary_email	Your primary email address.
+  │ #	other_email	A list (separated by ';') of other email addresses
+  │ #			at which you receive email.
+  │ #
+  │ # Notmuch will use the various email addresses configured here when
+  │ # formatting replies. It will avoid including your own addresses in the
+  │ # recipient list of replies, and will set the From address based on the
+  │ # address to which the original email was addressed.
+  │ #
+  │ [user]
+  │ name=Jhonny Lanzuisi
+  │ primary_email=jalb97@gmail.com
+  │ other_email=15-10759@usb.ve;
+  │ 
+  │ # Configuration for "notmuch new"
+  │ #
+  │ # The following options are supported here:
+  │ #
+  │ #	tags	A list (separated by ';') of the tags that will be
+  │ #		added to all messages incorporated by "notmuch new".
+  │ #
+  │ #	ignore	A list (separated by ';') of file and directory names
+  │ #		that will not be searched for messages by "notmuch new".
+  │ #
+  │ #		NOTE: *Every* file/directory that goes by one of those
+  │ #		names will be ignored, independent of its depth/location
+  │ #		in the mail store.
+  │ #
+  │ [new]
+  │ tags=unread;inbox;
+  │ ignore=
+  │ 
+  │ # Search configuration
+  │ #
+  │ # The following option is supported here:
+  │ #
+  │ #	exclude_tags
+  │ #		A ;-separated list of tags that will be excluded from
+  │ #		search results by default.  Using an excluded tag in a
+  │ #		query will override that exclusion.
+  │ #
+  │ [search]
+  │ exclude_tags=deleted;spam;
+  │ 
+  │ # Maildir compatibility configuration
+  │ #
+  │ # The following option is supported here:
+  │ #
+  │ #	synchronize_flags      Valid values are true and false.
+  │ #
+  │ #	If true, then the following maildir flags (in message filenames)
+  │ #	will be synchronized with the corresponding notmuch tags:
+  │ #
+  │ #		Flag	Tag
+  │ #		----	-------
+  │ #		D	draft
+  │ #		F	flagged
+  │ #		P	passed
+  │ #		R	replied
+  │ #		S	unread (added when 'S' flag is not present)
+  │ #
+  │ #	The "notmuch new" command will notice flag changes in filenames
+  │ #	and update tags, while the "notmuch tag" and "notmuch restore"
+  │ #	commands will notice tag changes and update flags in filenames
+  │ #
+  │ [maildir]
+  │ synchronize_flags=true
+  └────
+
+
+3.3 Msmtp
+─────────
+
+  Este programa envía emails.
+
+  ┌────
+  │ # Set default values for all following accounts.
+  │ defaults
+  │ auth           on
+  │ tls            on
+  │ tls_trust_file /etc/ssl/certs/ca-certificates.crt
+  │ logfile        ~/.msmtp.log
+  │ 
+  │ # Gmail
+  │ account        jalb97-gmail
+  │ host           smtp.gmail.com
+  │ port           587
+  │ from           jalb97@gmail.com
+  │ user           jalb97
+  │ passwordeval   "gpg2 --batch --yes --passphrase-file ~/.emacs.d/notmuch/passfile -q --for-your-eyes-only --no-tty -d ~/.emacs.d/notmuch/.mbsyncpass-jalb97.gpg"
+  │ 
+  │ # Gmail
+  │ account        15-10759-gmail
+  │ host           smtp.gmail.com
+  │ port           587
+  │ from           15-10759@usb.ve
+  │ user           15-10759@usb.ve
+  │ passwordeval   "gpg2 --batch --yes --passphrase-file ~/.emacs.d/notmuch/passfile -q --for-your-eyes-only --no-tty -d ~/.emacs.d/notmuch/.mbsyncpass-15-10759.gpg"
+  │ 
+  │ account default : jalb97-gmail
+  └────

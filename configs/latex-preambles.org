@@ -112,11 +112,11 @@ DIV = calc,
 % Latin modern fonts for serif and sans,
 % and Hack (Dejavu sans mono derivative)
 % for monospaced.
-\setmainfont[SmallCapsFeatures={LetterSpace=5,RawFeature={+c2sc}}]{STEP}
+\setmainfont[SmallCapsFont={* Caps},SmallCapsFeatures={LetterSpace=5}]{Latin Modern Roman}
 \defaultfontfeatures{Scale=MatchLowercase}
 \setsansfont{Latin Modern Sans}
-\setmonofont{Go Mono}
-\newfontfamily{\baskerfont}[Scale=1]{QTBasker}
+\setmonofont{TeX Gyre Cursor}
+\newfontfamily{\basker}{BaskervilleF}
 #+END_SRC
 
 #+BEGIN_SRC latex
@@ -128,7 +128,7 @@ DIV = calc,
 #+BEGIN_SRC latex
 % More symbols and better spacing than
 % Latin modern Math.
-\setmathfont[Path=/home/jhonny/.fonts/]{XITSMath-Regular.otf}
+\setmathfont{New Computer Modern Math}
 #+END_SRC
 
 * Paquetes varios
@@ -214,9 +214,8 @@ citecolor=\linkcolor
 #+BEGIN_SRC latex
 % List have no indent, and the numbers are in the right margin.
 \usepackage{enumitem} 
-\setlist[enumerate]{left=-11pt,nosep}
 \setlist[description]{font=\normalfont,leftmargin=\parindent}
-\setlist[itemize]{label={\small\textbullet},left=-11pt}
+\setlist[itemize]{label={\small\textbullet}}
 #+END_SRC
 
 * Página de título en los artículos
@@ -226,9 +225,9 @@ citecolor=\linkcolor
 
 #+BEGIN_SRC latex
 % Font style and size for title
-\setkomafont{title}{\baskerfont\itshape}
+\setkomafont{title}{\basker}
 % Font style for the subject
-\setkomafont{subject}{\scshape\Large}
+\setkomafont{subject}{\normalfont\scshape\large}
 % Font style for subtitle
 \setkomafont{subtitle}{\normalfont\upshape}
 #+END_SRC
@@ -242,13 +241,15 @@ citecolor=\linkcolor
 \usepackage[final]{listings} 
 \lstset
 {
-numbers=left, numberstyle=\tiny\ttfamily, stepnumber=2, numbersep=5pt, 
+numbers=left, numberstyle=\tiny\rmfamily, stepnumber=2, numbersep=5pt, 
 basicstyle=\ttfamily, 
 stringstyle=\ttfamily,
 commentstyle=\itshape,
+emphstyle=\scshape,
+keywordstyle=\scshape,
 breaklines=true,
 postbreak=\mbox{$\hookrightarrow$\enspace},
-columns=flexible
+%columns=flexible
 }
 #+END_SRC
 
@@ -276,8 +277,17 @@ skip=3pt
   :END:
 
 #+BEGIN_SRC latex
-\setkomafont{section}{\normalfont\bfseries}
-\setkomafont{subsection}{\normalfont}
+\RedeclareSectionCommand[
+  afterindent=false,
+  beforeskip=1.5\baselineskip,
+  afterskip=.5\baselineskip]{section}
+\setkomafont{section}{\normalfont\LARGE}
+\RedeclareSectionCommand[
+  afterindent=false,
+  beforeskip=1\baselineskip,
+  afterskip=1\baselineskip
+]{subsection}
+\setkomafont{subsection}{\normalfont\bfseries\small}
 #+END_SRC
 
 ** Libros
@@ -289,7 +299,7 @@ skip=3pt
   :END:
 
 #+BEGIN_SRC latex
-\setkomafont{sectionentry}{\normalfont\sffamily\small}
+\setkomafont{sectionentry}{\normalfont\sffamily\large}
 %\setkomafont{subsectionentry}{\normalfont}
 #+END_SRC
 * Encabezados y pies de página
