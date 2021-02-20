@@ -25,6 +25,9 @@
 *** DONE algo1 tercera tarea. iteración matrices
     CLOSED: [2021-02-16 mar 18:06] DEADLINE: <2021-02-17 Wed 10:00>
 
+*** TODO algo1 cuarta tarea asignación matrices
+    DEADLINE: <2021-02-23 mar 14:00>
+
 *** Exámenes parciales.
 **** DONE Algo1 1er parcial (25%).
      CLOSED: [2021-02-04 jue 18:55] DEADLINE: <2021-02-04 jue>
@@ -49,6 +52,9 @@
 **** DONE Lab semana 5, hay que hacer en colab
      CLOSED: [2021-02-17 mié 09:09] DEADLINE: <2021-02-17 Wed 10:00>
 
+**** TODO Lab semana 6
+     DEADLINE: <2021-02-24 mié 10:00>
+
 *** Exámenes parciales
 **** DONE Lab Primer parcial (20%).
      CLOSED: [2021-02-12 Fri 07:44] DEADLINE: <2021-02-10 mié>
@@ -63,8 +69,8 @@
 *** Exámenes parciales.
 **** DONE Ana Primer parcial 35%.
      CLOSED: [2021-02-08 lun 17:50] DEADLINE: <2021-02-08 lun>
-***** TODO Corección del parcial de analisis
-      DEADLINE: <2021-02-17 mié>
+***** DONE Corección del parcial de analisis
+      CLOSED: [2021-02-18 jue 12:38] DEADLINE: <2021-02-17 mié>
 
 **** Ana Segundo parcial 35%.
      DEADLINE: <2021-03-08 lun>

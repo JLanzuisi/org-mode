@@ -1,5 +1,5 @@
 #+TITLE: Preámbulos de LaTeX
-#+SUBTITLE: Una configuración que usa las clases article,book y LuaLaTeX
+#+SUBTITLE: Una configuración que usa las clases KOMA-Script y LuaLaTeX
 #+AUTHOR: Jhonny Lanzuisi
 #+TAGS: :latex:preamble:
 #+PROPERTY: header-args :eval never :exports code :noweb tangle
@@ -33,23 +33,9 @@
 #+END_SRC
 
 Este archivo explica mi configuración de LaTeX.
-La idea es usar el estilo de la "programación letrada",
-por lo que la prosa y los bloques de código se mezclan.
-
-‖
-Las herramientas utilizadas para lograr esta mezcla de código y texto
-son Emacs y Org.
-Las porciones del texto, como esta, que estan encerradas en doble barra vertical
-hablan sobre cosas que tienen que ver con este sistema de emacs+org
-y no de la configuración de LaTeX.
-
-Además de las herramientas mencionadas antes,
-parte de la sintanxis y el estilo pronvienen del sistema =WEB=
-inventado por Don Knuth.
-‖
 
 En LaTeX solo me han hecho falta dos tipos de documentos,
-los que usan como base la clase =article= y los que usan la clase =book=.
+los que usan como base la clase =scrartcl=  y los que usan la clase =scrbook=.
 Como ambos comparten partes del código,
 es pues sensato que ambos preámbulos sean descritos en este archivo.
 
@@ -58,41 +44,41 @@ pueden encontrarse de forma íntegra al final del documento,
 en caso de que se quiera hacer referencia al código directamente.
 
 * Configuraciones varias de TeX
-Esta parte hace que TeX no reporte overfull (o underfull) boxes si son muy pequeñas.
-Además, hace la marca de una overfull más grande, para que sea más fácil de ver
 
 #+NAME:misc-tex-config
 #+BEGIN_SRC latex
+% This block configures some misc plain TeX options
 \hfuzz1pc
 \overfullrule=2cm
 #+END_SRC
 
 * Configuración de idioma
-Aquí de configura el español, junto con una opción para que los párrafos que siguen a un título no estén identados.
 
-#+NAME:language-babel
+#+NAME:language
 #+BEGIN_SRC latex
-\usepackage[spanish,es-noindentfirst]{babel}
+% Language. Spanish for most texts,
+% english when needed. The csquotes packages is
+% usefull for quotes.
+\usepackage{polyglossia}
+\setdefaultlanguage{spanish}
+\PolyglossiaSetup{spanish}{indentfirst=false}
+%\setdefaultlanguage{english}
 \usepackage{csquotes}
 #+END_SRC
 
 * Dimensiones de la página
-Los márgenes se configuran aquí. Junto con el tamaño del papel, actualmente en carta.
 
 #+NAME:page-size-article
 #+BEGIN_SRC latex
-\usepackage
-[
-	includehead,
-	includefoot,
-	top=.5cm,
-	bottom=.5cm,
-	left=1.7cm,
-	right=7.3cm,
-	marginparsep=0.5cm,
-	marginparwidth=7cm,
-]
-{geometry}
+% Page layout
+\KOMAoptions{
+paper = letter,
+BCOR = 0mm,
+twoside = false,
+pagesize = luatex,
+fontsize = {11},
+DIV = calc,
+}
 #+END_SRC
 
 * Tipografías (texto y matemáticas)
@@ -102,12 +88,11 @@ Los márgenes se configuran aquí. Junto con el tamaño del papel, actualmente e
   :header-args: :noweb-ref fonts-common :eval never :exports code
   :END:
 
-Esta sección describe las fuentes que ambas clases comparten.
-
-Primero cargamos los paquetes de la AMS para tener algunos símbolos y entornos útiles.
-También se definen algunos operadores.
-
 #+BEGIN_SRC latex
+% Load amsmath family of packages,
+% and extra goodies.
+% The operators are not used too much, but
+% it's nice to have them.
 \usepackage{mathtools}
 \DeclareMathOperator{\Rea}{Re}
 \DeclareMathOperator{\Ima}{Im}
@@ -117,49 +102,33 @@ También se definen algunos operadores.
 \DeclareMathOperator{\mcm}{mcm}
 #+END_SRC
 
-Las fuentes utilizan el paquete =fontspec=, por lo que =lualatex= o =xelatex= son necesarios.
-Además, dado que =unicode-math= carga =fontspec= por defecto, es suficiente con:
-
 #+BEGIN_SRC latex
+% This package loads fontspec,
+% so only one usepackage is needed.
 \usepackage{unicode-math}
 #+END_SRC
 
-Ahora, si, las fuentes del texto.
-Se usan por defecto números proporcionales y "oldstyle".
-
 #+BEGIN_SRC latex
-\setmainfont{STEP}
+% Latin modern fonts for serif and sans,
+% and Hack (Dejavu sans mono derivative)
+% for monospaced.
+\setmainfont[SmallCapsFeatures={LetterSpace=5,RawFeature={+c2sc}}]{STEP}
 \defaultfontfeatures{Scale=MatchLowercase}
-\setsansfont{Source Sans Pro}
-\setmonofont{Hack}
+\setsansfont{Latin Modern Sans}
+\setmonofont{Go Mono}
+\newfontfamily{\baskerfont}[Scale=1]{QTBasker}
 #+END_SRC
 
-Algo de espacio entre las lineas. El comando =\frenchspacing= hace que LaTeX coloque un solo espacio después de los puntos.
-
 #+BEGIN_SRC latex
+% Only one space after periods
 \frenchspacing
-\linespread{1.05}
 #+END_SRC
 
-Las fuentes de matemáticas estan basadas en Times Roman.
 
 #+BEGIN_SRC latex
-\setmathfont{STEP Math}
-#+END_SRC
-
-Y por último, ajustes microtipográficos.
-
-#+BEGIN_SRC latex
-\usepackage[final]{microtype}
-#+END_SRC
-
-** Especifico de los artículos
-
-La fuente de los títulos viene dada por el siguiente bloque.
-
-#+NAME:fonts-article-headfont
-#+BEGIN_SRC latex
-\newcommand{\headfont}{\sffamily}
+% More symbols and better spacing than
+% Latin modern Math.
+\setmathfont[Path=/home/jhonny/.fonts/]{XITSMath-Regular.otf}
 #+END_SRC
 
 * Paquetes varios
@@ -169,27 +138,27 @@ La fuente de los títulos viene dada por el siguiente bloque.
   :header-args: :noweb-ref packages-common  :eval never :exports code
   :END:
 
-Primero, un línea que permite cargar las imágenes del documente según hagan falta.
-Esto se hace pasando la opción "borrador" al paquete que se encarga de las imágenes.
-Luego, una opción para poder usar los nombres de los colores en =xcolor=.
-
 #+BEGIN_SRC latex
+% For inserting images
 \PassOptionsToPackage{final}{graphicx}
+% Colors and color names
 \PassOptionsToPackage{dvipsnames}{xcolor}
 #+END_SRC
 
-Ahora, diversos paquetes útiles o que sirven de dependencias a otros.
-La mayoría son fáciles de entender, en cualquier caso chequeen la documentación individual de cada paquete (en GNU/Linux, con TeXLive, =texdoc $package-name=).
-
 #+BEGIN_SRC latex
+% Cancel allows to simbolize cancelling terms in math,
+% its sometimes useful to have.
+% Booktabs allows for better tables.
+% Pdfpages gives the option to insert a pdf,
+% really useful if I want an image to be scalable,
+% I can then make a pdf of a vector graphic for example.
+% Metalogo just gives the corrent typesetting for logos like LuaTeX.
 \usepackage
 {
 	xcolor,
 	graphicx,
 	cancel,
 	booktabs,
-	hyphenat,
-	authoraftertitle,
 	pdfpages,
 	metalogo
 }
@@ -200,33 +169,33 @@ La mayoría son fáciles de entender, en cualquier caso chequeen la documentaci�
   :header-args: :noweb-ref bib-common  :eval never :exports code
   :END:
 
-El siguiente bloque configura el estylo de la bibliografía,
-y además especifica el comando =biber= para procesar los archivos,
-evidentemente hará falat tener =biber= instalado para usarlo.
-La línea que especifica el lugar del archi =.bib= debe ser editada, evidentemente, si no se tiene una estructura de archivos idéntica.
+#+BEGIN_SRC latex
+% Make bibliography more compact, no indents.
+\KOMAoption{toc}{flat}
+#+END_SRC
 
 #+BEGIN_SRC latex
+% Biblatex and numeric style.
+% The backref option enables back references,
+% which I find nice to have.
 \usepackage
 [
 backend=biber,
 backref=true,
-citestyle=authortitle,
-bibstyle=authortitle,
+citestyle=numeric-comp,
+bibstyle=numeric-comp,
 sorting=ynt
 ]
 {biblatex}
 \addbibresource{/home/jhonny/git/Misc-LaTeX-files/bib/general.bib}
 #+END_SRC
-Nótese la opción =backref=true=, que permite hacer referencias desde la página de la bibliografía al texto.
-
-Ahora, se configura la apriencia de las referencias y los url.
-El paquete =cleveref= es bastante ùtil.
 
 #+BEGIN_SRC latex
+% Hyperlinks and their formatting
 \usepackage{url} 
 \usepackage{hyperref} 
 \definecolor{Carmine}{HTML}{960018}
-\newcommand{\linkcolor}{Carmine}
+\newcommand{\linkcolor}{Black}
 \hypersetup
 {
 colorlinks=true,
@@ -237,61 +206,13 @@ citecolor=\linkcolor
 \usepackage[spanish,nameinlink]{cleveref} 
 #+END_SRC
 
-* Notas al márgen
-  :PROPERTIES:
-  :header-args: :noweb-ref margin-notes-article  :eval never :exports code
-  :END:
-
-Esta parte define los comandos para añadir notas al margen.
-Primero, un nuevo comando que sirve como "variable" para elegir la fuente a usar en el margen =marfont=.
-
-#+BEGIN_src latex
-\newcommand{\marfont}{} 
-#+END_src
-
-Ahora, cambiamos el comando =marginpar= para que use esa fuente,
-y este alineado a la izquierda.
-
-#+BEGIN_SRC latex
-%\renewcommand*{\marginfont}{\marfont}
-\let\oldmarginpar\marginpar
-\renewcommand
-	{\marginpar}
-	[1]
-	{
-	\oldmarginpar{\raggedright\marfont #1}
-	}
-#+END_SRC
-
-El siguiente es un comando que inserta notas al margen numeradas.
-
-#+BEGIN_SRC latex
-\newcounter{nota}
-\newcommand
-	{\nota}
-	[1]
-	{
-	\refstepcounter{nota}\textsuperscript{\thenota}
-	\marginpar{
-		\raggedright\itshape\thenota. #1
-		}
-	}
-#+END_SRC
-
-Por último, que el comando =footnote= sea lo mismo que =nota=, para que el documento TeX sea mas portable.
-
-#+BEGIN_SRC latex
-\renewcommand{\footnote}{\nota}
-#+END_SRC
-
 * Listas
   :PROPERTIES:
   :header-args: :noweb-ref lists-common  :eval never :exports code
   :END:
 
-Este bloque se encarga de la apriencia de las listas, nada mas.
-
 #+BEGIN_SRC latex
+% List have no indent, and the numbers are in the right margin.
 \usepackage{enumitem} 
 \setlist[enumerate]{left=-11pt,nosep}
 \setlist[description]{font=\normalfont,leftmargin=\parindent}
@@ -303,63 +224,19 @@ Este bloque se encarga de la apriencia de las listas, nada mas.
   :header-args: :noweb-ref article-maketitle  :eval never :exports code
   :END:
 
-Un comando para el título diferente, se puede ignorar y usar el valor por defecto.
-Hace falta una manera de establecer para cual asignatura se esta escribiendo,
-de eso se encarga el siguiente bloque.
-
 #+BEGIN_SRC latex
-\newcommand{\Asignatura}{}
-\newcommand
-	{\asignatura}
-	[1]
-	{\renewcommand{\Asignatura}{#1}}
+% Font style and size for title
+\setkomafont{title}{\baskerfont\itshape}
+% Font style for the subject
+\setkomafont{subject}{\scshape\Large}
+% Font style for subtitle
+\setkomafont{subtitle}{\normalfont\upshape}
 #+END_SRC
 
-Ahora si, la definicón de =maketitle=
-
-#+BEGIN_SRC latex
-\makeatletter
-\def\@maketitle
-	{
-	\newpage
-	\null
-	\let \footnote \thanks
-  	\begin{flushleft}\sffamily
-  	\marginpar
-		{
-		\vspace*{.2em}
-		\begin{minipage}{.7\marginparwidth}
-		\begin{center}
-		\includegraphics
-			[width=.35\marginparwidth]
-			{/home/jhonny/git/LaTeX-University/usb-logo.png}\\
-		Universidad Simón Bolívar\\
-		Caracas, Venezuela\\
-		\end{center}
-		\end{minipage}
-		}
-	{
-	\Large\headfont
-		\MyTitle
-	\par
-	}
-	\smallskip
-	\Asignatura\par
-	\smallskip
-	\@author,\ \today.
-	\end{flushleft}
-	\vskip 1.5\baselineskip
-	}
-\makeatother
-#+END_SRC
 * Bloques de código
   :PROPERTIES:
   :header-args: :noweb-ref code-listings-common  :eval never :exports code
   :END:
-
-La apaciencia de los bloques de código, dando resaltado a la sintaxis, se configura a continuación.
-Se debe usar el comando =\lsset= para configurar el lenguaje que se va a usar en cada archivo,
-o si se usarán varios lenguajes estos se especifican en cada bloque.
 
 #+BEGIN_SRC latex
 \usepackage[final]{listings} 
@@ -380,8 +257,6 @@ columns=flexible
   :header-args: :noweb-ref captions-common  :eval never :exports code
   :END:
 
-La apariencia de las leyendas. Nada interesante.
-
 #+BEGIN_SRC latex
 \usepackage{caption} 
 \captionsetup
@@ -393,128 +268,42 @@ skip=3pt
 }
 #+END_SRC
 
-* Títulos de secciones y la lista de contenidos
-Los paquetes =titlesec= y =titletoc= pueden llegar a ser bastante confusos.
-Lamentablemente no hay mejor manera que ver la documentación original,
-sin la cual lo siguiente seguramente será ininteligible.
-
-El paquete en cuestión, con una opción para describir con mayor dellate el formato.
-
-#+BEGIN_SRC latex :noweb-ref titlesec-common  :eval never :exports code
-\usepackage[explicit]{titlesec}
-#+END_SRC
-
+* Títulos de secciones
+  
 ** Artículos
   :PROPERTIES:
-  :header-args: :noweb-ref titlesec-article  :eval never :exports code
+  :header-args: :noweb-ref headings-article  :eval never :exports code
   :END:
 
-Ahora, la configuración de las secciones y subsecciones; en ese orden.
-
 #+BEGIN_SRC latex
-\titleformat{\section}[hang]
-	{\flushleft\headfont}
-	{\addfontfeatures{Numbers=Lining}\thesection}
-	{1em}
-	{\addfontfeatures{LetterSpace=5}\MakeUppercase{#1}}
-	[]
-\titlespacing*{\section}
-	{0em}
-	{1.5\baselineskip}
-	{.5\baselineskip}
-\titleformat{\subsection}
-	{\flushleft\sffamily}
-	{\addfontfeatures{Numbers=Lining}\thesubsection}
-	{.5em}
-	{#1}
-	[]
-\titlespacing*{\subsection}
-	{0em}
-	{1\baselineskip}
-	{1\baselineskip}
-\titleformat{\paragraph}[runin]
-	{\scshape}
-	{}
-	{0em}
-	{\MakeLowercase{#1}}
-	[.]
-\titlespacing*{\paragraph}
-	{0em}
-	{1\baselineskip}
-	{5pt}
-#+END_SRC
-
-La siguiente parte configura la lista de contenidos, y sigue el mismo orden que la anterior.
-
-#+BEGIN_SRC latex
-\let\oldtoc\tableofcontents
-\renewcommand
-{\tableofcontents}
-{\marginpar{\bigskip\oldtoc}}
-\usepackage{titletoc}
-#+END_SRC
-
-#+BEGIN_SRC latex
-\titlecontents{section}
-	[0em]
-	{\vspace{0pt}}
-	{\contentsmargin{0pt}}
-	{\contentsmargin{0pt}}
-	{\contentspage}
-	[\vspace{.3em}]
-\titlecontents{subsection}
-	[1.5em]                              
-	{\vspace{0pt}}
-	{\contentsmargin{0pt}\small}
-	{\contentsmargin{0pt}\small}        
-	{\small\contentspage}                 
-	[\vspace{.3em}]
+\setkomafont{section}{\normalfont\bfseries}
+\setkomafont{subsection}{\normalfont}
 #+END_SRC
 
 ** Libros
 
+* Lista de contenidos
+** Artículo
+  :PROPERTIES:
+  :header-args: :noweb-ref toc-article  :eval never :exports code
+  :END:
+
+#+BEGIN_SRC latex
+\setkomafont{sectionentry}{\normalfont\sffamily\small}
+%\setkomafont{subsectionentry}{\normalfont}
+#+END_SRC
 * Encabezados y pies de página
-Es normalmente recomendado usar para esto una clase de =koma-script=,
-y probablemente sea lo que haga en un futuro, por ahora funciona.
-
-El paquete que se encarga de todo.
-#+BEGIN_SRC latex :noweb-ref fancyhdr-common  :eval never :exports code
-\usepackage{fancyhdr}
-#+END_SRC
-
-Ahora, que no haya una linea horizontal en los encabezados, 
-y además ahcerlos suficientemente grandes.
-
-#+BEGIN_SRC latex :noweb-ref fancyhdr-common-2  :eval never :exports code
-\renewcommand{\headrulewidth}{0pt}
-\setlength{\headheight}{14pt}
-#+END_SRC
 
 ** Artículos
   :PROPERTIES:
-  :header-args: :noweb-ref fancyhdr-article  :eval never :exports code
+  :header-args: :noweb-ref hdr-article  :eval never :exports code
   :END:
 
-Ahora si, la configuración.
-La construcción =if... else...= permite colocar cosas diferentes en las páginas pares e impares.
 #+BEGIN_SRC latex
-\pagestyle{fancy}
-\fancyhf{}
-\fancyhead
-	[L]
-	{
-	\ifodd\value{page}\MyTitle\else\Asignatura\fi
-	}
-\fancyhead[R]{\thepage}
-\fancypagestyle
-	{plain}
-	{
-	\fancyhead[R]{}
-	\fancyhead[L]{}
-	\fancyfoot[R]{}%
-	\fancyfoot[L]{}
-	\fancyfoot[C]{}
-	}
+% Line for header
+\KOMAoption{headsepline}{true}
+% Section headings in header
+\pagestyle{headings}
 #+END_SRC
 
 * Entornos de teoremas
@@ -522,14 +311,9 @@ La construcción =if... else...= permite colocar cosas diferentes en las página
   :header-args: :noweb-ref theorems-common  :eval never :exports code
   :END:
 
-Declaración y configuración de los entornos de teoremas.
-Para esto, usamos el siguiente paquete.
-
 #+BEGIN_SRC latex
 \usepackage[thmmarks]{ntheorem}
 #+END_SRC
-
-Ahora, los entornos numerados.
 
 #+BEGIN_SRC latex
 \theoremstyle{plain}
@@ -552,40 +336,21 @@ Ahora, los entornos numerados.
 Esta sección reproduce los archivos
 cuyas partes han sido descritas y explicadas anteriormente.
 
-‖
-En el archivo =.org= esto es bastanet sencillo de lograr.
-Simplemente hace falta crear un bloque =src= que contiene lo siguiente:
-
-#+BEGIN_SRC
-<<first-keyword>>
-
-<<second-keyword>>
-#+END_SRC
-
-Donde los =*-keyword= son los nombres de los bloques de código que se han de insertar.
-Esto junto con la opción =:noweb yes=
-permite crear el archivo =.tex= en el disco que se usará para compilar LaTeX
-y al mismo tiempo coloca una copia de dicho archivo en el documento exportado.
-‖
-
 ** Articulos
 
 #+NAME:article-preamble
-#+BEGIN_SRC latex :noweb yes :tangle ~/git/LaTeX-University/preamble-article-test.tex 
+#+BEGIN_SRC latex :noweb yes :tangle ~/git/LaTeX-University/preamble-article.tex 
 <<misc-tex-config>>
 
-<<language-babel>>
+<<language>>
 
 <<page-size-article>>
 
 <<fonts-common>>
-<<fonts-article-headfont>>
 
 <<packages-common>>
 
 <<bib-common>>
-
-<<margin-notes-article>>
 
 <<lists-common>>
 
@@ -594,12 +359,11 @@ y al mismo tiempo coloca una copia de dicho archivo en el documento exportado.
 <<code-listings-common>>
 <<captions-common>>
 
-<<titlesec-common>>
-<<titlesec-article>>
+<<headings-article>>
 
-<<fancyhdr-common>>
-<<fancyhdr-common-2>>
-<<fancyhdr-article>>
+<<toc-article>>
+
+<<hdr-article>>
 
 <<theorems-common>>
 #+END_SRC

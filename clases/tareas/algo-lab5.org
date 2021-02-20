@@ -29,14 +29,64 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 # ---------------
 
-* Una pruba
-es una prueba de alho 
+* Prelaboratorio
 
-#+BEGIN_SRC ipython
-import something from somethingelse
+** Ejercicio 1
 
-while n= 0:
-return 0
+El siguiente programa en GCL calcula la suma de los =N= elementos
+de un array =A= de tipo entero.
+
+#+BEGIN_SRC iphyton
+const N: int;
+var A: array [0,N) of int;
+var i: int;
+
+i := 0;
+suma := 0;
+
+{Invariante P: suma = (+ k: 0 <= k < i: A[i]) /\ 0 <= i < N}
+{Cota t: N - i}
+
+do i != N ->
+   suma := suma + A[i];
+   i := i + 1
+od
+
+{Postcondición Q: suma = + i: 0 <= i < N: A[i]}
 #+END_SRC
 
-Esto es otra prueba.
+** Ejercicio 2
+
+El siguiente programa traduce el programa del ejercicio 1 a python.
+Se define una función =summ= que suma las entradas de un arreglo de tipo entero.
+
+#+BEGIN_SRC python
+def summ(A: list):
+    '''
+    Sum the entries of a one dimensional integer list.
+
+    args:
+       A, a list of type int.
+    
+    output:
+       summ, a variable holding the sum
+    '''
+
+    for i in A:
+        assert isinstance(A[i], int)
+
+    summ = 0
+
+    for i in A:
+        summ = summ + A[i]
+
+    assert summ == sum(A)
+
+    return summ
+
+print(summ([1,2,3]))
+#+END_SRC
+
+#+RESULTS:
+
+* Laboratorio

@@ -1,7 +1,7 @@
 	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 			  PREÁMBULOS DE LATEX
-		  Una configuración que usa las clases
-			article,book y LuaLaTeX
+	    Una configuración que usa las clases KOMA-Script
+			       y LuaLaTeX
 
 			    Jhonny Lanzuisi
 	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -15,18 +15,18 @@ Table of Contents
 3. Dimensiones de la página
 4. Tipografías (texto y matemáticas)
 .. 1. Tipografías compartidas
-.. 2. Especifico de los artículos
 5. Paquetes varios
 .. 1. Paquetes compartidos
 6. Referencias y bibliografía
-7. Notas al márgen
-8. Listas
-9. Página de título en los artículos
-10. Bloques de código
-11. Leyendas para figuras y tablas
-12. Títulos de secciones y la lista de contenidos
+7. Listas
+8. Página de título en los artículos
+9. Bloques de código
+10. Leyendas para figuras y tablas
+11. Títulos de secciones
 .. 1. Artículos
 .. 2. Libros
+12. Lista de contenidos
+.. 1. Artículo
 13. Encabezados y pies de página
 .. 1. Artículos
 14. Entornos de teoremas
@@ -35,22 +35,12 @@ Table of Contents
 .. 2. Libros
 
 
-Este archivo explica mi configuración de LaTeX.  La idea es usar el
-estilo de la "programación letrada", por lo que la prosa y los bloques
-de código se mezclan.
-
-‖ Las herramientas utilizadas para lograr esta mezcla de código y texto
-son Emacs y Org.  Las porciones del texto, como esta, que estan
-encerradas en doble barra vertical hablan sobre cosas que tienen que ver
-con este sistema de emacs+org y no de la configuración de LaTeX.
-
-Además de las herramientas mencionadas antes, parte de la sintanxis y el
-estilo pronvienen del sistema `WEB' inventado por Don Knuth.  ‖
+Este archivo explica mi configuración de LaTeX.
 
 En LaTeX solo me han hecho falta dos tipos de documentos, los que usan
-como base la clase `article' y los que usan la clase `book'.  Como ambos
-comparten partes del código, es pues sensato que ambos preámbulos sean
-descritos en este archivo.
+como base la clase `scrartcl' y los que usan la clase `scrbook'.  Como
+ambos comparten partes del código, es pues sensato que ambos preámbulos
+sean descritos en este archivo.
 
 Todos los preambulos que se generan de este archivo pueden encontrarse
 de forma íntegra al final del documento, en caso de que se quiera hacer
@@ -60,11 +50,8 @@ referencia al código directamente.
 1 Configuraciones varias de TeX
 ═══════════════════════════════
 
-  Esta parte hace que TeX no reporte overfull (o underfull) boxes si son
-  muy pequeñas.  Además, hace la marca de una overfull más grande, para
-  que sea más fácil de ver
-
   ┌────
+  │ % This block configures some misc plain TeX options
   │ \hfuzz1pc
   │ \overfullrule=2cm
   └────
@@ -73,11 +60,14 @@ referencia al código directamente.
 2 Configuración de idioma
 ═════════════════════════
 
-  Aquí de configura el español, junto con una opción para que los
-  párrafos que siguen a un título no estén identados.
-
   ┌────
-  │ \usepackage[spanish,es-noindentfirst]{babel}
+  │ % Language. Spanish for most texts,
+  │ % english when needed. The csquotes packages is
+  │ % usefull for quotes.
+  │ \usepackage{polyglossia}
+  │ \setdefaultlanguage{spanish}
+  │ \PolyglossiaSetup{spanish}{indentfirst=false}
+  │ %\setdefaultlanguage{english}
   │ \usepackage{csquotes}
   └────
 
@@ -85,22 +75,16 @@ referencia al código directamente.
 3 Dimensiones de la página
 ══════════════════════════
 
-  Los márgenes se configuran aquí. Junto con el tamaño del papel,
-  actualmente en carta.
-
   ┌────
-  │ \usepackage
-  │ [
-  │ 	includehead,
-  │ 	includefoot,
-  │ 	top=.5cm,
-  │ 	bottom=.5cm,
-  │ 	left=1.7cm,
-  │ 	right=7.3cm,
-  │ 	marginparsep=0.5cm,
-  │ 	marginparwidth=7cm,
-  │ ]
-  │ {geometry}
+  │ % Page layout
+  │ \KOMAoptions{
+  │ paper = letter,
+  │ BCOR = 0mm,
+  │ twoside = false,
+  │ pagesize = luatex,
+  │ fontsize = {11},
+  │ DIV = calc,
+  │ }
   └────
 
 
@@ -110,12 +94,11 @@ referencia al código directamente.
 4.1 Tipografías compartidas
 ───────────────────────────
 
-  Esta sección describe las fuentes que ambas clases comparten.
-
-  Primero cargamos los paquetes de la AMS para tener algunos símbolos y
-  entornos útiles.  También se definen algunos operadores.
-
   ┌────
+  │ % Load amsmath family of packages,
+  │ % and extra goodies.
+  │ % The operators are not used too much, but
+  │ % it's nice to have them.
   │ \usepackage{mathtools}
   │ \DeclareMathOperator{\Rea}{Re}
   │ \DeclareMathOperator{\Ima}{Im}
@@ -125,52 +108,32 @@ referencia al código directamente.
   │ \DeclareMathOperator{\mcm}{mcm}
   └────
 
-  Las fuentes utilizan el paquete `fontspec', por lo que `lualatex' o
-  `xelatex' son necesarios.  Además, dado que `unicode-math' carga
-  `fontspec' por defecto, es suficiente con:
-
   ┌────
+  │ % This package loads fontspec,
+  │ % so only one usepackage is needed.
   │ \usepackage{unicode-math}
   └────
 
-  Ahora, si, las fuentes del texto.  Se usan por defecto números
-  proporcionales y "oldstyle".
-
   ┌────
-  │ \setmainfont{STEP}
+  │ % Latin modern fonts for serif and sans,
+  │ % and Hack (Dejavu sans mono derivative)
+  │ % for monospaced.
+  │ \setmainfont[SmallCapsFont={* Caps},SmallCapsFeatures={LetterSpace=5}]{Latin Modern Roman}
   │ \defaultfontfeatures{Scale=MatchLowercase}
-  │ \setsansfont{Source Sans Pro}
+  │ \setsansfont{Latin Modern Sans}
   │ \setmonofont{Hack}
   └────
 
-  Algo de espacio entre las lineas. El comando `\frenchspacing' hace que
-  LaTeX coloque un solo espacio después de los puntos.
-
   ┌────
+  │ % Only one space after periods
   │ \frenchspacing
-  │ \linespread{1.05}
-  └────
-
-  Las fuentes de matemáticas estan basadas en Times Roman.
-
-  ┌────
-  │ \setmathfont{STEP Math}
-  └────
-
-  Y por último, ajustes microtipográficos.
-
-  ┌────
-  │ \usepackage[final]{microtype}
   └────
 
 
-4.2 Especifico de los artículos
-───────────────────────────────
-
-  La fuente de los títulos viene dada por el siguiente bloque.
-
   ┌────
-  │ \newcommand{\headfont}{\sffamily}
+  │ % More symbols and better spacing than
+  │ % Latin modern Math.
+  │ \setmathfont{New Computer Modern Math}
   └────
 
 
@@ -180,30 +143,27 @@ referencia al código directamente.
 5.1 Paquetes compartidos
 ────────────────────────
 
-  Primero, un línea que permite cargar las imágenes del documente según
-  hagan falta.  Esto se hace pasando la opción "borrador" al paquete que
-  se encarga de las imágenes.  Luego, una opción para poder usar los
-  nombres de los colores en `xcolor'.
-
   ┌────
+  │ % For inserting images
   │ \PassOptionsToPackage{final}{graphicx}
+  │ % Colors and color names
   │ \PassOptionsToPackage{dvipsnames}{xcolor}
   └────
 
-  Ahora, diversos paquetes útiles o que sirven de dependencias a otros.
-  La mayoría son fáciles de entender, en cualquier caso chequeen la
-  documentación individual de cada paquete (en GNU/Linux, con TeXLive,
-  `texdoc $package-name').
-
   ┌────
+  │ % Cancel allows to simbolize cancelling terms in math,
+  │ % its sometimes useful to have.
+  │ % Booktabs allows for better tables.
+  │ % Pdfpages gives the option to insert a pdf,
+  │ % really useful if I want an image to be scalable,
+  │ % I can then make a pdf of a vector graphic for example.
+  │ % Metalogo just gives the corrent typesetting for logos like LuaTeX.
   │ \usepackage
   │ {
   │ 	xcolor,
   │ 	graphicx,
   │ 	cancel,
   │ 	booktabs,
-  │ 	hyphenat,
-  │ 	authoraftertitle,
   │ 	pdfpages,
   │ 	metalogo
   │ }
@@ -213,35 +173,33 @@ referencia al código directamente.
 6 Referencias y bibliografía
 ════════════════════════════
 
-  El siguiente bloque configura el estylo de la bibliografía, y además
-  especifica el comando `biber' para procesar los archivos,
-  evidentemente hará falat tener `biber' instalado para usarlo.  La
-  línea que especifica el lugar del archi `.bib' debe ser editada,
-  evidentemente, si no se tiene una estructura de archivos idéntica.
+  ┌────
+  │ % Make bibliography more compact, no indents.
+  │ \KOMAoption{toc}{flat}
+  └────
 
   ┌────
+  │ % Biblatex and numeric style.
+  │ % The backref option enables back references,
+  │ % which I find nice to have.
   │ \usepackage
   │ [
   │ backend=biber,
   │ backref=true,
-  │ citestyle=authortitle,
-  │ bibstyle=authortitle,
+  │ citestyle=numeric-comp,
+  │ bibstyle=numeric-comp,
   │ sorting=ynt
   │ ]
   │ {biblatex}
   │ \addbibresource{/home/jhonny/git/Misc-LaTeX-files/bib/general.bib}
   └────
-  Nótese la opción `backref=true', que permite hacer referencias desde
-  la página de la bibliografía al texto.
-
-  Ahora, se configura la apriencia de las referencias y los url.  El
-  paquete `cleveref' es bastante ùtil.
 
   ┌────
+  │ % Hyperlinks and their formatting
   │ \usepackage{url} 
   │ \usepackage{hyperref} 
   │ \definecolor{Carmine}{HTML}{960018}
-  │ \newcommand{\linkcolor}{Carmine}
+  │ \newcommand{\linkcolor}{Black}
   │ \hypersetup
   │ {
   │ colorlinks=true,
@@ -253,60 +211,11 @@ referencia al código directamente.
   └────
 
 
-7 Notas al márgen
-═════════════════
-
-  Esta parte define los comandos para añadir notas al margen.  Primero,
-  un nuevo comando que sirve como "variable" para elegir la fuente a
-  usar en el margen `marfont'.
-
-  ┌────
-  │ \newcommand{\marfont}{} 
-  └────
-
-  Ahora, cambiamos el comando `marginpar' para que use esa fuente, y
-  este alineado a la izquierda.
-
-  ┌────
-  │ %\renewcommand*{\marginfont}{\marfont}
-  │ \let\oldmarginpar\marginpar
-  │ \renewcommand
-  │ 	{\marginpar}
-  │ 	[1]
-  │ 	{
-  │ 	\oldmarginpar{\raggedright\marfont #1}
-  │ 	}
-  └────
-
-  El siguiente es un comando que inserta notas al margen numeradas.
-
-  ┌────
-  │ \newcounter{nota}
-  │ \newcommand
-  │ 	{\nota}
-  │ 	[1]
-  │ 	{
-  │ 	\refstepcounter{nota}\textsuperscript{\thenota}
-  │ 	\marginpar{
-  │ 		\raggedright\itshape\thenota. #1
-  │ 		}
-  │ 	}
-  └────
-
-  Por último, que el comando `footnote' sea lo mismo que `nota', para
-  que el documento TeX sea mas portable.
-
-  ┌────
-  │ \renewcommand{\footnote}{\nota}
-  └────
-
-
-8 Listas
+7 Listas
 ════════
 
-  Este bloque se encarga de la apriencia de las listas, nada mas.
-
   ┌────
+  │ % List have no indent, and the numbers are in the right margin.
   │ \usepackage{enumitem} 
   │ \setlist[enumerate]{left=-11pt,nosep}
   │ \setlist[description]{font=\normalfont,leftmargin=\parindent}
@@ -314,67 +223,19 @@ referencia al código directamente.
   └────
 
 
-9 Página de título en los artículos
+8 Página de título en los artículos
 ═══════════════════════════════════
 
-  Un comando para el título diferente, se puede ignorar y usar el valor
-  por defecto.  Hace falta una manera de establecer para cual asignatura
-  se esta escribiendo, de eso se encarga el siguiente bloque.
-
   ┌────
-  │ \newcommand{\Asignatura}{}
-  │ \newcommand
-  │ 	{\asignatura}
-  │ 	[1]
-  │ 	{\renewcommand{\Asignatura}{#1}}
-  └────
-
-  Ahora si, la definicón de `maketitle'
-
-  ┌────
-  │ \makeatletter
-  │ \def\@maketitle
-  │ 	{
-  │ 	\newpage
-  │ 	\null
-  │ 	\let \footnote \thanks
-  │ 	\begin{flushleft}\sffamily
-  │ 	\marginpar
-  │ 		{
-  │ 		\vspace*{.2em}
-  │ 		\begin{minipage}{.7\marginparwidth}
-  │ 		\begin{center}
-  │ 		\includegraphics
-  │ 			[width=.35\marginparwidth]
-  │ 			{/home/jhonny/git/LaTeX-University/usb-logo.png}\\
-  │ 		Universidad Simón Bolívar\\
-  │ 		Caracas, Venezuela\\
-  │ 		\end{center}
-  │ 		\end{minipage}
-  │ 		}
-  │ 	{
-  │ 	\Large\headfont
-  │ 		\MyTitle
-  │ 	\par
-  │ 	}
-  │ 	\smallskip
-  │ 	\Asignatura\par
-  │ 	\smallskip
-  │ 	\@author,\ \today.
-  │ 	\end{flushleft}
-  │ 	\vskip 1.5\baselineskip
-  │ 	}
-  │ \makeatother
+  │ % Font style and size for title
+  │ \setkomafont{title}{\normalfont\LARGE}
+  │ % Font style for the subject
+  │ \setkomafont{subject}{\itshape\Large}
   └────
 
 
-10 Bloques de código
-════════════════════
-
-  La apaciencia de los bloques de código, dando resaltado a la sintaxis,
-  se configura a continuación.  Se debe usar el comando `\lsset' para
-  configurar el lenguaje que se va a usar en cada archivo, o si se
-  usarán varios lenguajes estos se especifican en cada bloque.
+9 Bloques de código
+═══════════════════
 
   ┌────
   │ \usepackage[final]{listings} 
@@ -391,10 +252,8 @@ referencia al código directamente.
   └────
 
 
-11 Leyendas para figuras y tablas
+10 Leyendas para figuras y tablas
 ═════════════════════════════════
-
-  La apariencia de las leyendas. Nada interesante.
 
   ┌────
   │ \usepackage{caption} 
@@ -408,150 +267,54 @@ referencia al código directamente.
   └────
 
 
-12 Títulos de secciones y la lista de contenidos
-════════════════════════════════════════════════
+11 Títulos de secciones
+═══════════════════════
 
-  Los paquetes `titlesec' y `titletoc' pueden llegar a ser bastante
-  confusos.  Lamentablemente no hay mejor manera que ver la
-  documentación original, sin la cual lo siguiente seguramente será
-  ininteligible.
-
-  El paquete en cuestión, con una opción para describir con mayor
-  dellate el formato.
-
-  ┌────
-  │ \usepackage[explicit]{titlesec}
-  └────
-
-
-12.1 Artículos
+11.1 Artículos
 ──────────────
 
-  Ahora, la configuración de las secciones y subsecciones; en ese orden.
-
   ┌────
-  │ \titleformat{\section}[hang]
-  │ 	{\flushleft\headfont}
-  │ 	{\addfontfeatures{Numbers=Lining}\thesection}
-  │ 	{1em}
-  │ 	{\addfontfeatures{LetterSpace=5}\MakeUppercase{#1}}
-  │ 	[]
-  │ \titlespacing*{\section}
-  │ 	{0em}
-  │ 	{1.5\baselineskip}
-  │ 	{.5\baselineskip}
-  │ \titleformat{\subsection}
-  │ 	{\flushleft\sffamily}
-  │ 	{\addfontfeatures{Numbers=Lining}\thesubsection}
-  │ 	{.5em}
-  │ 	{#1}
-  │ 	[]
-  │ \titlespacing*{\subsection}
-  │ 	{0em}
-  │ 	{1\baselineskip}
-  │ 	{1\baselineskip}
-  │ \titleformat{\paragraph}[runin]
-  │ 	{\scshape}
-  │ 	{}
-  │ 	{0em}
-  │ 	{\MakeLowercase{#1}}
-  │ 	[.]
-  │ \titlespacing*{\paragraph}
-  │ 	{0em}
-  │ 	{1\baselineskip}
-  │ 	{5pt}
-  └────
-
-  La siguiente parte configura la lista de contenidos, y sigue el mismo
-  orden que la anterior.
-
-  ┌────
-  │ \let\oldtoc\tableofcontents
-  │ \renewcommand
-  │ {\tableofcontents}
-  │ {\marginpar{\bigskip\oldtoc}}
-  │ \usepackage{titletoc}
-  └────
-
-  ┌────
-  │ \titlecontents{section}
-  │ 	[0em]
-  │ 	{\vspace{0pt}}
-  │ 	{\contentsmargin{0pt}}
-  │ 	{\contentsmargin{0pt}}
-  │ 	{\contentspage}
-  │ 	[\vspace{.3em}]
-  │ \titlecontents{subsection}
-  │ 	[1.5em]                              
-  │ 	{\vspace{0pt}}
-  │ 	{\contentsmargin{0pt}\small}
-  │ 	{\contentsmargin{0pt}\small}        
-  │ 	{\small\contentspage}                 
-  │ 	[\vspace{.3em}]
+  │ \setkomafont{section}{\normalfont\bfseries}
+  │ \setkomafont{subsection}{\normalfont}
   └────
 
 
-12.2 Libros
+11.2 Libros
 ───────────
+
+
+12 Lista de contenidos
+══════════════════════
+
+12.1 Artículo
+─────────────
+
+  ┌────
+  │ \setkomafont{sectionentry}{\normalfont\large}
+  │ %\setkomafont{subsectionentry}{\normalfont}
+  └────
 
 
 13 Encabezados y pies de página
 ═══════════════════════════════
 
-  Es normalmente recomendado usar para esto una clase de `koma-script',
-  y probablemente sea lo que haga en un futuro, por ahora funciona.
-
-  El paquete que se encarga de todo.
-  ┌────
-  │ \usepackage{fancyhdr}
-  └────
-
-  Ahora, que no haya una linea horizontal en los encabezados, y además
-  ahcerlos suficientemente grandes.
-
-  ┌────
-  │ \renewcommand{\headrulewidth}{0pt}
-  │ \setlength{\headheight}{14pt}
-  └────
-
-
 13.1 Artículos
 ──────────────
 
-  Ahora si, la configuración.  La construcción `if... else...' permite
-  colocar cosas diferentes en las páginas pares e impares.
   ┌────
-  │ \pagestyle{fancy}
-  │ \fancyhf{}
-  │ \fancyhead
-  │ 	[L]
-  │ 	{
-  │ 	\ifodd\value{page}\MyTitle\else\Asignatura\fi
-  │ 	}
-  │ \fancyhead[R]{\thepage}
-  │ \fancypagestyle
-  │ 	{plain}
-  │ 	{
-  │ 	\fancyhead[R]{}
-  │ 	\fancyhead[L]{}
-  │ 	\fancyfoot[R]{}%
-  │ 	\fancyfoot[L]{}
-  │ 	\fancyfoot[C]{}
-  │ 	}
+  │ % Line for header
+  │ \KOMAoption{headsepline}{true}
+  │ % Section headings in header
+  │ \pagestyle{headings}
   └────
 
 
 14 Entornos de teoremas
 ═══════════════════════
 
-  Declaración y configuración de los entornos de teoremas.  Para esto,
-  usamos el siguiente paquete.
-
   ┌────
   │ \usepackage[thmmarks]{ntheorem}
   └────
-
-  Ahora, los entornos numerados.
 
   ┌────
   │ \theoremstyle{plain}
@@ -576,46 +339,38 @@ referencia al código directamente.
   Esta sección reproduce los archivos cuyas partes han sido descritas y
   explicadas anteriormente.
 
-  ‖ En el archivo `.org' esto es bastanet sencillo de lograr.
-  Simplemente hace falta crear un bloque `src' que contiene lo
-  siguiente:
-
-  ┌────
-  │ <<first-keyword>>
-  │ 
-  │ <<second-keyword>>
-  └────
-
-  Donde los `*-keyword' son los nombres de los bloques de código que se
-  han de insertar.  Esto junto con la opción `:noweb yes' permite crear
-  el archivo `.tex' en el disco que se usará para compilar LaTeX y al
-  mismo tiempo coloca una copia de dicho archivo en el documento
-  exportado.  ‖
-
 
 15.1 Articulos
 ──────────────
 
   ┌────
+  │ % This block configures some misc plain TeX options
   │ \hfuzz1pc
   │ \overfullrule=2cm
   │ 
-  │ \usepackage[spanish,es-noindentfirst]{babel}
+  │ % Language. Spanish for most texts,
+  │ % english when needed. The csquotes packages is
+  │ % usefull for quotes.
+  │ \usepackage{polyglossia}
+  │ \setdefaultlanguage{spanish}
+  │ \PolyglossiaSetup{spanish}{indentfirst=false}
+  │ %\setdefaultlanguage{english}
   │ \usepackage{csquotes}
   │ 
-  │ \usepackage
-  │ [
-  │ 	includehead,
-  │ 	includefoot,
-  │ 	top=.5cm,
-  │ 	bottom=.5cm,
-  │ 	left=1.7cm,
-  │ 	right=7.3cm,
-  │ 	marginparsep=0.5cm,
-  │ 	marginparwidth=7cm,
-  │ ]
-  │ {geometry}
+  │ % Page layout
+  │ \KOMAoptions{
+  │ paper = letter,
+  │ BCOR = 0mm,
+  │ twoside = false,
+  │ pagesize = luatex,
+  │ fontsize = {11},
+  │ DIV = calc,
+  │ }
   │ 
+  │ % Load amsmath family of packages,
+  │ % and extra goodies.
+  │ % The operators are not used too much, but
+  │ % it's nice to have them.
   │ \usepackage{mathtools}
   │ \DeclareMathOperator{\Rea}{Re}
   │ \DeclareMathOperator{\Ima}{Im}
@@ -623,45 +378,63 @@ referencia al código directamente.
   │ \DeclareMathOperator{\traz}{tr}
   │ \DeclareMathOperator{\gen}{gen}
   │ \DeclareMathOperator{\mcm}{mcm}
+  │ % This package loads fontspec,
+  │ % so only one usepackage is needed.
   │ \usepackage{unicode-math}
-  │ \setmainfont{STEP}
+  │ % Latin modern fonts for serif and sans,
+  │ % and Hack (Dejavu sans mono derivative)
+  │ % for monospaced.
+  │ \setmainfont[SmallCapsFont={* Caps},SmallCapsFeatures={LetterSpace=5}]{Latin Modern Roman}
   │ \defaultfontfeatures{Scale=MatchLowercase}
-  │ \setsansfont{Source Sans Pro}
+  │ \setsansfont{Latin Modern Sans}
   │ \setmonofont{Hack}
+  │ % Only one space after periods
   │ \frenchspacing
-  │ \linespread{1.05}
-  │ \setmathfont{STEP Math}
-  │ \usepackage[final]{microtype}
-  │ \newcommand{\headfont}{\sffamily}
+  │ % More symbols and better spacing than
+  │ % Latin modern Math.
+  │ \setmathfont{New Computer Modern Math}
   │ 
+  │ % For inserting images
   │ \PassOptionsToPackage{final}{graphicx}
+  │ % Colors and color names
   │ \PassOptionsToPackage{dvipsnames}{xcolor}
+  │ % Cancel allows to simbolize cancelling terms in math,
+  │ % its sometimes useful to have.
+  │ % Booktabs allows for better tables.
+  │ % Pdfpages gives the option to insert a pdf,
+  │ % really useful if I want an image to be scalable,
+  │ % I can then make a pdf of a vector graphic for example.
+  │ % Metalogo just gives the corrent typesetting for logos like LuaTeX.
   │ \usepackage
   │ {
   │ 	xcolor,
   │ 	graphicx,
   │ 	cancel,
   │ 	booktabs,
-  │ 	hyphenat,
-  │ 	authoraftertitle,
   │ 	pdfpages,
   │ 	metalogo
   │ }
   │ 
+  │ % Make bibliography more compact, no indents.
+  │ \KOMAoption{toc}{flat}
+  │ % Biblatex and numeric style.
+  │ % The backref option enables back references,
+  │ % which I find nice to have.
   │ \usepackage
   │ [
   │ backend=biber,
   │ backref=true,
-  │ citestyle=authortitle,
-  │ bibstyle=authortitle,
+  │ citestyle=numeric-comp,
+  │ bibstyle=numeric-comp,
   │ sorting=ynt
   │ ]
   │ {biblatex}
   │ \addbibresource{/home/jhonny/git/Misc-LaTeX-files/bib/general.bib}
+  │ % Hyperlinks and their formatting
   │ \usepackage{url} 
   │ \usepackage{hyperref} 
   │ \definecolor{Carmine}{HTML}{960018}
-  │ \newcommand{\linkcolor}{Carmine}
+  │ \newcommand{\linkcolor}{Black}
   │ \hypersetup
   │ {
   │ colorlinks=true,
@@ -671,70 +444,16 @@ referencia al código directamente.
   │ }
   │ \usepackage[spanish,nameinlink]{cleveref} 
   │ 
-  │ \newcommand{\marfont}{} 
-  │ %\renewcommand*{\marginfont}{\marfont}
-  │ \let\oldmarginpar\marginpar
-  │ \renewcommand
-  │ 	{\marginpar}
-  │ 	[1]
-  │ 	{
-  │ 	\oldmarginpar{\raggedright\marfont #1}
-  │ 	}
-  │ \newcounter{nota}
-  │ \newcommand
-  │ 	{\nota}
-  │ 	[1]
-  │ 	{
-  │ 	\refstepcounter{nota}\textsuperscript{\thenota}
-  │ 	\marginpar{
-  │ 		\raggedright\itshape\thenota. #1
-  │ 		}
-  │ 	}
-  │ \renewcommand{\footnote}{\nota}
-  │ 
+  │ % List have no indent, and the numbers are in the right margin.
   │ \usepackage{enumitem} 
   │ \setlist[enumerate]{left=-11pt,nosep}
   │ \setlist[description]{font=\normalfont,leftmargin=\parindent}
   │ \setlist[itemize]{label={\small\textbullet},left=-11pt}
   │ 
-  │ \newcommand{\Asignatura}{}
-  │ \newcommand
-  │ 	{\asignatura}
-  │ 	[1]
-  │ 	{\renewcommand{\Asignatura}{#1}}
-  │ \makeatletter
-  │ \def\@maketitle
-  │ 	{
-  │ 	\newpage
-  │ 	\null
-  │ 	\let \footnote \thanks
-  │ 	\begin{flushleft}\sffamily
-  │ 	\marginpar
-  │ 		{
-  │ 		\vspace*{.2em}
-  │ 		\begin{minipage}{.7\marginparwidth}
-  │ 		\begin{center}
-  │ 		\includegraphics
-  │ 			[width=.35\marginparwidth]
-  │ 			{/home/jhonny/git/LaTeX-University/usb-logo.png}\\
-  │ 		Universidad Simón Bolívar\\
-  │ 		Caracas, Venezuela\\
-  │ 		\end{center}
-  │ 		\end{minipage}
-  │ 		}
-  │ 	{
-  │ 	\Large\headfont
-  │ 		\MyTitle
-  │ 	\par
-  │ 	}
-  │ 	\smallskip
-  │ 	\Asignatura\par
-  │ 	\smallskip
-  │ 	\@author,\ \today.
-  │ 	\end{flushleft}
-  │ 	\vskip 1.5\baselineskip
-  │ 	}
-  │ \makeatother
+  │ % Font style and size for title
+  │ \setkomafont{title}{\normalfont\LARGE}
+  │ % Font style for the subject
+  │ \setkomafont{subject}{\itshape\Large}
   │ 
   │ \usepackage[final]{listings} 
   │ \lstset
@@ -756,77 +475,16 @@ referencia al código directamente.
   │ skip=3pt
   │ }
   │ 
-  │ \usepackage[explicit]{titlesec}
-  │ \titleformat{\section}[hang]
-  │ 	{\flushleft\headfont}
-  │ 	{\addfontfeatures{Numbers=Lining}\thesection}
-  │ 	{1em}
-  │ 	{\addfontfeatures{LetterSpace=5}\MakeUppercase{#1}}
-  │ 	[]
-  │ \titlespacing*{\section}
-  │ 	{0em}
-  │ 	{1.5\baselineskip}
-  │ 	{.5\baselineskip}
-  │ \titleformat{\subsection}
-  │ 	{\flushleft\sffamily}
-  │ 	{\addfontfeatures{Numbers=Lining}\thesubsection}
-  │ 	{.5em}
-  │ 	{#1}
-  │ 	[]
-  │ \titlespacing*{\subsection}
-  │ 	{0em}
-  │ 	{1\baselineskip}
-  │ 	{1\baselineskip}
-  │ \titleformat{\paragraph}[runin]
-  │ 	{\scshape}
-  │ 	{}
-  │ 	{0em}
-  │ 	{\MakeLowercase{#1}}
-  │ 	[.]
-  │ \titlespacing*{\paragraph}
-  │ 	{0em}
-  │ 	{1\baselineskip}
-  │ 	{5pt}
-  │ \let\oldtoc\tableofcontents
-  │ \renewcommand
-  │ {\tableofcontents}
-  │ {\marginpar{\bigskip\oldtoc}}
-  │ \usepackage{titletoc}
-  │ \titlecontents{section}
-  │ 	[0em]
-  │ 	{\vspace{0pt}}
-  │ 	{\contentsmargin{0pt}}
-  │ 	{\contentsmargin{0pt}}
-  │ 	{\contentspage}
-  │ 	[\vspace{.3em}]
-  │ \titlecontents{subsection}
-  │ 	[1.5em]                              
-  │ 	{\vspace{0pt}}
-  │ 	{\contentsmargin{0pt}\small}
-  │ 	{\contentsmargin{0pt}\small}        
-  │ 	{\small\contentspage}                 
-  │ 	[\vspace{.3em}]
+  │ \setkomafont{section}{\normalfont\bfseries}
+  │ \setkomafont{subsection}{\normalfont}
   │ 
-  │ \usepackage{fancyhdr}
-  │ \renewcommand{\headrulewidth}{0pt}
-  │ \setlength{\headheight}{14pt}
-  │ \pagestyle{fancy}
-  │ \fancyhf{}
-  │ \fancyhead
-  │ 	[L]
-  │ 	{
-  │ 	\ifodd\value{page}\MyTitle\else\Asignatura\fi
-  │ 	}
-  │ \fancyhead[R]{\thepage}
-  │ \fancypagestyle
-  │ 	{plain}
-  │ 	{
-  │ 	\fancyhead[R]{}
-  │ 	\fancyhead[L]{}
-  │ 	\fancyfoot[R]{}%
-  │ 	\fancyfoot[L]{}
-  │ 	\fancyfoot[C]{}
-  │ 	}
+  │ \setkomafont{sectionentry}{\normalfont\large}
+  │ %\setkomafont{subsectionentry}{\normalfont}
+  │ 
+  │ % Line for header
+  │ \KOMAoption{headsepline}{true}
+  │ % Section headings in header
+  │ \pagestyle{headings}
   │ 
   │ \usepackage[thmmarks]{ntheorem}
   │ \theoremstyle{plain}

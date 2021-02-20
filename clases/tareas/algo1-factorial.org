@@ -10,7 +10,8 @@
 #+HTML_MATHJAX: align: left indent: 5em tagside: left font: "STIX General"
 #+HTML_MATHJAX: cancel.js noErrors.js
 #+SETUPFILE: /home/jhonny/git/org-mode/style.css.org
-#+LATEX_HEADER: \asignatura{Algoritmos y estructuras I}\lstset{emph={skip,fi,od},emphstyle={\bfseries}}\newcommand{\factorial}{\texttt{factorial}}\newcommand{\vari}{\texttt{i}}
+#+LATEX_HEADER: \subject{Algoritmos y estructuras I}\lstset{emph={skip,fi,od},emphstyle={\bfseries}}\newcommand{\factorial}{\texttt{factorial}}\newcommand{\vari}{\texttt{i}}
+#+LATEX_HEADER: \titlehead{Universidad Simón Bolivar.\hfill Caracas, Venezuela.}
 
 # ----LICENSE---
 # Copyright 2021 Jhonny Lanzuisi (jalb97@gmail.com)
