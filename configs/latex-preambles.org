@@ -112,7 +112,7 @@ DIV = calc,
 % Latin modern fonts for serif and sans,
 % and Hack (Dejavu sans mono derivative)
 % for monospaced.
-\setmainfont[SmallCapsFont={* Caps},SmallCapsFeatures={LetterSpace=5}]{Latin Modern Roman}
+\setmainfont[SmallCapsFeatures={LetterSpace=5,RawFeature={+c2sc}}]{STEP}
 \defaultfontfeatures{Scale=MatchLowercase}
 \setsansfont{Latin Modern Sans}
 \setmonofont{TeX Gyre Cursor}
@@ -128,7 +128,7 @@ DIV = calc,
 #+BEGIN_SRC latex
 % More symbols and better spacing than
 % Latin modern Math.
-\setmathfont{New Computer Modern Math}
+\setmathfont{XITS Math}
 #+END_SRC
 
 * Paquetes varios
