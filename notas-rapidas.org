@@ -4,3 +4,7 @@ Notas sin orden de lo que se me ocurre.
 
 es mejor plain text
 
+* ocr para el kaldewaij
+
+https://github.com/jbarlow83/OCRmyPDF
+
