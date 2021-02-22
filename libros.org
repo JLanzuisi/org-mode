@@ -7,11 +7,10 @@
 ** TODO Art of unix programming
 ** TODO Libro de emcas
 ** TODO Libro de common lisp
-* Filosofía
+* Libros del 2021 [/]
 
-* Historia
-
-* Politica
-
-* Ori
+- [X] /The Daemon, the GNU, and the Penguin
+A History of Free and Open Source/
+by *Peter H. Salus*
+- [ ] /The Art of Unix Programming/ by *Eric Steven Raymond*
 

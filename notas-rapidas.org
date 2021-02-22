@@ -8,3 +8,5 @@ es mejor plain text
 
 https://github.com/jbarlow83/OCRmyPDF
 
+* reemplazar aliases con shell scripts
+* no usar bashism
