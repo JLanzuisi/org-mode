@@ -10,3 +10,6 @@ https://github.com/jbarlow83/OCRmyPDF
 
 * reemplazar aliases con shell scripts
 * no usar bashism
+* Meterme en cantv y ver si me antiende alguien
+  DEADLINE: <2021-02-22 lun 10:00>
+
