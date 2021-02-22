@@ -1,0 +1,70 @@
+#+TITLE: Quinta tarea.
+#+SUBTITLE: Segundo ejercicio, (iii) y (iv), de Arreglos y Subprogramas en GCL.
+#+AUTHOR: Jhonny Lanzuisi
+#+EMAIL: jalb97@gmail.com
+#+TAGS: :uni:algo1:
+#+LANGUAGE: es
+#+OPTIONS: toc:2
+#+LATEX_CLASS: article
+#+HTML_MATHJAX: align: left indent: 5em tagside: left font: "STIX General"
+#+HTML_MATHJAX: cancel.js noErrors.js
+#+SETUPFILE: /home/jhonny/git/org-mode/style.css.org
+#+LATEX_HEADER: \subject{Algoritmos y estructuras I}
+#+LATEX_HEADER: \titlehead{Universidad Simón Bolívar.\hfill Caracas, Venezuela.}
+
+# ----LICENSE----
+#  Copyright 2021 Jhonny Lanzuisi (jalb97@gmail.com)
+#  More source files at github.com/JLanzuisi
+#
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+#
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#
+#  You should have received a copy of the GNU General Public License
+#  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+# ---------------
+
+#+BEGIN_EXPORT latex
+{\let\thefootnote\relax
+\footnotetext{
+\sffamily\scriptsize
+\noindent Copyright (C)  2021 Jhonny Lanzuisi.
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.3
+or any later version published by the Free Software Foundation;
+with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+A copy of the license can be found at \url{https://www.gnu.org/licenses/fdl-1.3.en.html}.
+}
+}
+#+END_EXPORT
+
+* Parte (iii)
+
+Queremos demostrar que la tripleta:
+
+#+BEGIN_EXPORT latex
+\newcommand{\tripleta}[3]{\{#1\}\quad #2 \quad\{#3\}}
+#+END_EXPORT
+
+#+begin_export latex
+\[\tripleta{b[0] \coloneqq 0 \land (\forall i\mid 0\leq i\leq 5: c[i] = i)}
+    {b[c(3)-1] \coloneqq 0}
+        {b[0] + b[1]b[2] = 0},\]
+#+end_export
+es correcta.
+
+** Demostración
+
+Una \(prueba\) de como sirve
+
+#+begin_export latex
+\begin{align*}
+
+\end{align*}
+#+end_export

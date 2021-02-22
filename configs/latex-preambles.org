@@ -76,7 +76,7 @@ paper = letter,
 BCOR = 0mm,
 twoside = false,
 pagesize = luatex,
-fontsize = {11},
+fontsize = {10},
 DIV = calc,
 }
 #+END_SRC
@@ -112,11 +112,13 @@ DIV = calc,
 % Latin modern fonts for serif and sans,
 % and Hack (Dejavu sans mono derivative)
 % for monospaced.
-\setmainfont[SmallCapsFeatures={LetterSpace=5,RawFeature={+c2sc}}]{STEP}
+\setmainfont[SmallCapsFeatures={LetterSpace=5,RawFeature={+c2sc}}]{Domitian}
+\linespread{1.07}
+\KOMAoptions{DIV=last}
 \defaultfontfeatures{Scale=MatchLowercase}
 \setsansfont{Latin Modern Sans}
 \setmonofont{TeX Gyre Cursor}
-\newfontfamily{\basker}{BaskervilleF}
+%\newfontfamily{\basker}{QTBasker}
 #+END_SRC
 
 #+BEGIN_SRC latex
@@ -128,7 +130,7 @@ DIV = calc,
 #+BEGIN_SRC latex
 % More symbols and better spacing than
 % Latin modern Math.
-\setmathfont{XITS Math}
+\setmathfont{Asana Math}
 #+END_SRC
 
 * Paquetes varios
@@ -225,7 +227,7 @@ citecolor=\linkcolor
 
 #+BEGIN_SRC latex
 % Font style and size for title
-\setkomafont{title}{\basker}
+\setkomafont{title}{\itshape}
 % Font style for the subject
 \setkomafont{subject}{\normalfont\scshape\large}
 % Font style for subtitle
@@ -280,14 +282,15 @@ skip=3pt
 \RedeclareSectionCommand[
   afterindent=false,
   beforeskip=1.5\baselineskip,
-  afterskip=.5\baselineskip]{section}
-\setkomafont{section}{\normalfont\LARGE}
+  afterskip=.5\baselineskip,
+  font=\normalfont\sffamily\Large,
+]{section}
 \RedeclareSectionCommand[
   afterindent=false,
   beforeskip=1\baselineskip,
-  afterskip=1\baselineskip
+  afterskip=1\baselineskip,
+  font=\normalfont\sffamily\large
 ]{subsection}
-\setkomafont{subsection}{\normalfont\bfseries\small}
 #+END_SRC
 
 ** Libros
@@ -299,8 +302,7 @@ skip=3pt
   :END:
 
 #+BEGIN_SRC latex
-\setkomafont{sectionentry}{\normalfont\sffamily\large}
-%\setkomafont{subsectionentry}{\normalfont}
+\setkomafont{sectionentry}{\normalfont\bfseries}
 #+END_SRC
 * Encabezados y pies de página
 
