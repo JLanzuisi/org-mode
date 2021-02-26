@@ -7,10 +7,10 @@
 ** TODO Art of unix programming
 ** TODO Libro de emcas
 ** TODO Libro de common lisp
-* Libros del 2021 [/]
+* Libros del 2021 [1/4]
 
-- [X] /The Daemon, the GNU, and the Penguin
-A History of Free and Open Source/
-by *Peter H. Salus*
+- [X] /The Daemon, the GNU, and the Penguin A History of Free and Open Source/ by *Peter H. Salus*
+      Buen recuento histórico y relativamente corto. Sacado de una página web.
 - [ ] /The Art of Unix Programming/ by *Eric Steven Raymond*
-
+- [ ] /The Unix programming environment/ by *Brian Kernighan & Rob Pike*
+- [ ] /The defendant/ by *G. K. Chesterton*
