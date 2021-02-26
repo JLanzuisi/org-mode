@@ -46,14 +46,15 @@
 *** 24 en sigo, pagados con paypal de ori (dom ene 17 14:32:41 -04 2021)
 *** 5 en nova (dom ene 17 14:58:44 -04 2021)
 *** 10 en nova (mié ene 20 21:12:34 -04 2021)
-***  12.5 en sigo (jue 28 ene 2021 19:33:50 -04)
+*** 12.5 en sigo (jue 28 ene 2021 19:33:50 -04)
+
 --------------------------------------------------
+
 *** ori pago 50
 *** 31 en sigo (total, mié 03 feb 2021 12:37:50 -04)
 *** 29.32 en sigo, pago ori con paypal
 *** Mi mama pago 90 en mercado grande (mar 09 feb 2021 13:29:41 -04)
 *** Ori pago 10$ en heladito del 14 + leche
-
 * DONE preguntar cuanto se gasto en rio y la carniceria
   CLOSED: [2020-12-31 jue 11:59]
 
@@ -63,6 +64,7 @@
 Del trabajo del epub de graham se pago el nokia de telcentro.
 Vinitos de sigo, uno que otro mercado tambien.
 El odongotlogo, 53.17
+
 ** Efectivo (apartamento)
 *** Primeros 100$
 **** 20$ en farmatodo y 20$ en sushi (Wed Jan 13 15:21:06 -04 2021)
@@ -74,10 +76,13 @@ El odongotlogo, 53.17
 **** Telfeono de mama
 *** cuartos 100$
 **** 20$ para ori por el wipod
-**** 45$ maus y teclado 
+**** 45$ maus y teclado
 **** 18$ churros, 1$ prestado a mama
-**** 20$ regalo a ori del 14 + 10$ de papa
+**** 15$ regalo a ori del 14 + 10$ de papa
 **** TODO le debo 10$ a papa
+*** Quintos 100
+**** 5 regalo del 14
+**** 20$ en río sanguiches de elado
 *** Le cambie un billete de 100$ a ori por 5 de 20$ (dom ene 17 11:12:43 -04 2021)
 ** Otros
 * Internet wipod
@@ -91,3 +96,4 @@ recargaron 8 millones hoy (vie 05 feb 2021 18:06:15 -04)
 lunes 8 se recargaron 10$ paypal
 
 recaragron 10$ paypal al wipod (jue 11 feb 2021 09:37:16 -04)
+
