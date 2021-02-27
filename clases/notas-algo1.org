@@ -3,15 +3,8 @@
 #+AUTHOR: Jhonny Lanzuisi
 #+EMAIL: jalb97@gmail.com
 #+TAGS: :uni:algo1:
+#+GROFF_CLASS:
 #+LANGUAGE: es
-#+OPTIONS: toc:2
-#+LATEX_CLASS: article
-#+HTML_MATHJAX: align: left indent: 5em tagside: left font: "STIX General"
-#+HTML_MATHJAX: cancel.js noErrors.js
-#+SETUPFILE: /home/jhonny/git/org-mode/style.css.org
-#+LATEX_HEADER: \subject{Algoritmos y estructuras I}
-#+LATEX_HEADER: \titlehead{Universidad Simón Bolívar.\hfill Caracas, Venezuela.}
-#+LATEX_HEADER: \lstset{emph={skip,fi,od}}
 
 # ----LICENSE----
 #  Copyright 2021 Jhonny Lanzuisi (jalb97@gmail.com)
@@ -31,67 +24,49 @@
 #  along with this program.  If not, see <https://www.gnu.org/licenses/>.
 # ---------------
 
-#+BEGIN_EXPORT latex
-{\let\thefootnote\relax
-\footnotetext{
-\sffamily\scriptsize
-\noindent Copyright (C)  2021 Jhonny Lanzuisi.
-Permission is granted to copy, distribute and/or modify this document
-under the terms of the GNU Free Documentation License, Version 1.3
-or any later version published by the Free Software Foundation;
-with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
-A copy of the license can be found at \url{https://www.gnu.org/licenses/fdl-1.3.en.html}.
-}
-}
-#+END_EXPORT
-
-#+BEGIN_EXPORT latex
-\newcommand{\tripleta}[3]{\{#1\}\quad #2 \quad\{#3\}}
-#+END_EXPORT
-
-* Propósito, libros utilizados y otras cosas
-Mi idea es una suerte de "resumen" de los contenidos.
+* Prop\*[']osito, libros utilizados y otras cosas
+Mi idea e \*[']s una suerte de "resumen" de los contenidos.
 Algunas veces simplemente copio y pego de los autores,
 otras cambio como algo esta escrito para, por ejemplo,
 hacer la notación uniforme o explicar algo de forma mas clara.
 
-Las referencias principales son el Kaldewaij cite:kaldewaij_programming:_1992,
-y el ravelo cite:mezaravelo_programacion.
+Las referencias principales son el Kaldewaij ,
+y el ravelo .
 Puede que aparezca algo sacado de internet,
 en cuyo caso se indicará la fuente en ese momento.
 
-# * Técnicas para hallar invariantes
+* Técnicas para hallar invariantes
 
-# Conviene tener en cuenta los siguientes pasos:
+Conviene tener en cuenta los siguientes pasos:
 
-# 1. Determinar el Invariante y las guardias.
-# 2. Inicialización: Establecer el invariante la primera vez. Es decir, establecer el valor
-#    inicial de las variables para que se cumpla el invariante.
-# 3. Determinar la función de cota a partir de (1) y (2).
-# 4. Desarrollar el trozo de programa que corresponde al cuerpo de cada guardia de manera
-#    que cumpla la especificación:
-#    \[\tripleta{\text{Invariante y Guardia}}{S}{\text{Invariante}}\]
-#    Este paso se
-#    puede descomponer en primero modificar la función de cota como última instrucción de
-#    \(S\) y en función de esto desarrollar el resto de \(S\). La modificación de la función de cota es
-#    la que garantiza que la función decrece (o crece) estrictamente.
+1. Determinar el Invariante y las guardias.
+2. Inicialización: Establecer el invariante la primera vez. Es decir, establecer el valor
+   inicial de las variables para que se cumpla el invariante.
+3. Determinar la función de cota a partir de (1) y (2).
+4. Desarrollar el trozo de programa que corresponde al cuerpo de cada guardia de manera
+   que cumpla la especificación:
+   \[\tripleta{\text{Invariante y Guardia}}{S}{\text{Invariante}}\]
+   Este paso se
+   puede descomponer en primero modificar la función de cota como última instrucción de
+   \(S\) y en función de esto desarrollar el resto de \(S\). La modificación de la función de cota es
+   la que garantiza que la función decrece (o crece) estrictamente.
 
-# ** Eliminar un predicado de una conjunción
+** Eliminar un predicado de una conjunción
 
 
 
-# #+BEGIN_SRC pascal -n
-# |[
-# const A, B: entero;
-# var q, r: entero;
+#+BEGIN_SRC pascal -n
+|[
+const A, B: entero;
+var q, r: entero;
 
-# { A >= 0 /\ B > 0 }
+{ A >= 0 /\ B > 0 }
 
-# divmod
+divmod
 
-# { q = A div B /\ r = A mod B }
-# ]|
-# #+END_SRC
+{ q = A div B /\ r = A mod B }
+]|
+#+END_SRC
 
 * Técnicas generales para invariantes en iteraciones
 
@@ -140,5 +115,3 @@ od
 ** Reemplazar constantes por variables
 
 ** Fortalecer los invariantes
-
-\printbibliography

@@ -113,7 +113,6 @@ DIV = calc,
 % and Hack (Dejavu sans mono derivative)
 % for monospaced.
 \setmainfont[
-Numbers={Proportional,OldStyle},
 SmallCapsFeatures={LetterSpace=5,RawFeature={+c2sc}},
 Ligatures=TeX,
 ]{CMU Concrete}
@@ -121,7 +120,7 @@ Ligatures=TeX,
 \KOMAoptions{DIV=last}
 \defaultfontfeatures{Scale=MatchLowercase}
 %\setsansfont{New Computer Modern Sans}
-\setmonofont{Courier 10 Pitch}
+\setmonofont{Go Mono}
 \newfontfamily{\commodern}{New Computer Modern}
 #+END_SRC
 
@@ -132,15 +131,16 @@ Ligatures=TeX,
 
 
 #+BEGIN_SRC latex
-  % More symbols and better spacing than
-  % Latin modern Math.
-  \setmathfont{New Computer Modern Math}
-  % \setmathfont[
-  % range={
-  %        \sum,\prod,\int,
-  %        up/{Latin,latin,greek,Greek}
-  %       }
-  % ]{Neo Euler}
+% More symbols and better spacing than
+% Latin modern Math.
+\setmathfont{New Computer Modern Math}
+\setmathfont[
+range={
+       \sum,\prod,\int,
+      up/{Latin,latin,greek,Greek,num,bfup},
+      cal,scr,frak
+}
+]{Neo Euler}
 #+END_SRC
 
 * Paquetes varios
