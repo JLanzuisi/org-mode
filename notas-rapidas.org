@@ -20,3 +20,11 @@ https://github.com/jbarlow83/OCRmyPDF
 
 investigar hercules
 
+* groff intentar font N
+* para eqn usar pdfmom con -e
+* crear script para compilar groff
+
+https://emacs.stackexchange.com/questions/4108/execute-external-script-upon-save-when-in-a-certain-mode
+
+* probar cambios a negrita y de familia en eqn
+* hacer plantilla para groff en yasnippet
