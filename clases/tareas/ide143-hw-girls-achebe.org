@@ -1,0 +1,163 @@
+#+TITLE: Questions on Girls at War.
+#+SUBTITLE: Answers to questions on a literary work by Chinua Achebe.
+#+AUTHOR: Jhonny Lanzuisi
+#+EMAIL: jalb97@gmail.com
+#+TAGS: :uni::
+#+LANGUAGE: es
+#+OPTIONS: toc:nil
+#+LATEX_CLASS: article
+#+HTML_MATHJAX: align: left indent: 5em tagside: left font: "STIX General"
+#+HTML_MATHJAX: cancel.js noErrors.js
+#+SETUPFILE: /home/jhonny/git/org-mode/style.css.org
+#+LATEX_HEADER: \subject{IDE-143 El Mundo de la Literatura en Inglés}
+#+LATEX_HEADER: \titlehead{Universidad Simón Bolívar.\hfill Caracas, Venezuela.}
+
+# ----LICENSE----
+#  Copyright 2021 Jhonny Lanzuisi (jalb97@gmail.com)
+#  More source files at github.com/JLanzuisi
+#
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+#
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#
+#  You should have received a copy of the GNU General Public License
+#  along with this program.  If not, see <https://www.gnu.org/licenses/>.
+# ---------------
+
+#+BEGIN_EXPORT latex
+{\let\thefootnote\relax
+\footnotetext{
+\sffamily\scriptsize
+\noindent Copyright (C)  2021 Jhonny Lanzuisi.
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.3
+or any later version published by the Free Software Foundation;
+with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+A copy of the license can be found at \url{https://www.gnu.org/licenses/fdl-1.3.en.html}.
+}
+}
+#+END_EXPORT
+
+* How did the ordinary people feel about the war?
+  The Biafran people were at first enthusiastic about the war,
+  they had just declared independence from the rest of Nigeria
+  and the new republic had been borne.
+
+  This of course changed with the development of the war,
+  the mass murder of the Igbo population would have certainly
+  drained the enthusiasm of the people.
+
+  Other Nigerian populations, like the northerners, felt differently about the war.
+
+* How did Nwanko feel when he was searched? Why?
+  He felt offended, even thought he sees the necessity for the roadblock
+  and the search, he ultimately felt annoyed at being stopped.
+  In a way, it made him feel not as important,
+  as if his title of ministry of justice wasn't an important one.
+
+* Had he taken women's participation seriously before?
+  No, not at least concerning the military or revolution.
+  Maybe if he were to be asked about women's participation in other areas,
+  like any area usually attached to women by patriarchal societies,
+  then he would take them seriously.
+
+* How long passed before he met her again?
+  They met a third time eighteen months later.
+
+* Had things changed?
+  Yes, they got much, much, worse.
+  Death and starving followed the early days,
+  and the few that still had some fighting spirit in them
+  got it trough resignation.
+
+* Where did he say most heroic acts occur?
+  In refugee camps, in damp tatters, in the bare-handed courage of the first line of fire.
+  It's like a vindication of the lost and forgotten,
+  the ones far, far, below the eye level.
+  It is in their daily struggles that heroism resides.
+
+* In the next 3 paragraphs what do you realize about the relief efforts?
+  In Caritas he gets tinned meat and some terrible food that's probably animal feed.
+  Here we see mentioned the bias Caritas had towards helping more catholic people,
+  while being a bit more austere with members of other religions.
+
+  Aside from this, the relief efforts seems unsuccessful and insufficient.
+  There're lots of people begging in the street near the WCC.
+  This describes a situation in which the best bet for anyone is to try and help
+  one's immediate neighbor.
+
+* When he meets Gladys again how has she changed?
+  She's gone from the militia to Fuel Directorate,
+  and thus changed her style completely: from the militia uniform to
+  a expensive skirt and Gabon shoes.
+  Later, we are told that she seems to have lost faith
+  in the struggle, and is now a very different person.
+
+* What sad realities do we discover about the war?
+  Air raids have become commonplace,
+  so everyone has to pray for their lives at least once a day,
+  hoping that they'll be lucky and avoid the bombing.
+  The Biafran war was infamous for bombing of civilian populations,
+  so this concern is more than justified.
+
+* What does Gladys mean by, 'Monkey de work, baboon de chop?'
+  She means that, while some work and live in very austere circumstances,
+  others are making money out of misery or simply taking advantage of
+  irregularities like foreign exchange.
+
+* What does the incident in the bunker tell us about Nwanko?
+  It tells us first about his tempered fear of the plane,
+  relieved that it didn't drop anything.
+  It also speaks briefly of how Nwanko feels about his enemies,
+  that go to seek foreign help as soon as "our boys press them".
+
+  It also tells us about his relationship with Gladys,
+  having slept together even tough he knows he's only using her
+  and she's fully aware as well.
+
+* How does Gladys say times have changed?
+  She recognizes that, given the horrors of the war,
+  now the only priority is survival.
+  She changed to survive, probably forced to it by a far worse alternative.
+  She's speaking of the transition from the early enthusiasm to the crude and horrible reality
+  of months at war.
+
+* Why did the Red Cross man drink too  much and explode?
+  Because an air pilot that he knew well was killed in a crash at the airport.
+  The rumor got around and by the time he was drunk everyone was expecting something,
+  they all knew that he had something to get off his chest.
+
+* What is the irony in this scene at the party?
+  That the girls behave exactly as the drunk men describes them,
+  just a few instants after he is thrown out.
+  Also, it is the officer who is the beast in the scene,
+  cold hearted and careless.
+
+* Do Nwanko´s actions reflect his words?
+  Sometimes they do, or at least halfway there.
+  He speaks out in defense to the drunk man, and then leaves the party
+  regarding it a insulting event, given the everyday loss of life.
+
+  But on the other hand he treats Gladys in the same way
+  he criticizes that other men probably treated her in the past.
+  He sees her as an object most of the time.
+  This without taking into account the fact that he his a married man.
+
+  At the end, he decides to leave Gladys and the soldier, who die tragically.
+
+* What happens at the end of the story?
+  Our protagonists get caught by a bomb drop,
+  ending in disaster, death and destruction.
+  Gladys gets killed along with the soldier they were giving a lift
+  and Nwanko appears to survive but only to witness such a horrible scenery.
+
+* What does it tell us about the 2 main characters ?
+  It tells us about the tragic relationship the were in,
+  maybe thinking that they could finally be safe or better off,
+  carelessly dismissing the impeding doom that war brings upon everyone.

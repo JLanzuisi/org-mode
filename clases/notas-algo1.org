@@ -81,7 +81,7 @@ en cuyo caso se indicará la fuente en ese momento.
 
 
 # #+BEGIN_SRC pascal -n
-# |[ 
+# |[
 # const A, B: entero;
 # var q, r: entero;
 
