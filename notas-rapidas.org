@@ -11,7 +11,8 @@ https://github.com/jbarlow83/OCRmyPDF
 * reemplazar aliases con shell scripts
 * no usar bashism
 * CANCELED Meterme en cantv y ver si me antiende alguien
-  CLOSED: [2021-02-24 mié 14:54] 
+  CLOSED: [2021-02-24 mié 14:54]
+
 * DONE googlear modulos arch
   CLOSED: [2021-02-25 Thu 09:56]
 
@@ -27,3 +28,11 @@ https://emacs.stackexchange.com/questions/4108/execute-external-script-upon-save
 
 * probar cambios a negrita y de familia en eqn
 * hacer plantilla para groff en yasnippet
+* intentar bloques de código con números de linea
+
+poner el toggle. CODE dentro del toggle .NUMBER_LINES 1 2
+
+* poner caracteres de acento automáticamente al guardar
+
+https://emacs.stackexchange.com/questions/7435/automatically-capitalise-i-to-i
+
