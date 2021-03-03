@@ -58,8 +58,11 @@
 *** Exámenes parciales
 **** DONE Lab Primer parcial (20%).
      CLOSED: [2021-02-12 Fri 07:44] DEADLINE: <2021-02-10 mié>
+
 **** Lab Segundo parcial (30%).
      DEADLINE: <2021-03-03 mié>
+     Revisar ejercicios 5 y 6 de la tarea que estén bien hechos.
+     Revisar el laboratorio de freedom
 
 ** Analisis
 *** Ejercicios de la guia.
@@ -69,6 +72,7 @@
 *** Exámenes parciales.
 **** DONE Ana Primer parcial 35%.
      CLOSED: [2021-02-08 lun 17:50] DEADLINE: <2021-02-08 lun>
+
 ***** DONE Corección del parcial de analisis
       CLOSED: [2021-02-18 jue 12:38] DEADLINE: <2021-02-17 mié>
 
@@ -102,8 +106,11 @@ Explicar los problemas que plantean las obras con ejemplos de las mismas. Al hab
 
 Concluir sobre el mensaje general y regresar sobre la tesis central del ensayo.
 
-*** TODO gen tarea girls at war
-    DEADLINE: <2021-02-25 jue>
+*** DONE gen tarea girls at war
+    CLOSED: [2021-02-27 Sat 12:28] DEADLINE: <2021-02-25 jue>
+
+*** TODO gen tarea semana 6
+    DEADLINE: <2021-03-06 sáb>
 
 ** Ingles
 *** DONE Ing Mat Tarea semana 2
@@ -114,3 +121,6 @@ Concluir sobre el mensaje general y regresar sobre la tesis central del ensayo.
 
 *** DONE Ingles quiz de 20pts
     CLOSED: [2021-02-15 lun 14:13] DEADLINE: <2021-02-16 mar>
+
+*** TODO Ingles actividades sem 7
+    DEADLINE: <2021-03-07 dom>

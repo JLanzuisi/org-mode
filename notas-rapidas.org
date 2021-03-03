@@ -11,10 +11,19 @@ https://github.com/jbarlow83/OCRmyPDF
 * reemplazar aliases con shell scripts
 * no usar bashism
 * CANCELED Meterme en cantv y ver si me antiende alguien
-  CLOSED: [2021-02-24 mié 14:54] DEADLINE: <2021-02-22 lun 10:00>
+  CLOSED: [2021-02-24 mié 14:54] 
 * DONE googlear modulos arch
   CLOSED: [2021-02-25 Thu 09:56]
 
 * instalar which key en emacs
 
 investigar hercules
+
+* groff intentar font N
+* para eqn usar pdfmom con -e
+* crear script para compilar groff
+
+https://emacs.stackexchange.com/questions/4108/execute-external-script-upon-save-when-in-a-certain-mode
+
+* probar cambios a negrita y de familia en eqn
+* hacer plantilla para groff en yasnippet

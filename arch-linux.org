@@ -48,7 +48,11 @@ Para solucionar esto se puede usar:
   CLOSED: [2021-01-17 dom 14:33]
 
 * TODO Update the system (more bellow):
-  SCHEDULED: <2021-02-27 sáb +1m>
+  SCHEDULED: <2021-03-27 sáb +1m>
+  :PROPERTIES:
+  :LAST_REPEAT: [2021-02-28 dom 15:01]
+  :END:
+  - State "DONE"       from "TODO"       [2021-02-28 dom 15:01]
 To Update:
 
 1. Check the arch [[https://archlinux.org/][bulletin]] & [[https://artixlinux.org/][artix site]].

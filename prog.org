@@ -41,11 +41,15 @@ Quizás tengan que ver con editores de texto, u otras cosas cercanas a programar
 
 ** TODO github pages
 
-Colocar "binarios" en el github pages 
+Colocar "binarios" en el github pages
 
 *** DONE averiguar tamaño máximo de pages
     CLOSED: [2021-02-01 lun 18:13]
     el tamaño máximo es 1GB
 ** DONE Poner READMEs en repo de org
    CLOSED: [2021-01-16 Sat 19:56]
-
+* Shell scripts
+** DONE En pdfmom.sh colocar if para que no haga nada cunado $1 esta vacio
+   CLOSED: [2021-02-28 dom 14:54]
+** En weather.sh colocar if para que muestre "no hay internet" cuando curl retorne que no puede descargar
+** Alias de ls, cambiar a bash script
