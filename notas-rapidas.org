@@ -32,7 +32,15 @@ https://emacs.stackexchange.com/questions/4108/execute-external-script-upon-save
 
 poner el toggle. CODE dentro del toggle .NUMBER_LINES 1 2
 
-* poner caracteres de acento automáticamente al guardar
+* poner caracteres de acento automáticamente al guardar. Investigar string-replace
 
 https://emacs.stackexchange.com/questions/7435/automatically-capitalise-i-to-i
 
+* emacs quitar evil y vim keys en general
+* añadir lineas de numero al codigo. crear macro para bloques de código: .def CBLK end. Y cambiar el escape caracter con ec a @
+* hacer colofón mas pequeño, poner nombres de programas en courier
+* toallas y toallitas y cosas de mama
+
+1878 el dolar
+
+* esperar a tener internet y actualizar tablet a lineage 16
