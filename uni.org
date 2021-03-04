@@ -59,8 +59,8 @@
 **** DONE Lab Primer parcial (20%).
      CLOSED: [2021-02-12 Fri 07:44] DEADLINE: <2021-02-10 mié>
 
-**** Lab Segundo parcial (30%).
-     DEADLINE: <2021-03-03 mié>
+**** DONE Lab Segundo parcial (30%).
+     CLOSED: [2021-03-03 mié 17:38] DEADLINE: <2021-03-03 mié>
      Revisar ejercicios 5 y 6 de la tarea que estén bien hechos.
      Revisar el laboratorio de freedom
 
