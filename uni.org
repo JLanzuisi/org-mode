@@ -32,8 +32,8 @@
 **** DONE Algo1 1er parcial (25%).
      CLOSED: [2021-02-04 jue 18:55] DEADLINE: <2021-02-04 jue>
 
-**** Algo1 2do parcial.
-     DEADLINE: <2021-03-04 jue>
+**** DONE Algo1 2do parcial.
+     CLOSED: [2021-03-04 jue 18:26] DEADLINE: <2021-03-04 jue>
 
 **** Algo1 3er parcial.
      DEADLINE: <2021-04-06 mar>
