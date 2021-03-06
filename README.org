@@ -10,7 +10,7 @@ All I can say is that I have for main purposes for it:
 + The configuration of my system (in the future) and configuration files in general.
   For now, Org takes care of my LaTeX templates (now deprecated in favor of groff), and my Emacs configuration (wip).
   The plan for the future is to extend this to as many configuration files as possible,
-  culminating in something like ~GNU Guix and a operating system completely configured in Org files~,
+  culminating in something like +GNU Guix and a operating system completely configured in Org files+,
   im leaning more now to something like FreeBSD.
 
 * A bit more in depth
