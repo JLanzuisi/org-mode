@@ -8,11 +8,10 @@ All I can say is that I have for main purposes for it:
 + My agenda. I keep track of things I have to do, and things I've done.
   The amount of features I use in this area is a really small subset of the total amount of things org allows one to do.
 + The configuration of my system (in the future) and configuration files in general.
-  For now, Org takes care of my LaTeX templates, and my Emacs configuration.
+  For now, Org takes care of my LaTeX templates (now deprecated in favor of groff), and my Emacs configuration (wip).
   The plan for the future is to extend this to as many configuration files as possible,
-  culminating in something like GNU Guix and a operating system completely configured in Org files.
-+ Programming. More about this below, but Org (and emacs for that matter) gave me the most comfortable environment to code I've tried so far.
-+ Writing. It's almost my word processor. I write everything in Org and then export to the format I need, usually that is PDF or odt.
+  culminating in something like ~GNU Guix and a operating system completely configured in Org files~,
+  im leaning more now to something like FreeBSD.
 
 * A bit more in depth
 
@@ -33,15 +32,21 @@ I use the whole idea of tangling and exporting as a way to generate both "code" 
 The idea is given by the following diagram:
 
 #+BEGIN_SRC
-	  ---(tangling)---> Code, configuration file, etc
-	 /
+      ---(tangling)---> Code, configuration file, etc
+     /
 Org file
-	 \
-	  ---(exporting)---> Documentation, PDF files, HTML files.
+     \
+      ---(exporting)---> Documentation, PDF files, HTML files.
 #+END_SRC
 
 This is the reason that this repo contains almost nothing but Org files.
 Everything can be made out of them.
+
+*** Or maybe not for everything
+    Literate programming is still an interesting idea,
+    but it's too unpractical for small code or studying.
+    If I ever get into a large project, I may consider using it,
+    for now I prefer to write documentation in groff.
 
 *** Makefiles are the future
 
@@ -58,6 +63,7 @@ Something similar for tangling.
 
 I'll add a dedicated section for building once the whole system is in place,
 until then only partial or no part of it may work.
+*This concerns my agendas and the few config files I keep in org mode. Most stuff is being moved.*
 
 ** Writing, or, how I learned to love plain text files.
 
@@ -66,25 +72,7 @@ This is really one of those things that's better experienced than explained,
 so if you have even the slightest inclination for learning to better use your computer,
 look into using and editing plain text and stop with the horrible behemoths like docx files.
 
-The whole UNIX philosophy is a big part of it. Check it out.
-
-For this repo the relevant thing is that Org allows quite a bit of configuration and extensibility.
-This means I get more out of everything I write just by writing it in emacs and Org.
-
-Specifically, Org gives me a simple and easy to read syntax that is at the same time powerful.
-I can export to say PDF and ODT and keep all the structure of the text intact.
-Even references and bibliographies.
-What is more, all off this can be triggered by simply typing =C-c C-e l p= to get a PDF trough LaTeX.
-All the configuration is abstracted away, and I can focus in the task at hand. 
-
-For an idea of how this is all implemented look at my Emacs configuration in this repo.
-
-
-* My Org files are self-documenting (or at least that's what I want for them)
-
-That means that you only need to look at the file itself to get an idea of how things work.
-Usually the files explain something particular (like my LaTeX preambles)
-and then also give bits of how everything is put together underneath.
+The UNIX philosophy is a big part of it.
 
 * Regarding the License
 
