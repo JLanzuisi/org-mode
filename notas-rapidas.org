@@ -44,3 +44,5 @@ https://emacs.stackexchange.com/questions/7435/automatically-capitalise-i-to-i
 1878 el dolar
 
 * esperar a tener internet y actualizar tablet a lineage 16
+* en groff usar autolead en el preamble
+* en groff revisar apariencia del TOC, poner al inicio
