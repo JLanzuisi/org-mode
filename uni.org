@@ -76,8 +76,8 @@
 ***** DONE Corección del parcial de analisis
       CLOSED: [2021-02-18 jue 12:38] DEADLINE: <2021-02-17 mié>
 
-**** Ana Segundo parcial 35%.
-     DEADLINE: <2021-03-08 lun>
+**** DONE Ana Segundo parcial 35%.
+     CLOSED: [2021-03-08 lun 21:06] DEADLINE: <2021-03-08 lun>
 
 **** Ana Tercer parcial 30%.
      DEADLINE: <2021-04-07 mié>
@@ -109,8 +109,11 @@ Concluir sobre el mensaje general y regresar sobre la tesis central del ensayo.
 *** DONE gen tarea girls at war
     CLOSED: [2021-02-27 Sat 12:28] DEADLINE: <2021-02-25 jue>
 
-*** TODO gen tarea semana 6
-    DEADLINE: <2021-03-06 sáb>
+*** DONE gen tarea semana 6
+    CLOSED: [2021-03-08 lun 21:06] DEADLINE: <2021-03-06 sáb>
+
+*** TODO gen tar sem 8
+    DEADLINE: <2021-03-12 vie>
 
 ** Ingles
 *** DONE Ing Mat Tarea semana 2
@@ -122,5 +125,8 @@ Concluir sobre el mensaje general y regresar sobre la tesis central del ensayo.
 *** DONE Ingles quiz de 20pts
     CLOSED: [2021-02-15 lun 14:13] DEADLINE: <2021-02-16 mar>
 
-*** TODO Ingles actividades sem 7
-    DEADLINE: <2021-03-07 dom>
+*** DONE Ingles actividades sem 7
+    CLOSED: [2021-03-08 lun 21:06] DEADLINE: <2021-03-07 dom>
+
+*** TODO actividades ing sem 8
+    DEADLINE: <2021-03-14 dom>
