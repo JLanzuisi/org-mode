@@ -1,17 +1,12 @@
-* Org for.. Everything!
+* Org for todos, agenda and notes
 
-Org, being the huge thing it is, is hard to describe.
-It is thus also hard to concretely explain all that can be done with it.
+The main use I have right now for org mode
+is to manage my agenda, todos, and notes
+of all kinds.
 
-All I can say is that I have for main purposes for it:
-
-+ My agenda. I keep track of things I have to do, and things I've done.
-  The amount of features I use in this area is a really small subset of the total amount of things org allows one to do.
-+ The configuration of my system (in the future) and configuration files in general.
-  For now, Org takes care of my LaTeX templates (now deprecated in favor of groff), and my Emacs configuration (wip).
-  The plan for the future is to extend this to as many configuration files as possible,
-  culminating in something like +GNU Guix and a operating system completely configured in Org files+,
-  im leaning more now to something like FreeBSD.
+This repo holds the files I used
+for the purposes mentioned earlier,
+plus some other configuration files.
 
 * A bit more in depth
 
@@ -22,61 +17,7 @@ which opens a window with everything I've marked =TODO= in my Org files.
 Also, the agenda help with things that I need to get done for a specific date.
 My usage of this is very basic.
 
-** Literate programming for everything
-
-The literate programming paradigm is something I find really nice.
-An explanation of the whole thing here is unnecessary and unwieldy, so better go check out the original documentation,
-that is, the articles and the book written by Don Knuth.
-
-I use the whole idea of tangling and exporting as a way to generate both "code" and documentation files associated with it from a single file.
-The idea is given by the following diagram:
-
-#+BEGIN_SRC
-      ---(tangling)---> Code, configuration file, etc
-     /
-Org file
-     \
-      ---(exporting)---> Documentation, PDF files, HTML files.
-#+END_SRC
-
-This is the reason that this repo contains almost nothing but Org files.
-Everything can be made out of them.
-
-*** Or maybe not for everything
-    Literate programming is still an interesting idea,
-    but it's too unpractical for small code or studying.
-    If I ever get into a large project, I may consider using it,
-    for now I prefer to write documentation in groff.
-
-*** Makefiles are the future
-
-I will add makefiles so that getting the code produced by the Org file can be automated.
-The dependencies for now are just to have emacs installed and maybe some other small files,
-but emacs should be enough to get something that works.
-
-My idea is to use something like
-#+BEGIN_SRC
-emacs myorgfile.org --batch -f org-export-as-*
-#+END_SRC
-to get things exported the way I want them.
-Something similar for tangling.
-
-I'll add a dedicated section for building once the whole system is in place,
-until then only partial or no part of it may work.
-*This concerns my agendas and the few config files I keep in org mode. Most stuff is being moved.*
-
-** Writing, or, how I learned to love plain text files.
-
-The thing is, plain text is to comfortable to use anything else.
-This is really one of those things that's better experienced than explained,
-so if you have even the slightest inclination for learning to better use your computer,
-look into using and editing plain text and stop with the horrible behemoths like docx files.
-
-The UNIX philosophy is a big part of it.
-
 * Regarding the License
 
 Maybe the GPL is not the absolute best for this type of work,
 but it does no harm to have it.
-
-I do believe free software to be important enough to make the effort to license everything I do that can be remotely considered software under a copyleft license.
