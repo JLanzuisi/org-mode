@@ -18,6 +18,54 @@
    CLOSED: [2020-12-19 sáb 19:03]
 ** DONE Subir al github
    CLOSED: [2020-12-19 sáb 19:03]
+** TODO Arreglar cap 6
+*** Añadir imágenes usando calibre
+*** Si los cambios son demasiado grandes, intentar convertir tex en html
+** TODO  Añadir cap 16 (y mover posteriores)
+*** TeX a html
+    Usar pandoc para convertir de TeX a html.
+    Quitar, antes de convertir, todo lo que no tenga sentido
+    en el epub (como index) y cualquier otra cosas que prefiera
+    hacer manualmente después (como añadir una imágen).
+*** +1 a los números de los cap
+    A partit del cap 15 hay que cambiar los números de los caps,
+    añadiendo 1. 16 -> 17, 17 -> 18, etc
+*** Cambiar el indice
+    Tanto la sección de contenidos como el indice
+    virtual del epub.
+*** Referencias
+    Hay que corregir la referencias y cualquier mención
+    de números errados.
+**** TODO Descargar /todos/ los TeX
+**** Hallar referencias
+     Usar grep para obtener todos los ~\label~ dentro
+     de un cap, luego se pueden buscar
+     todos los otros lugares en que aparece cada uno
+     de esto ~\label~ (como argumento de un ~\ref~, por ejemplo).
+**** Casos particulares
+     + Cap 17 Growing regenerative businesses and ecosystems:
+       Existen varias referencias al cap 16
+     + Caps 18,19,20:
+       No vi ninguna referencia nueva al comparar pdfs,
+       es probable que no haya ninguna. De cualquier modo aparecerá
+       en los grep.
+*** Referencias hechas con "Page" y similares
+    No hay páginas en un epub, cambiar esto
+** Cosas útiles:
+*** pdfjam
+    La utilidad pdfjam de texlive se puede usar para juntar
+    muchas paginas en un solo scroll:
+    ~pdfjam --nup 1x15 --papersize {"432pt,9720pt"} --outfile new-scroll.pdf new.pdf~
+*** separar pdfs
+    Separar los capítulos del pdf es útil para comparar.
+    El siguiente script lo use:
+    #+BEGIN_SRC sh
+    #!/bin/sh
+
+    rm *
+    pdfseparate -f $1 -l $2 ../OLDMasterEinstein-Picasso-1.pdf %d.pdf
+    pdfunite *.pdf old.pdf
+    #+END_SRC
 * Ori
 ** DONE Poner en el primer articulo bullet points en alguna parte.
    CLOSED: [2020-12-23 mié 18:24]

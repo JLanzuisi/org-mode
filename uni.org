@@ -27,7 +27,21 @@
 
 *** DONE algo1 cuarta tarea asignación matrices
     CLOSED: [2021-02-24 mié 14:54] DEADLINE: <2021-02-23 mar 14:00>
-
+*** DONE ver videos antes de la clase de este martes
+    CLOSED: [2021-03-23 mar 16:15]
+*** DONE tarea de algo1
+    CLOSED: [2021-04-01 jue 12:04] DEADLINE: <2021-04-01 jue>
+*** CANCELED Preguntar a la profe sobre cv2.substract para comparar imágenes, realmente funciona?
+    CLOSED: [2021-03-24 mié 16:15]
+**** Hacer cambios pequeños y ver si el valor de subtract cambia mucho
+**** Expresarlo en porcentaje. Hay que ver cual es el valor máximo, el mínimo es 0.
+*** DONE Trabajar el el proyecto
+    CLOSED: [2021-03-28 dom 16:46] SCHEDULED: <2021-03-27 sáb>
+*** DONE revisar ejercicios de la guia de algo1 recursion
+    CLOSED: [2021-04-04 dom 16:37] SCHEDULED: <2021-04-03 sáb>
+*** DONE ver video de algo1 clase del martes
+    CLOSED: [2021-03-30 mar 20:07] SCHEDULED: <2021-03-29 lun>
+*** TODO revisar el libro de logica, el capitulo de los teoremas 10
 *** Exámenes parciales.
 **** DONE Algo1 1er parcial (25%).
      CLOSED: [2021-02-04 jue 18:55] DEADLINE: <2021-02-04 jue>
@@ -35,8 +49,8 @@
 **** DONE Algo1 2do parcial.
      CLOSED: [2021-03-04 jue 18:26] DEADLINE: <2021-03-04 jue>
 
-**** Algo1 3er parcial.
-     DEADLINE: <2021-04-06 mar>
+**** DONE Algo1 3er parcial.
+     CLOSED: [2021-04-10 sáb 21:19] DEADLINE: <2021-04-06 mar>
 
 ** Laboratorio de Algoritmos
 *** Laboratorios
@@ -64,6 +78,13 @@
      Revisar ejercicios 5 y 6 de la tarea que estén bien hechos.
      Revisar el laboratorio de freedom
 
+*** Proyecto
+
+**** DONE Primera entrega
+     CLOSED: [2021-03-23 mar 16:19]
+
+**** DONE Segunda entrega
+     CLOSED: [2021-04-10 sáb 21:19] DEADLINE: <2021-04-07 mié>
 ** Analisis
 *** Ejercicios de la guia.
 **** DONE Ejercicios de integrales
@@ -79,8 +100,8 @@
 **** DONE Ana Segundo parcial 35%.
      CLOSED: [2021-03-08 lun 21:06] DEADLINE: <2021-03-08 lun>
 
-**** Ana Tercer parcial 30%.
-     DEADLINE: <2021-04-07 mié>
+**** DONE Ana Tercer parcial 30%.
+     CLOSED: [2021-04-10 sáb 21:19] DEADLINE: <2021-04-07 mié>
 
 *** DONE Videos de la profe semanas 1 y 2
     CLOSED: [2021-02-08 lun 17:49] SCHEDULED: <2021-02-06 sáb>
@@ -112,9 +133,14 @@ Concluir sobre el mensaje general y regresar sobre la tesis central del ensayo.
 *** DONE gen tarea semana 6
     CLOSED: [2021-03-08 lun 21:06] DEADLINE: <2021-03-06 sáb>
 
-*** TODO gen tar sem 8
-    DEADLINE: <2021-03-12 vie>
+*** DONE gen tar sem 8
+    CLOSED: [2021-03-23 mar 16:17] DEADLINE: <2021-03-12 vie>
 
+*** DONE gen ensayo sem 10
+    CLOSED: [2021-03-28 dom 16:46] DEADLINE: <2021-03-26 vie>
+
+*** DONE Empezar el ensayo del general
+    CLOSED: [2021-03-28 dom 16:46] SCHEDULED: <2021-03-25 jue>
 ** Ingles
 *** DONE Ing Mat Tarea semana 2
     CLOSED: [2021-01-27 mié 13:09] DEADLINE: <2021-01-31 dom>
@@ -128,5 +154,8 @@ Concluir sobre el mensaje general y regresar sobre la tesis central del ensayo.
 *** DONE Ingles actividades sem 7
     CLOSED: [2021-03-08 lun 21:06] DEADLINE: <2021-03-07 dom>
 
-*** TODO actividades ing sem 8
-    DEADLINE: <2021-03-14 dom>
+*** DONE actividades ing sem 8
+    CLOSED: [2021-03-23 mar 16:17] DEADLINE: <2021-03-14 dom>
+
+*** DONE actividades ing sem 10
+    CLOSED: [2021-03-30 mar 20:08] DEADLINE: <2021-03-28 dom>

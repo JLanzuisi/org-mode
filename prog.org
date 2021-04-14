@@ -53,3 +53,12 @@ Colocar "binarios" en el github pages
    CLOSED: [2021-02-28 dom 14:54]
 ** En weather.sh colocar if para que muestre "no hay internet" cuando curl retorne que no puede descargar
 ** Alias de ls, cambiar a bash script
+* Virtual machines
+** Windows
+   Maquina de windows 10 para cuando necesite software propietario.
+   Si instalo office puedo quitar el office que tengo en mi distro.
+   Descargar las isos de gen2.
+** OpenBSD
+   Una máquina de OpenBSD estaría bien para probar cosas.
+** RHEL
+   Nunca he probado rhel, quizás aprenda algo
