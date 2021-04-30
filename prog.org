@@ -19,8 +19,22 @@ Quizás tengan que ver con editores de texto, u otras cosas cercanas a programar
    CLOSED: [2021-01-17 dom 15:03]
 
 ** TODO Compilar emacs en la tablet, sin x11, con modulos
-* LISP :lisp:
+* Languages:
+** Emacs lisp (duh)
+** Python
+** Julia
+** Web (html css javascript)
 * CS50 EdX :cs50:
+** DONE Chequear que el progreso se mantuvo
+   CLOSED: [2021-04-23 vie 12:16] DEADLINE: <2021-04-23 vie>
+   Si se mantiene, los score no aparecen pero es normal.
+** Revisar todo lo hecho, ponerme al día
+*** DONE Sem 1
+    CLOSED: [2021-04-28 mié 20:47] SCHEDULED: <2021-04-27 mar>
+*** DONE Sem 2
+    CLOSED: [2021-04-28 mié 20:47] SCHEDULED: <2021-04-28 mié>
+*** TODO sem 3
+    SCHEDULED: <2021-04-29 jue>
 ** WAIT Ver videos de la semana 3
 ** WAIT Hacer segundo ejercicio de la semana 3
 * Github :git:
@@ -58,7 +72,5 @@ Colocar "binarios" en el github pages
    Maquina de windows 10 para cuando necesite software propietario.
    Si instalo office puedo quitar el office que tengo en mi distro.
    Descargar las isos de gen2.
-** OpenBSD
-   Una máquina de OpenBSD estaría bien para probar cosas.
 ** RHEL
    Nunca he probado rhel, quizás aprenda algo

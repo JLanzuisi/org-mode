@@ -19,6 +19,18 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 # --------------
 
+* Instalación
+
+** TODO Backups
+
+** TODO Terminar trabajo graham
+* Idea general
+
+Debian stable,
+cwm for window manager no panels just cwm,
+networkmanager with nmcli for wifi (make script for it),
+dash in emacs as a shell
+
 * Paquetes
 
 Debian tiene paquetes antiguos.
@@ -31,21 +43,11 @@ Para solucionar esto se puede usar:
 
 *Youtube-dl y streamlink* se pueden instalar con pip3.
 
-*latex* se usa texlive directamente (ya descragado)
+*latex*
 
 ** Lista de software
 
-+ Firefox
-+ Transmission
-+ Calibre
-+ VLC
-+ emacs (compilar)
-+ libreoffice
-+ chromium
-+ inkscape
-+ emulación (retroarch + dolphin)
-+ transmission
+Ver archivos respectivos.
 
 * DONE Pasar las peliculas de la laptop
   CLOSED: [2021-01-17 dom 14:33]
-

@@ -18,19 +18,30 @@
    CLOSED: [2020-12-19 sáb 19:03]
 ** DONE Subir al github
    CLOSED: [2020-12-19 sáb 19:03]
-** TODO Arreglar cap 6
+** DONE Arreglar cap 6
+   CLOSED: [2021-04-16 vie 07:15]
 *** Añadir imágenes usando calibre
 *** Si los cambios son demasiado grandes, intentar convertir tex en html
 ** TODO  Añadir cap 16 (y mover posteriores)
-*** TeX a html
+*** DONE TeX a html
+    CLOSED: [2021-04-16 vie 07:15]
     Usar pandoc para convertir de TeX a html.
     Quitar, antes de convertir, todo lo que no tenga sentido
     en el epub (como index) y cualquier otra cosas que prefiera
     hacer manualmente después (como añadir una imágen).
+*** DONE Añadir nuevo html al epub
+    CLOSED: [2021-04-17 sáb 13:59]
+    Revisar que el epub funcione, es decir,
+    que el capítulo aparezca donde debería
+*** DONE Referencias dentros del nuevo Cap
+    CLOSED: [2021-04-19 lun 13:31]
+    Hay que cambiar los ref y cite dentro del nuevo cap
+    también hay que añadir una imágen y una tabla
 *** +1 a los números de los cap
     A partit del cap 15 hay que cambiar los números de los caps,
     añadiendo 1. 16 -> 17, 17 -> 18, etc
-*** Cambiar el indice
+*** DONE Cambiar el indice
+    CLOSED: [2021-04-19 lun 13:31]
     Tanto la sección de contenidos como el indice
     virtual del epub.
 *** Referencias

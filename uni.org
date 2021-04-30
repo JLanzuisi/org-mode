@@ -159,3 +159,27 @@ Concluir sobre el mensaje general y regresar sobre la tesis central del ensayo.
 
 *** DONE actividades ing sem 10
     CLOSED: [2021-03-30 mar 20:08] DEADLINE: <2021-03-28 dom>
+
+* Abril julio 2021
+
+** Inscripciones
+
+*** Odiana 1510151 2644054
+    Materias a inscribir:
+    - MA2112 Mate 5 (SECCION 1)
+    - GC3114 Fisica de rocas
+    - GC3121 Geologia estructural
+    - GC3311 Metodos gravimetricos (gravimetria)
+
+    Número de créditos: 16
+    Índice: 3.66 creo
+
+*** ioni 1510759 26707361
+    Materias a inscribir:
+    - MA2323 analisis 3
+    - MA4411 combinatoria
+    - CI2612 CI2692 Algo 2
+    - ID2132 ing 2
+
+    Creditos: 15
+    Indice: 4.0683
