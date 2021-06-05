@@ -20,7 +20,7 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 # --------------
 
-* Juegos retro :juegos:retro: 
+* Juegos retro :juegos:retro:
 ** RPGs en la SNES.
    Los dejé por ahora.
 ** RPGs en PS1.
@@ -29,24 +29,24 @@
    En pausa por ahora
 *** Terminar pikmin.
 
-* Navidades :varios:navid: 
+* Navidades :varios:navid:
 ** DONE Pensar regalo para Oriana.                                      :ori:
    CLOSED: [2020-12-23 mié 18:23]
 *** DONE Una taza con diseño similar, preguntar a mama.
     CLOSED: [2020-12-23 mié 18:23]
-    Una taza con al de otters, investigar sobre ellas. 
+    Una taza con al de otters, investigar sobre ellas.
 *** DONE Cuaderno lindo para el trimestre
     CLOSED: [2020-12-23 mié 18:23]
 ** DONE Peliculas, series, especiales de navidad:                       :ori:
    CLOSED: [2021-01-10 dom 17:08]
-   
+
    + Especiales de los simpsons
    + Especial de sherk
    + The boys 2
    + Hilda 2
    + Kurosagua
 
-* Ori y an llamadas :ori: 
+* Ori y an llamadas :ori:
 ** CANCELED Revisara utoras de la lista
    CLOSED: [2021-01-17 dom 14:33]
 ** Revisar libros de la lista que descargue:
@@ -60,6 +60,7 @@
 * Rebajas en juegos.
 ** GOG
 ** Steam
-* TODO Limpiar correos gmail
+* CANCELED Limpiar correos gmail
+  CLOSED: [2021-04-30 vie 11:54]
 * DONE Buscar "manufacturer refurbishded" hdd en ebay
 * Minecraft

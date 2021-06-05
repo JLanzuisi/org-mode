@@ -37,7 +37,8 @@
 
 * Mercados
 ** Margarita
-*** TODO Por pagar (ver lista)
+*** CANCELED Por pagar (ver lista)
+    CLOSED: [2021-04-30 vie 11:53]
 *** 5 en sigo, 5 en Nova, 2.5 en rio, 5 carniceria. Total:17.5 (mié dic 30 16:39:29 -04 2020)
 *** 8 en nova, 2 en rio. Total: 10 (mié ene  6 20:32:43 -04 2021)
 *** 14 menos de la cuenta por pago del condominio (vie ene  8 17:38:18 -04 2021)
@@ -79,7 +80,8 @@ El odongotlogo, 53.17
 **** 45$ maus y teclado
 **** 18$ churros, 1$ prestado a mama
 **** 15$ regalo a ori del 14 + 10$ de papa
-**** TODO le debo 10$ a papa
+**** CANCELED le debo 10$ a papa
+     CLOSED: [2021-04-30 vie 11:53]
 *** Quintos 100
 **** 5 regalo del 14
 **** 20$ en río sanguiches de elado
@@ -89,6 +91,9 @@ El odongotlogo, 53.17
 *** gastae 10 en mercado
 *** 40$ en mercado rio
 *** 20$ en pollo arturo
+*** 40$ pasaje regreso or
+*** 20$ mercado en rio con papa
+*** 20$ mercado en nova
 ** Otros
 * Internet wipod
 

@@ -21,9 +21,11 @@
 
 * Instalación
 
-** TODO Backups
+** CANCELED Backups
+   CLOSED: [2021-04-30 vie 11:53]
 
-** TODO Terminar trabajo graham
+** DONE Terminar trabajo graham
+   CLOSED: [2021-04-30 vie 11:54]
 * Idea general
 
 Debian stable,

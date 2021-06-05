@@ -47,7 +47,8 @@ https://emacs.stackexchange.com/questions/7435/automatically-capitalise-i-to-i
 * en groff usar autolead en el preamble
 * en groff revisar apariencia del TOC, poner al inicio
 * descargar openmw y morrowind para jugar
-* TODO sistema para backup de archivos importantes.
+* CANCELED sistema para backup de archivos importantes.
+  CLOSED: [2021-04-30 vie 11:54]
   todo lo que este en ciertas carpetas se comprime y despues lo copio al pendrive rapido.
   hacer el backup una vez por semana, y enviarme un correo de que ya esta listo, para
   que yo me acuerde de copiarlas al pendrive

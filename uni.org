@@ -41,7 +41,8 @@
     CLOSED: [2021-04-04 dom 16:37] SCHEDULED: <2021-04-03 sáb>
 *** DONE ver video de algo1 clase del martes
     CLOSED: [2021-03-30 mar 20:07] SCHEDULED: <2021-03-29 lun>
-*** TODO revisar el libro de logica, el capitulo de los teoremas 10
+*** CANCELED revisar el libro de logica, el capitulo de los teoremas 10
+    CLOSED: [2021-04-30 vie 11:55]
 *** Exámenes parciales.
 **** DONE Algo1 1er parcial (25%).
      CLOSED: [2021-02-04 jue 18:55] DEADLINE: <2021-02-04 jue>
@@ -162,7 +163,8 @@ Concluir sobre el mensaje general y regresar sobre la tesis central del ensayo.
 
 * Abril julio 2021
 
-** Inscripciones
+** DONE Inscripciones
+   CLOSED: [2021-05-07 vie 00:50]
 
 *** Odiana 1510151 2644054
     Materias a inscribir:
@@ -183,3 +185,19 @@ Concluir sobre el mensaje general y regresar sobre la tesis central del ensayo.
 
     Creditos: 15
     Indice: 4.0683
+
+** Analisis 3
+
+*** Primera tarea
+
+** Combinatoria
+
+** Algoritmos 2
+
+*** Algo2 Primer parcial (50%)
+    DEADLINE: <2021-06-15 mar>
+
+*** Algo2 Segundo parcial (50%)
+    DEADLINE: <2021-07-20 mar>
+
+** Lab algortimos 2

@@ -18,7 +18,8 @@ Quizás tengan que ver con editores de texto, u otras cosas cercanas a programar
 ** CANCELED Hacer plantillas de cosas de org, los prgramas de C y notas.
    CLOSED: [2021-01-17 dom 15:03]
 
-** TODO Compilar emacs en la tablet, sin x11, con modulos
+** CANCELED Compilar emacs en la tablet, sin x11, con modulos
+   CLOSED: [2021-04-30 vie 11:54]
 * Languages:
 ** Emacs lisp (duh)
 ** Python
@@ -33,22 +34,30 @@ Quizás tengan que ver con editores de texto, u otras cosas cercanas a programar
     CLOSED: [2021-04-28 mié 20:47] SCHEDULED: <2021-04-27 mar>
 *** DONE Sem 2
     CLOSED: [2021-04-28 mié 20:47] SCHEDULED: <2021-04-28 mié>
-*** TODO sem 3
-    SCHEDULED: <2021-04-29 jue>
-** WAIT Ver videos de la semana 3
-** WAIT Hacer segundo ejercicio de la semana 3
+*** DONE sem 3
+    CLOSED: [2021-05-01 sáb 13:56] SCHEDULED: <2021-04-29 jue>
+*** TODO sem 4
+** DONE Ver videos de la semana 3
+   CLOSED: [2021-05-07 vie 00:42]
+** DONE Hacer segundo ejercicio de la semana 3
+   CLOSED: [2021-05-07 vie 00:42]
 * Github :git:
 ** CANCELED EPUB de robert
    CLOSED: [2021-01-17 dom 09:50]
 
    Colocar bien el epub de robert en su repo de github
 
-** TODO cambiar nombres de las repos en github a usar solo minúsculas
-** TODO repo de text-files(renombrar) y
-** TODO repo de c-files
+** CANCELED cambiar nombres de las repos en github a usar solo minúsculas
+   CLOSED: [2021-04-30 vie 11:54]
+** CANCELED repo de text-files(renombrar) y
+   CLOSED: [2021-04-30 vie 11:54]
+** CANCELED repo de c-files
+   CLOSED: [2021-04-30 vie 11:54]
 ** GLPv3
-*** TODO Pasar todas las repos menos la del trabajo a la GPL.
-*** TODO Poner el license notice en cada archivo:
+*** CANCELED Pasar todas las repos menos la del trabajo a la GPL.
+    CLOSED: [2021-04-30 vie 11:54]
+*** CANCELED Poner el license notice en cada archivo:
+    CLOSED: [2021-04-30 vie 11:54]
 
    + Para los TeX, añadirlo en la plantilla de org mode, que haga tangle pero no se exporte
    + Para los archivos de C, añadirlo en cada archivo org, quizas igual con plantillas

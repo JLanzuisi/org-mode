@@ -22,7 +22,8 @@
    CLOSED: [2021-04-16 vie 07:15]
 *** Añadir imágenes usando calibre
 *** Si los cambios son demasiado grandes, intentar convertir tex en html
-** TODO  Añadir cap 16 (y mover posteriores)
+** DONE Añadir cap 16 (y mover posteriores)
+   CLOSED: [2021-04-30 vie 11:55]
 *** DONE TeX a html
     CLOSED: [2021-04-16 vie 07:15]
     Usar pandoc para convertir de TeX a html.
@@ -47,7 +48,8 @@
 *** Referencias
     Hay que corregir la referencias y cualquier mención
     de números errados.
-**** TODO Descargar /todos/ los TeX
+**** DONE Descargar /todos/ los TeX
+     CLOSED: [2021-04-30 vie 11:55]
 **** Hallar referencias
      Usar grep para obtener todos los ~\label~ dentro
      de un cap, luego se pueden buscar
@@ -81,4 +83,5 @@
 ** DONE Poner en el primer articulo bullet points en alguna parte.
    CLOSED: [2020-12-23 mié 18:24]
 * Otros
-** TODO Responder a optimate. Rellenar planilla.
+** CANCELED Responder a optimate. Rellenar planilla.
+   CLOSED: [2021-04-30 vie 11:55]
